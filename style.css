@@ -368,8 +368,21 @@ body::before {
 .theme-option:hover {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-5px);
-  border-color: var(--accent-color);
-  box-shadow: 0 10px 20px var(--accent-glow);
+}
+
+.theme-option.purple:hover {
+  border-color: rgba(157, 78, 221, 0.2);
+  box-shadow: 0 10px 20px #9d4edd;
+}
+
+.theme-option.red:hover {
+  border-color: rgba(255, 77, 77, 0.3);
+  box-shadow: 0 10px 20px rgba(255, 77, 77, 0.4);
+}
+
+.theme-option.blue:hover {
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 10px 20px rgba(0, 212, 255, 0.4);
 }
 
 .theme-preview {
@@ -429,9 +442,7 @@ body::before {
   }
   
   .lang-toggle {
-    margin-left: 5px;
-    font-size: 0.7rem;
-    padding: 2px 5px;
+    display: none;
   }
   
   .hero h1 {
