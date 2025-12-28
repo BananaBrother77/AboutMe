@@ -8,7 +8,6 @@
   --border-color: rgba(157, 78, 221, 0.2);
 }
 
-/* --- THEMES (JS-Trigger) --- */
 body.theme-red {
   --accent-color: #ff4d4d;
   --accent-glow: rgba(255, 77, 77, 0.4);
@@ -33,10 +32,8 @@ body.theme-blue {
 .lang-toggle:hover {
   opacity: 1;
   background: rgba(157, 78, 221, 0.2);
-  /* Passend zu deiner theme-color */
 }
 
-/* --- GLOBAL RESET --- */
 * {
   margin: 0;
   padding: 0;
@@ -64,7 +61,6 @@ body::before {
   border-radius: 50%;
 }
 
-/* --- NAVBAR --- */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -101,7 +97,6 @@ body::before {
   text-shadow: 0 0 15px var(--accent-glow);
 }
 
-/* --- CONTENT STRUCTURE --- */
 .container {
   max-width: 800px;
   margin: 80px auto;
@@ -130,7 +125,6 @@ body::before {
   }
 }
 
-/* --- HERO SECTION --- */
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 10px;
@@ -175,7 +169,6 @@ body::before {
   border-radius: 50%;
 }
 
-/* --- BADGES & ICONS --- */
 .badge-container {
   margin-bottom: 20px;
 }
@@ -221,7 +214,6 @@ body::before {
   filter: drop-shadow(0 0 8px var(--accent-color));
 }
 
-/* --- MCSH FEATURE CARD --- */
 .mcsh-feature {
   margin-top: 50px;
   background: linear-gradient(135deg, var(--card-bg), rgba(0, 0, 0, 0.6));
@@ -294,7 +286,6 @@ body::before {
   box-shadow: 0 0 15px var(--accent-glow);
 }
 
-/* --- CARDS & GRIDS --- */
 .section-title {
   margin-bottom: 30px;
   font-size: 1.5rem;
