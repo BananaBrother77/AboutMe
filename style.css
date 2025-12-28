@@ -21,6 +21,21 @@ body.theme-blue {
   --border-color: rgba(0, 212, 255, 0.3);
 }
 
+.lang-toggle {
+  margin-left: 15px;
+  opacity: 0.7;
+  font-size: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.lang-toggle:hover {
+  opacity: 1;
+  background: rgba(157, 78, 221, 0.2);
+  /* Passend zu deiner theme-color */
+}
+
 /* --- GLOBAL RESET --- */
 * {
   margin: 0;

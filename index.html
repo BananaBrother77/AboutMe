@@ -22,13 +22,15 @@
 <body>
   
   <nav class="navbar">
-    <div class="nav-logo">About me</div>
+    <div class="nav-logo" data-i18n="nav_about">About me</div>
     <div class="nav-links">
-      <button class="nav-btn active" data-target="home">Home</button>
-      <button class="nav-btn" data-target="roles">Experience</button>
-      <button class="nav-btn" data-target="games">Gaming</button>
+      <button class="nav-btn active" data-target="home" data-i18n="nav_home">Home</button>
+      <button class="nav-btn" data-target="roles" data-i18n="nav_exp">Experience</button>
+      <button class="nav-btn" data-target="games" data-i18n="nav_gaming">Gaming</button>
+      <button id="lang-switch" class="nav-btn lang-toggle">EN / DE</button>
     </div>
   </nav>
+  
   
   <main class="container">
     
@@ -40,10 +42,10 @@
         </div>
         
         <h1><span class="highlight">BananaBrother77</span></h1>
-        <p class="subtitle">Web Development & Community Integration</p>
+        <p class="subtitle" data-i18n="hero_subtitle">Web Development & Community Integration</p>
         
         <div class="badge-container">
-          <span class="badge">Learning Frontend</span>
+          <span class="badge" data-i18n="badge_learning">Learning Frontend</span>
           <span class="badge discord">Staff @MCServerHost</span>
         </div>
         
@@ -59,12 +61,12 @@
           <div class="mcsh-header">
             <img src="assets/mcsh.png" alt="MCSH Logo" class="mcsh-badge-img">
             <div class="mcsh-title">
-              <h3>Official Partner</h3>
-              <p>Reliable Hosting for your Minecraft Worlds</p>
+              <h3 data-i18n="mcsh_partner">Official Partner</h3>
+              <p data-i18n="mcsh_desc">Reliable Hosting for your Minecraft Worlds</p>
             </div>
           </div>
           <div class="mcsh-action">
-            <a href="https://discord.gg/mcserverhost" target="_blank" rel="noopener noreferrer" class="action-link discord">Join Discord</a>
+            <a href="https://discord.gg/mcserverhost" target="_blank" rel="noopener noreferrer" class="action-link discord" data-i18n="btn_discord">Join Discord</a>
             <a href="https://www.trustpilot.com/review/mcserverhost.com" target="_blank" rel="noopener noreferrer" class="action-link review">Trustpilot</a>
           </div>
         </div>
@@ -73,46 +75,46 @@
     </section>
     
     <section id="roles" class="tab-content">
-      <h2 class="section-title">Roles & Skills</h2>
+      <h2 class="section-title" data-i18n="title_roles">Roles & Skills</h2>
       <div class="card">
-        <h3>Support @ MCServerHost</h3>
-        <p>Providing technical support and driving community growth through creative ideas.</p>
+        <h3 data-i18n="role_support_title">Support @ MCServerHost</h3>
+        <p data-i18n="role_support_desc">Providing technical support and driving community growth through creative ideas.</p>
       </div>
       <div class="card">
-        <h3>Development</h3>
-        <p>Currently deep-diving into HTML5, CSS3, and JavaScript to build modern web applications.</p>
+        <h3 data-i18n="role_dev_title">Development</h3>
+        <p data-i18n="role_dev_desc">Currently deep-diving into HTML5, CSS3, and JavaScript to build modern web applications.</p>
       </div>
     </section>
     
     <section id="games" class="tab-content">
-      <h2 class="section-title">Favorite Games</h2>
+      <h2 class="section-title" data-i18n="title_games">Favorite Games</h2>
       <div class="game-grid">
         <div class="game-card">
           <div class="game-img" style="background-image: url('assets/minecraft.jpeg')"></div>
           <div class="game-info">
             <h4>Minecraft</h4>
-            <p>Surviving in endless worlds, building complex Redstone machines, and connecting with the community on servers</p>
+            <p data-i18n="game_mc_desc">Surviving in endless worlds, building complex Redstone machines, and connecting with the community on servers</p>
           </div>
         </div>
         <div class="game-card">
           <div class="game-img" style="background-image: url('assets/portal.png')"></div>
           <div class="game-info">
             <h4>Portal 1 & 2</h4>
-            <p>Challenging logic puzzles and a unique story, all in the name of science</p>
+            <p data-i18n="game_portal_desc">Challenging logic puzzles and a unique story, all in the name of science</p>
           </div>
         </div>
         <div class="game-card">
           <div class="game-img" style="background-image: url('assets/hollowknight.jpeg')"></div>
           <div class="game-info">
             <h4>Hollow Knight</h4>
-            <p>Exploring a vast, ruined kingdom, mastering challenging combat, and uncovering a deep, atmospheric story</p>
+            <p data-i18n="game_hollow_desc">Exploring a vast, ruined kingdom, mastering challenging combat, and uncovering a deep, atmospheric story</p>
           </div>
         </div>
         <div class="game-card">
           <div class="game-img" style="background-image: url('assets/hades.jpeg')"></div>
           <div class="game-info">
             <h4>Hades</h4>
-            <p>Battle out of hell, master godly powers, and experience a gripping story in this fast-paced rogue-like</p>
+            <p data-i18n="game_hades_desc">Battle out of hell, master godly powers, and experience a gripping story in this fast-paced rogue-like</p>
           </div>
         </div>
       </div>
