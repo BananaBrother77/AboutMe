@@ -406,15 +406,32 @@ body::before {
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 1rem 5%;
-    flex-direction: column;
-    gap: 10px;
+    padding: 0.8rem 5%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .nav-right {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 5px;
   }
   
   .nav-btn {
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 0.8rem;
+    margin-left: 0;
+    padding: 5px 8px;
+    font-size: 0.75rem;
+  }
+  
+  .lang-toggle {
+    margin-left: 5px;
+    font-size: 0.7rem;
+    padding: 2px 5px;
   }
   
   .hero h1 {

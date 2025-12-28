@@ -106,6 +106,7 @@ function initLangSwitch() {
   if (langBtn) {
     langBtn.addEventListener('click', () => {
       switchLang();
+      showLangOnBtn();
     });
   }
   
