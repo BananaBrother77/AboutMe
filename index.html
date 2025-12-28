@@ -19,7 +19,7 @@
 </head>
 
 
-<body>
+<body class="">
   
   <nav class="navbar">
     <div class="nav-logo" data-i18n="nav_about">About me</div>
@@ -27,6 +27,7 @@
       <button class="nav-btn active" data-target="home" data-i18n="nav_home">Home</button>
       <button class="nav-btn" data-target="roles" data-i18n="nav_exp">Experience</button>
       <button class="nav-btn" data-target="games" data-i18n="nav_gaming">Gaming</button>
+      <button class="nav-btn" data-target="settings">Settings</button>
       <button id="lang-switch" class="nav-btn lang-toggle">EN / DE</button>
     </div>
   </nav>
@@ -119,6 +120,37 @@
         </div>
       </div>
     </section>
+    
+    <section id="settings" class="tab-content">
+      <h2 class="section-title">Settings</h2>
+      
+      <div class="card settings-card">
+        <h3 data-i18n="settings_lang_title">Language / Sprache</h3>
+        <p data-i18n="settings_lang_desc">Choose your preferred language.</p>
+        <button id="lang-setting" class="action-link review badge" style="margin-top: 15px; cursor: pointer;">German</button>
+      </div>
+      
+      <div class="card settings-card">
+        <h3 data-i18n="settings_theme_title">Appearance</h3>
+        <p data-i18n="settings_theme_desc">Select a theme color for the website.</p>
+        
+        <div class="theme-grid">
+          <div class="theme-option" data-theme="default">
+            <div class="theme-preview purple"></div>
+            <span>Purple</span>
+          </div>
+          <div class="theme-option" data-theme="theme-red">
+            <div class="theme-preview red"></div>
+            <span>Red</span>
+          </div>
+          <div class="theme-option" data-theme="theme-blue">
+            <div class="theme-preview blue"></div>
+            <span>Blue</span>
+          </div>
+        </div>
+        
+    </section>
+    
     
   </main>
   
