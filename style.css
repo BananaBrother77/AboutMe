@@ -138,17 +138,6 @@ body::before {
   box-shadow: 0 0 25px var(--accent-glow);
 }
 
-.status-dot {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  width: 22px;
-  height: 22px;
-  background: #43b581;
-  border: 4px solid var(--bg-color);
-  border-radius: 50%;
-}
-
 .badge-container {
   margin-bottom: 20px;
 }
