@@ -25,6 +25,7 @@ function initTabs() {
         
         activeTab.classList.add('active');
         btn.classList.add('active');
+        window.scrollTo(0, 0);
       }
     });
   });
