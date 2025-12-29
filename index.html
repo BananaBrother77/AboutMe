@@ -27,7 +27,7 @@
     <div class="nav-logo" data-i18n="nav_about">About me</div>
     <div class="nav-links">
       <button class="nav-btn active" data-target="home" data-i18n="nav_home">Home</button>
-      <button class="nav-btn" data-target="roles" data-i18n="nav_exp">Experience</button>
+      <button class="nav-btn" data-target="roles" data-i18n="nav_inf">Information</button>
       <button class="nav-btn" data-target="games" data-i18n="nav_gaming">Gaming</button>
       <button class="nav-btn" data-target="settings" data-i18n="nav_settings">Settings</button>
       <button id="lang-switch" class="nav-btn lang-toggle">EN / DE</button>
@@ -77,14 +77,39 @@
     </section>
     
     <section id="roles" class="tab-content">
-      <h2 class="section-title" data-i18n="title_roles">Roles & Skills</h2>
-      <div class="card">
-        <h3 data-i18n="role_support_title">Support @ MCServerHost</h3>
-        <p data-i18n="role_support_desc">Providing technical support and driving community growth through creative ideas.</p>
+      <h2 class="section-title" data-i18n="title_roles">Information</h2>
+      
+      <div class="card info-card">
+        <div class="info-top">
+          <div class="info-image">
+            <img src="assets/profile.jpeg" alt="Profile" class="profile-img">
+          </div>
+          <div class="info-bullets">
+            <ul>
+              <li><strong data-i18n="info_lang_label">Languages:</strong> DE / EN</li>
+              <li><strong data-i18n="info_role_label">Role:</strong> Staff @MCSH</li>
+              <li><strong data-i18n="info_focus_label">Focus:</strong> Frontend & Community</li>
+              <li><strong data-i18n="info_status_label">Status:</strong> Learning</li>
+            </ul>
+          </div>
+        </div>
+        <div class="info-text">
+          <p data-i18n="role_support_desc">I love spending my time with funny people that have the same interests as me and I love learning new stuff. That's why I'm enjoying my time as a staff member at MCSH.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3 data-i18n="role_dev_title">Development</h3>
-        <p data-i18n="role_dev_desc">Currently deep-diving into HTML5, CSS3, and JavaScript to build modern web applications.</p>
+      
+      <h2 class="section-title" data-i18n="title_mcsh">MCSH</h2>
+      <div class="card info-card">
+        <div class="info-title">
+          <p><strong data-i18n="mcsh_question">What is MCSH?</strong></p>
+        </div>
+        <div class="info-text no-border">
+          <p data-i18n="mcsh_support_txt">MCServerHost alias MCSH is a premium quality minecraft server host, with tons of features, friendly people and even free servers.</p>
+          <div class="mcsh-action mcsh-info">
+            <a href="https://discord.gg/mcserverhost" target="_blank" rel="noopener noreferrer" class="action-link discord" data-i18n="btn_discord">Join Discord</a>
+            <a href="https://www.trustpilot.com/review/mcserverhost.com" target="_blank" rel="noopener noreferrer" class="action-link review">Trustpilot</a>
+          </div>
+        </div>
       </div>
     </section>
     
@@ -154,7 +179,9 @@
     
   </main>
   
+  <script src="translations.js"></script>
   <script src="script.js"></script>
 </body>
+
 
 </html>

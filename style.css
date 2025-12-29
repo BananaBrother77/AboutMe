@@ -122,6 +122,8 @@ body::before {
 }
 
 .profile-container {
+  display: flex;
+  justify-content: flex-start;
   position: relative;
   width: 130px;
   height: 130px;
@@ -137,6 +139,70 @@ body::before {
   object-fit: cover;
   box-shadow: 0 0 25px var(--accent-glow);
 }
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-top {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.info-image {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+}
+
+.info-image .profile-img {
+  width: 100%;
+  height: 100%;
+}
+
+.info-bullets ul {
+  list-style: none;
+  text-align: left;
+}
+
+.info-bullets li {
+  margin-bottom: 8px;
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+.info-bullets li strong {
+  color: var(--accent-color);
+}
+
+.info-text {
+  border-top: 1px solid var(--border-color);
+  padding-top: 15px;
+  color: var(--text-dim);
+}
+
+.info-title {
+  color: var(--accent-color);
+}
+
+@media (max-width: 600px) {
+  .info-top {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .info-bullets ul {
+    text-align: center;
+  }
+  
+  .info-image {
+    margin: 0 auto;
+  }
+}
+
 
 .badge-container {
   margin-bottom: 20px;
@@ -229,6 +295,12 @@ body::before {
   display: flex;
   gap: 15px;
   justify-content: center;
+}
+
+.mcsh-info {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
 }
 
 .action-link {
