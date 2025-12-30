@@ -39,7 +39,8 @@ const translations = {
     "settings_theme_desc": "Select a theme color for the website.",
     "theme_purple": "Purple",
     "theme_red": "Red",
-    "theme_blue": "Blue"
+    "theme_blue": "Blue",
+    "theme_yellow": "Yellow"
   },
   "de": {
     "nav_about": "Über mich",
@@ -81,6 +82,7 @@ const translations = {
     "settings_theme_desc": "Wähle eine Akzentfarbe für die Webseite.",
     "theme_purple": "Lila",
     "theme_red": "Rot",
-    "theme_blue": "Blau"
+    "theme_blue": "Blau",
+    "theme_yellow": "Gelb"
   }
 };
