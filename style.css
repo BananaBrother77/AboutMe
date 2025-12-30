@@ -14,6 +14,12 @@ body.theme-red {
   --border-color: rgba(255, 77, 77, 0.3);
 }
 
+body.theme-yellow {
+  --accent-color: #ffd700;
+  --accent-glow: rgba(255, 215, 0, 0.4);
+  --border-color: rgba(255, 215, 0, 0.3);
+}
+
 body.theme-blue {
   --accent-color: #00d4ff;
   --accent-glow: rgba(0, 212, 255, 0.4);
@@ -27,14 +33,14 @@ body.theme-blue {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: var(--bg-color);
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
 }
-
 
 body::before {
   content: "";
@@ -193,16 +199,15 @@ body::before {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .info-bullets ul {
     text-align: center;
   }
-  
+
   .info-image {
     margin: 0 auto;
   }
 }
-
 
 .badge-container {
   margin-bottom: 20px;
@@ -399,7 +404,7 @@ body::before {
     opacity: 0;
     transform: translateY(20px);
   }
-  
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -446,6 +451,11 @@ body::before {
   box-shadow: 0 10px 20px rgba(0, 212, 255, 0.4);
 }
 
+.theme-option.yellow:hover {
+  border-color: rgba(255, 215, 0, 0.3);
+  box-shadow: 0 10px 20px rgba(255, 215, 0, 0.4);
+}
+
 .theme-preview {
   width: 25px;
   height: 25px;
@@ -468,6 +478,11 @@ body::before {
   box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
+.theme-preview.yellow {
+  background: #ffd700;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
 .theme-option span {
   font-size: 0.85rem;
   color: var(--text-dim);
@@ -484,60 +499,60 @@ body::before {
     flex-direction: row;
     justify-content: space-between;
   }
-  
+
   .nav-right {
     display: flex;
     justify-content: center;
     gap: 20px;
   }
-  
+
   .nav-links {
     display: flex;
     gap: 5px;
   }
-  
+
   .nav-btn {
     margin-left: 0;
     padding: 5px 8px;
     font-size: 0.75rem;
   }
-  
+
   .lang-toggle {
     display: none;
   }
-  
+
   .hero h1 {
     font-size: 2rem;
   }
-  
+
   .container {
     margin: 40px auto;
     padding: 0 15px;
   }
-  
+
   .game-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .mcsh-header {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .mcsh-title {
     text-align: center;
   }
-  
+
   .mcsh-action {
     flex-direction: column;
     width: 100%;
   }
-  
+
   .action-link {
     width: 100%;
     text-align: center;
   }
-  
+
   .profile-container {
     width: 100px;
     height: 100px;
