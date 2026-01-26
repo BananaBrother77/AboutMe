@@ -118,6 +118,24 @@ body {
   color: transparent;
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 5px 0;
+}
+
+.nav-links::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-links {
+  -webkit-overflow-scrolling: touch;
+}
+
 .nav-btn {
   background: none;
   border: none;
@@ -129,6 +147,7 @@ body {
   transition: all var(--transition-normal);
   position: relative;
   padding: 5px 0;
+  flex-shrink: 0;
 }
 
 .nav-btn::after {
@@ -398,8 +417,9 @@ body {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200%;
   height: 4px;
   background: var(--text-gradient);
   border-radius: 2px;
@@ -940,17 +960,33 @@ body {
     flex-wrap: wrap;
   }
 
+  .nav-links {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    margin-left: -5%;
+    margin-right: -5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    mask-image: linear-gradient(to right, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+  }
+
   .nav-btn {
-    margin-left: 10px;
-    font-size: 0.75rem;
-    padding: 5px 8px;
+    margin-left: 15px;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .nav-btn:first-child {
+    margin-left: 0;
   }
 
   .lang-toggle {
     display: inline-block;
-    margin-left: 10px;
-    font-size: 0.7rem;
-    padding: 4px 8px;
+    margin-left: 15px;
+    font-size: 0.8rem;
+    padding: 8px 12px;
   }
 
   .hero h1 {
