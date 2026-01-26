@@ -35,6 +35,7 @@ function changeTheme() {
   const currentTheme = localStorage.getItem('savedTheme');
 
   if (currentTheme && currentTheme !== 'default') {
+    document.body.classList.remove('theme-red', 'theme-blue', 'theme-yellow', 'theme-dark');
     document.body.classList.add(currentTheme);
   } else {
     localStorage.removeItem('savedTheme');
@@ -45,7 +46,7 @@ function changeTheme() {
   themeBtns.forEach(option => {
     option.addEventListener('click', () => {
       const theme = option.getAttribute('data-theme');
-      document.body.classList.remove('theme-red', 'theme-blue', 'theme-dark');
+      document.body.classList.remove('theme-red', 'theme-blue', 'theme-yellow', 'theme-dark');
 
       if (theme !== 'default') {
         document.body.classList.add(theme);
