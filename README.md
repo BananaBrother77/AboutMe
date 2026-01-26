@@ -94,8 +94,7 @@ AboutMe/
 ├── index.html                # Main HTML structure
 ├── style.css                 # All styling and themes
 ├── script.js                 # JavaScript logic
-├── translations.js           # i18n translations
-└── google34ada29e47854586.html  # Google site verification
+└── translations.js           # i18n translations
 ```
 
 ---
