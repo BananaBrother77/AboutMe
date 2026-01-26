@@ -1,6 +1,6 @@
 const translations = {
   "en": {
-    "nav_about": "About me",
+    "nav_about": "Projects",
     "nav_home": "Home",
     "nav_inf": "Information",
     "nav_gaming": "Gaming",
@@ -38,10 +38,20 @@ const translations = {
     "theme_purple": "Purple",
     "theme_red": "Red",
     "theme_blue": "Blue",
-    "theme_yellow": "Yellow"
+    "theme_yellow": "Yellow",
+    "title_projects": "Projects",
+    "projects_intro": "Here are some of the projects I've been working on.",
+    "project_secret_title": "Secret Project",
+    "project_secret_desc": "A secret project that can't be disclosed yet",
+    "project_status_learning": "In Progress",
+    "projects_powered_by": "Powered by MCServerHost",
+    "projects_partner_desc": "Premium Minecraft Server Hosting Partner",
+    "btn_website": "Website",
+    "btn_discord_full": "Join Discord",
+    "btn_trustpilot": "Trustpilot"
   },
   "de": {
-    "nav_about": "Über mich",
+    "nav_about": "Projekte",
     "nav_home": "Start",
     "nav_inf": "Informationen",
     "nav_gaming": "Gaming",
@@ -79,7 +89,17 @@ const translations = {
     "theme_purple": "Lila",
     "theme_red": "Rot",
     "theme_blue": "Blau",
-    "theme_yellow": "Gelb"
+    "theme_yellow": "Gelb",
+    "title_projects": "Projekte",
+    "projects_intro": "Hier sind einige Projekte, an denen ich gearbeitet habe.",
+    "project_secret_title": "Geheimes Projekt",
+    "project_secret_desc": "Ein geheimes Projekt, das noch nicht bekannt gegeben werden kann",
+    "project_status_learning": "In Arbeit",
+    "projects_powered_by": "Unterstützt von MCServerHost",
+    "projects_partner_desc": "Premium Minecraft Server Hosting Partner",
+    "btn_website": "Webseite",
+    "btn_discord_full": "Discord beitreten",
+    "btn_trustpilot": "Trustpilot"
   }
 };
 
