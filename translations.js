@@ -48,7 +48,23 @@ const translations = {
     "projects_partner_desc": "Premium Minecraft Server Hosting Partner",
     "btn_website": "Website",
     "btn_discord_full": "Join Discord",
-    "btn_trustpilot": "Trustpilot"
+    "btn_trustpilot": "Trustpilot",
+    // Stats Section
+    "stats_title": "Quick Stats",
+    "stats_years": "Months Coding",
+    "stats_projects": "Projects",
+    "stats_servers": "Servers Managed",
+    "stats_community": "Community",
+    // Contact Section
+    "contact_title": "Get in Touch",
+    "contact_subtitle": "Have a question or want to collaborate? Feel free to reach out!",
+    "contact_discord": "Join Discord",
+    "contact_github": "GitHub",
+    // Footer
+    "footer_rights": "All rights reserved.",
+    "footer_made": "Made with",
+    "footer_and": "and",
+    "footer_code": "code"
   },
   "de": {
     "nav_about": "Projekte",
@@ -99,7 +115,23 @@ const translations = {
     "projects_partner_desc": "Premium Minecraft Server Hosting Partner",
     "btn_website": "Webseite",
     "btn_discord_full": "Discord beitreten",
-    "btn_trustpilot": "Trustpilot"
+    "btn_trustpilot": "Trustpilot",
+    // Stats Section
+    "stats_title": "Schnellstatistiken",
+    "stats_years": "Monate Code",
+    "stats_projects": "Projekte",
+    "stats_servers": "Server Verwaltet",
+    "stats_community": "Community",
+    // Contact Section
+    "contact_title": "Kontakt",
+    "contact_subtitle": "Du hast eine Frage oder möchtest zusammenarbeiten? Melde dich gerne!",
+    "contact_discord": "Discord beitreten",
+    "contact_github": "GitHub",
+    // Footer
+    "footer_rights": "Alle Rechte vorbehalten.",
+    "footer_made": "Gemacht mit",
+    "footer_and": "und",
+    "footer_code": "Code"
   }
 };
 
