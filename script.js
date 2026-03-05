@@ -18,7 +18,8 @@ navBtns.forEach((btn) => {
 });
 
 // Theme Switching
-const savedTheme = localStorage.getItem('savedTheme');
+let savedTheme = localStorage.getItem('savedTheme');
+
 if (savedTheme && savedTheme !== 'default') {
   document.body.classList.add(savedTheme);
 }
@@ -26,15 +27,43 @@ if (savedTheme && savedTheme !== 'default') {
 document.querySelectorAll('.theme-option').forEach((option) => {
   option.addEventListener('click', () => {
     const theme = option.getAttribute('data-theme');
-    document.body.classList.remove('theme-red', 'theme-blue', 'theme-yellow');
+    document.body.classList.className = '';
 
-    if (theme !== 'default') {
-      document.body.classList.add(theme);
-    }
+    changeTheme(theme);
 
     localStorage.setItem('savedTheme', theme);
   });
 });
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 't') checkTheme();
+});
+
+function checkTheme() {
+  if (savedTheme == 'default') {
+    changeTheme('theme-red');
+    return;
+  }
+  if (savedTheme == 'theme-red') {
+    changeTheme('theme-blue');
+    return;
+  }
+  if (savedTheme == 'theme-blue') {
+    changeTheme('theme-yellow');
+    return;
+  }
+  if (savedTheme == 'theme-yellow') {
+    changeTheme('default');
+    return;
+  }
+}
+
+function changeTheme(theme) {
+  document.body.className = '';
+  document.body.classList.add(theme);
+  localStorage.setItem('savedTheme', theme);
+  savedTheme = theme;
+}
 
 // Language Toggle
 const langBtn = document.getElementById('lang-switch');
