@@ -64,7 +64,7 @@ const translations = {
     stats_years: 'Months Coding',
     stats_projects: 'Projects',
     stats_servers: 'Servers Managed',
-    stats_community: 'Community',
+    stats_community: 'Community Members',
     // Contact Section
     contact_title: 'Get in Touch',
     contact_subtitle:
@@ -144,7 +144,7 @@ const translations = {
     stats_years: 'Monate Code',
     stats_projects: 'Projekte',
     stats_servers: 'Server Verwaltet',
-    stats_community: 'Community',
+    stats_community: 'Community Mitglieder',
     // Contact Section
     contact_title: 'Kontakt',
     contact_subtitle:
