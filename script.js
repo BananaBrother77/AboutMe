@@ -35,6 +35,7 @@ function renderPage(path) {
   }
 
   updateTitle(page);
+  window.scrollTo(0, 0);
 }
 
 window.addEventListener('popstate', () => {
