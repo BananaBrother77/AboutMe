@@ -33,11 +33,25 @@ function renderPage(path) {
   if (activeTab) {
     activeTab.classList.add('active');
   }
+
+  updateTitle(page);
 }
 
 window.addEventListener('popstate', () => {
   renderPage(location.pathname);
 });
+
+function updateTitle(page) {
+  const titles = {
+    home: 'BananaBrother77 | Home',
+    information: 'BananaBrother77 | Information',
+    projects: 'BananaBrother77 | Projects',
+    gaming: 'BananaBrother77 | Gaming',
+    settings: 'BananaBrother77 | Settings',
+  };
+
+  document.title = titles[page] || 'BananBrother77';
+}
 
 // Theme Switching
 let savedTheme = localStorage.getItem('savedTheme');
