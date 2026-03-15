@@ -104,25 +104,8 @@ document.addEventListener('keydown', (e) => {
 // Apply translations on page load
 document.addEventListener('DOMContentLoaded', () => {
   applyTranslations();
-  initParticles();
   initScrollReveal();
 });
-
-// Particle Animation
-function initParticles() {
-  const container = document.querySelector('.particles-container');
-  if (!container) return;
-
-  const particleCount = 18;
-  for (let i = 0; i < particleCount; i++) {
-    const particle = document.createElement('div');
-    particle.classList.add('particle');
-    particle.style.animationDelay = `${Math.random() * 5}s`;
-    particle.style.animationDuration = `${10 + Math.random() * 10}s`;
-    particle.style.left = `${Math.random() * 100}%`;
-    container.appendChild(particle);
-  }
-}
 
 // Scroll Reveal Animation
 function initScrollReveal() {
