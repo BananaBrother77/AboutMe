@@ -28,30 +28,25 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="default">
-    <!-- Animated Background Elements -->
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-
     <nav class="navbar">
       <div class="nav-logo">BananaBrother77</div>
       <div class="nav-links">
-        <button class="nav-btn active" data-target="home" data-i18n="nav_home">
-          Home
-        </button>
-        <button class="nav-btn" data-target="roles" data-i18n="nav_inf">
-          Information
-        </button>
-        <button class="nav-btn" data-target="projects" data-i18n="nav_about">
-          Projects
-        </button>
-        <button class="nav-btn" data-target="games" data-i18n="nav_gaming">
-          Gaming
-        </button>
-        <button class="nav-btn" data-target="settings" data-i18n="nav_settings">
-          Settings
-        </button>
-        <button id="lang-switch" class="nav-btn lang-toggle">EN / DE</button>
+        <a class="nav-link active" href="/home">
+          <p data-i18n="home">Home</p>
+        </a>
+        <a class="nav-link" href="/information">
+          <p data-i18n="information">Information</p>
+        </a>
+        <a class="nav-link" href="/projects">
+          <p data-i18n="projects">Projects</p>
+        </a>
+        <a class="nav-link" href="/gaming">
+          <p data-i18n="gaming">Gaming</p>
+        </a>
+        <a class="nav-link" href="/settings">
+          <p data-i18n="settings">Settings</p>
+        </a>
+        <button id="lang-switch" class="nav-link lang-toggle">EN / DE</button>
       </div>
     </nav>
 
@@ -215,19 +210,20 @@
                 data-i18n="btn_discord"
                 >Join Discord</a
               >
-              <!--<a
+              <a
                 href="https://www.trustpilot.com/review/mcserverhost.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="action-link review"
-                >Trustpilot</a> -->
+                >Trustpilot</a
+              >
             </div>
           </div>
         </div>
       </section>
 
       <!-- INFORMATION SECTION -->
-      <section id="roles" class="tab-content">
+      <section id="information" class="tab-content">
         <h2 class="section-title" data-i18n="title_roles">Information</h2>
 
         <div class="card info-card">
@@ -389,13 +385,13 @@
                 data-i18n="btn_discord"
                 >Join Discord</a
               >
-              <!-- <a
+              <a
                 href="https://www.trustpilot.com/review/mcserverhost.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="action-link review"
                 >Trustpilot</a
-              > -->
+              >
             </div>
           </div>
         </div>
@@ -502,12 +498,12 @@
                 </svg>
                 <span data-i18n="btn_discord">Discord</span>
               </a>
-              <!--- <a
+              <a
                 href="https://www.trustpilot.com/review/mcserverhost.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="partner-link trustpilot"
-              > 
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -520,14 +516,14 @@
                   />
                 </svg>
                 <span data-i18n="btn_trustpilot">Trustpilot</span>
-              </a> -->
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- GAMES SECTION -->
-      <section id="games" class="tab-content">
+      <section id="gaming" class="tab-content">
         <h2 class="section-title" data-i18n="title_games">Favorite Games</h2>
         <div class="game-grid">
           <div class="game-card">

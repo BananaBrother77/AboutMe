@@ -1,20 +1,42 @@
-const navBtns = document.querySelectorAll('.nav-btn[data-target]');
+const navLinks = document.querySelectorAll('.nav-link');
 const allTabs = document.querySelectorAll('.tab-content');
 
-navBtns.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const targetId = btn.getAttribute('data-target');
-    const activeTab = document.getElementById(targetId);
+navLinks.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
 
-    if (activeTab) {
-      allTabs.forEach((tab) => tab.classList.remove('active'));
-      navBtns.forEach((b) => b.classList.remove('active'));
+    const path = link.getAttribute('href');
 
-      activeTab.classList.add('active');
-      btn.classList.add('active');
-      window.scrollTo(0, 0);
-    }
+    history.pushState({}, '', path);
+
+    renderPage(path);
   });
+});
+
+function renderPage(path) {
+  let page = path.replace('/', '');
+
+  if (page === '') {
+    page = 'home';
+  }
+
+  allTabs.forEach((tab) => tab.classList.remove('active'));
+  navLinks.forEach((link) => link.classList.remove('active'));
+
+  const activeTab = document.getElementById(page);
+  const activeLink = document.querySelector(`.nav-link[href="${path}"]`);
+
+  if (activeLink) {
+    activeLink.classList.add('active');
+  }
+
+  if (activeTab) {
+    activeTab.classList.add('active');
+  }
+}
+
+window.addEventListener('popstate', () => {
+  renderPage(location.pathname);
 });
 
 // Theme Switching
@@ -101,12 +123,6 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'l') toggleLanguage();
 });
 
-// Apply translations on page load
-document.addEventListener('DOMContentLoaded', () => {
-  applyTranslations();
-  initScrollReveal();
-});
-
 // Scroll Reveal Animation
 function initScrollReveal() {
   const revealElements = document.querySelectorAll(
@@ -182,3 +198,10 @@ const statsSection = document.querySelector('.stats-section');
 if (statsSection) {
   statsObserver.observe(statsSection);
 }
+
+// Page load
+document.addEventListener('DOMContentLoaded', () => {
+  renderPage(location.pathname);
+  applyTranslations();
+  initScrollReveal();
+});
