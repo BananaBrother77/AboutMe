@@ -116,6 +116,9 @@ function applyTranslations() {
     }
   });
 
+  // Set html lang attribute dynamically
+  document.documentElement.lang = currentLang;
+
   // Update language button text
   if (langBtn) {
     langBtn.textContent = currentLang === 'de' ? 'EN / DE' : 'DE / EN';
@@ -216,7 +219,9 @@ if (statsSection) {
 
 // Page load
 document.addEventListener('DOMContentLoaded', () => {
-  renderPage(location.pathname);
+  if (location.pathname !== '/404.html') {
+    renderPage(location.pathname);
+  }
   applyTranslations();
   initScrollReveal();
 });

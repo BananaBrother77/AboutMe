@@ -77,6 +77,22 @@ const translations = {
     footer_made: 'Made with',
     footer_and: 'and',
     footer_code: 'code',
+    home: 'Home',
+    information: 'Information',
+    projects: 'Projects',
+    gaming: 'Gaming',
+    settings: 'Settings',
+
+    // 404 Page
+    '404_subtitle':
+      "Where are you trying to go? What are you looking for?\nI, of course, don't know that, but I know that you won't find it here.",
+    '404_btn_home': 'Go Home',
+    '404_btn_reload': "Reload (Won't help)",
+    '404_protip': "Pro Tip: I don't know, what did you expect?",
+    information: 'Information',
+    projects: 'Projects',
+    gaming: 'Gaming',
+    settings: 'Settings',
   },
   de: {
     projects: 'Projekte',
@@ -157,5 +173,11 @@ const translations = {
     footer_made: 'Gemacht mit',
     footer_and: 'und',
     footer_code: 'Code',
+    // 404 Page - German
+    '404_subtitle':
+      'Wohin versuchst du zu gehen? Was suchst du?\nIch weiß das natürlich nicht, aber ich weiß, dass du es hier nicht findest.',
+    '404_btn_home': 'Zur Startseite',
+    '404_btn_reload': 'Neu laden (Hilft nicht)',
+    '404_protip': 'Pro-Tipp: Keine Ahnung. Was hast du erwartet?',
   },
 };

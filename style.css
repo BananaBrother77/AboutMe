@@ -237,6 +237,7 @@ body {
   font-size: 1.2rem;
   margin-bottom: 25px;
   font-weight: 300;
+  white-space: pre-line;
 }
 
 .highlight {
