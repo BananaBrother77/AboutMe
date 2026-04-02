@@ -1,0 +1,918 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BananaBrother77</title>
+    <meta
+      name="description"
+      content="Web Development & Community Support. Staff @MCServerHost."
+    />
+    <meta property="og:title" content="BananaBrother77" />
+    <meta
+      property="og:description"
+      content="Web Development & Community Integration."
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/BananaBrother77/global-assets/refs/heads/main/profile.jpeg"
+    />
+    <meta name="theme-color" content="#a96dff" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./ai.css" />
+  </head>
+  <body class="default">
+    <div class="site-frame">
+      <header class="site-header">
+        <nav class="navbar" aria-label="Primary navigation">
+          <a class="brand" href="#home" aria-label="BananaBrother77 home">
+            <span class="brand-mark">BB</span>
+            <span class="brand-copy">
+              <strong>BananaBrother77</strong>
+              <span data-i18n="brand_status">Digital Profile</span>
+            </span>
+          </a>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-panel"
+          >
+            <span class="nav-toggle-line"></span>
+            <span class="nav-toggle-line"></span>
+            <span class="nav-toggle-line"></span>
+            <span class="sr-only" data-i18n="menu_label"
+              >Toggle navigation</span
+            >
+          </button>
+
+          <div class="nav-panel" id="nav-panel">
+            <div class="nav-links">
+              <a
+                class="nav-link"
+                href="#home"
+                data-nav-target="home"
+                data-i18n="home"
+                >Home</a
+              >
+              <a
+                class="nav-link"
+                href="#profile"
+                data-nav-target="profile"
+                data-i18n="profile_nav"
+                >Profile</a
+              >
+              <a
+                class="nav-link"
+                href="#projects"
+                data-nav-target="projects"
+                data-i18n="projects"
+                >Projects</a
+              >
+              <a
+                class="nav-link"
+                href="#gaming"
+                data-nav-target="gaming"
+                data-i18n="gaming"
+                >Gaming</a
+              >
+              <a
+                class="nav-link"
+                href="#settings"
+                data-nav-target="settings"
+                data-i18n="settings_nav"
+                >Control</a
+              >
+            </div>
+
+            <div class="nav-actions">
+              <button
+                id="lang-switch"
+                class="nav-utility"
+                type="button"
+                data-lang-toggle
+              >
+                EN / DE
+              </button>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main class="page-shell">
+        <section
+          id="home"
+          class="page-section hero-section"
+          data-title-key="home"
+        >
+          <div class="section-shell hero-shell">
+            <div class="hero-grid">
+              <article class="panel profile-panel" data-reveal>
+                <div class="panel-meta-row">
+                  <span class="panel-kicker" data-i18n="hero_eyebrow"
+                    >Digital Online Profile</span
+                  >
+                  <span class="status-pill" data-i18n="hero_status">Live</span>
+                </div>
+
+                <div class="player-core">
+                  <div class="avatar-frame">
+                    <img
+                      src="https://raw.githubusercontent.com/BananaBrother77/global-assets/refs/heads/main/profile.jpeg"
+                      alt="BananaBrother77 profile"
+                      class="profile-img"
+                    />
+                  </div>
+
+                  <div class="player-meta">
+                    <p class="player-handle">@bananabrother77</p>
+                    <h1 class="hero-name">
+                      <span class="gradient-text">BananaBrother77</span>
+                    </h1>
+                    <p class="hero-subtitle" data-i18n="hero_subtitle">
+                      Web Development & Community Integration
+                    </p>
+                  </div>
+                </div>
+
+                <ul class="identity-list compact-list">
+                  <li>
+                    <span data-i18n="info_role_label">Role:</span>
+                    <strong>Staff @MCSH</strong>
+                  </li>
+                  <li>
+                    <span data-i18n="info_focus_label">Focus:</span>
+                    <strong>Frontend & Community</strong>
+                  </li>
+                  <li>
+                    <span data-i18n="info_status_label">Status:</span>
+                    <strong data-i18n="info_status_learning">Improving</strong>
+                  </li>
+                  <li>
+                    <span data-i18n="info_lang_label">Languages:</span>
+                    <strong>DE / EN</strong>
+                  </li>
+                </ul>
+
+                <div class="badge-cluster">
+                  <span class="badge" data-i18n="badge_learning"
+                    >Improving Frontend Skills</span
+                  >
+                  <span class="badge badge-accent" data-i18n="mcsh_partner"
+                    >Official Partner</span
+                  >
+                </div>
+
+                <div
+                  class="platform-icons"
+                  aria-label="Main platforms and tools"
+                >
+                  <img
+                    src="/assets/mcsh.png"
+                    title="MCServerHost"
+                    alt="MCServerHost"
+                    class="mini-logo"
+                    loading="lazy"
+                  />
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    title="JavaScript"
+                    alt="JavaScript"
+                    class="mini-logo"
+                    loading="lazy"
+                  />
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                    title="HTML5"
+                    alt="HTML5"
+                    class="mini-logo"
+                    loading="lazy"
+                  />
+                </div>
+              </article>
+
+              <div class="hero-stack">
+                <article class="panel intro-panel" data-reveal>
+                  <p class="panel-kicker" data-i18n="hero_intro_label">
+                    Player Card
+                  </p>
+                  <h2 class="hero-title">
+                    <span data-i18n="hero_title_prefix">Modern Gamer</span>
+                    <small data-i18n="hero_title_suffix"
+                      >Digital online profile</small
+                    >
+                  </h2>
+                  <p class="hero-summary" data-i18n="hero_summary">
+                    Scroll through the profile, squad cards, projects, favorite
+                    games, and the settings that control the whole experience.
+                  </p>
+
+                  <div class="action-row">
+                    <a
+                      href="mailto:support@bananabrother77.online"
+                      class="action-link action-link-primary"
+                    >
+                      <span data-i18n="contact_email">Email</span>
+                    </a>
+                    <a
+                      href="https://discord.gg/mcserverhost"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="action-link action-link-secondary"
+                    >
+                      <span data-i18n="contact_discord">Join Discord</span>
+                    </a>
+                    <a
+                      href="https://github.com/BananaBrother77"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="action-link action-link-ghost"
+                    >
+                      <span data-i18n="contact_github">GitHub</span>
+                    </a>
+                  </div>
+                </article>
+
+                <div class="hero-side-grid">
+                  <article class="panel stats-panel" data-reveal>
+                    <div class="panel-heading-inline">
+                      <div>
+                        <p class="panel-kicker" data-i18n="stats_title">
+                          Quick Stats
+                        </p>
+                        <h2 class="panel-title" data-i18n="stats_panel_title">
+                          Current Run
+                        </h2>
+                      </div>
+                    </div>
+
+                    <div class="stats-grid">
+                      <div class="stat-item">
+                        <span class="stat-number" data-value="6">0</span>
+                        <span class="stat-label" data-i18n="stats_years"
+                          >Months Coding</span
+                        >
+                      </div>
+                      <div class="stat-item">
+                        <span class="stat-number" data-value="3">0</span>
+                        <span class="stat-label" data-i18n="stats_projects"
+                          >Projects</span
+                        >
+                      </div>
+                      <div class="stat-item">
+                        <span class="stat-number" data-value="1">0</span>
+                        <span class="stat-label" data-i18n="stats_servers"
+                          >Servers Managed</span
+                        >
+                      </div>
+                      <div class="stat-item">
+                        <span class="stat-number" data-value="25298">0</span>
+                        <span class="stat-label" data-i18n="stats_community"
+                          >Community Members</span
+                        >
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="panel partner-panel" data-reveal>
+                    <div class="partner-heading">
+                      <img
+                        src="/assets/mcsh.png"
+                        alt="MCSH Logo"
+                        class="partner-logo"
+                      />
+                      <div>
+                        <p class="panel-kicker" data-i18n="hero_partner_label">
+                          Featured Partner
+                        </p>
+                        <h2 class="panel-title" data-i18n="mcsh_partner">
+                          Official Partner
+                        </h2>
+                        <p class="partner-copy" data-i18n="mcsh_desc">
+                          Reliable Hosting
+                        </p>
+                      </div>
+                    </div>
+                    <div class="action-row compact-actions">
+                      <a
+                        href="https://discord.gg/mcserverhost"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="action-link action-link-primary"
+                        data-i18n="btn_discord"
+                        >Join Discord</a
+                      >
+                      <a
+                        href="https://www.trustpilot.com/review/mcserverhost.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="action-link action-link-ghost"
+                        data-i18n="btn_trustpilot"
+                        >Trustpilot</a
+                      >
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="profile" class="page-section" data-title-key="profile_nav">
+          <div class="section-heading" data-reveal>
+            <p class="section-kicker" data-i18n="profile_heading_kicker">
+              Profile / Squad
+            </p>
+            <h2 class="section-title" data-i18n="profile_section_title">
+              Profile Grid
+            </h2>
+            <p class="section-copy" data-i18n="profile_section_desc">
+              Core info, squad cards, and the community connection behind the
+              profile.
+            </p>
+          </div>
+
+          <div class="profile-grid">
+            <article class="panel about-panel panel-wide" data-reveal>
+              <div class="panel-heading">
+                <div class="card-avatar small-avatar">
+                  <img
+                    src="https://raw.githubusercontent.com/BananaBrother77/global-assets/refs/heads/main/profile.jpeg"
+                    alt="BananaBrother77 profile"
+                    class="profile-img"
+                  />
+                </div>
+                <div>
+                  <p class="panel-kicker" data-i18n="profile_main_label">
+                    Main Profile
+                  </p>
+                  <h3 class="panel-title" data-i18n="profile_main_title">
+                    BananaBrother77
+                  </h3>
+                </div>
+              </div>
+
+              <div class="panel-split">
+                <ul class="identity-list">
+                  <li>
+                    <span data-i18n="info_lang_label">Languages:</span>
+                    <strong>DE / EN</strong>
+                  </li>
+                  <li>
+                    <span data-i18n="info_role_label">Role:</span>
+                    <strong>Staff @MCSH</strong>
+                  </li>
+                  <li>
+                    <span data-i18n="info_focus_label">Focus:</span>
+                    <strong>Frontend & Community</strong>
+                  </li>
+                  <li>
+                    <span data-i18n="info_status_label">Status:</span>
+                    <strong data-i18n="info_status_learning">Improving</strong>
+                  </li>
+                </ul>
+
+                <div class="card-story">
+                  <p data-i18n="role_support_desc">
+                    I love spending my time with funny people that have the same
+                    interests as me and I love learning new stuff. That's why
+                    I'm enjoying my time as a staff member at MCSH.
+                  </p>
+                  <div class="action-row compact-actions left-actions">
+                    <a
+                      href="https://github.com/BananaBrother77"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="action-link action-link-ghost"
+                      >GitHub</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="panel friend-panel" data-reveal>
+              <div class="panel-heading">
+                <div class="card-avatar">
+                  <img
+                    src="/assets/friend.jpeg"
+                    alt="David22"
+                    class="profile-img"
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <p class="panel-kicker" data-i18n="squad_label">Squad Card</p>
+                  <h3 class="panel-title">David22</h3>
+                </div>
+              </div>
+
+              <ul class="identity-list">
+                <li>
+                  <span>Name:</span>
+                  <strong>David22</strong>
+                </li>
+                <li>
+                  <span data-i18n="info_lang_label">Languages:</span>
+                  <strong>DE / EN</strong>
+                </li>
+                <li>
+                  <span data-i18n="info_role_label">Role:</span>
+                  <strong data-i18n="info_role_youtuber">YouTuber</strong>
+                </li>
+                <li>
+                  <span data-i18n="info_focus_label">Focus:</span>
+                  <strong data-i18n="info_status_watching_youtube"
+                    >Watching YouTube</strong
+                  >
+                </li>
+                <li>
+                  <span data-i18n="info_status_label">Status:</span>
+                  <strong data-i18n="info_status_youtubing">YouTubing</strong>
+                </li>
+              </ul>
+
+              <div class="card-story">
+                <p data-i18n="role_david_desc">Subscribe to David22_Kaiser</p>
+                <div class="action-row compact-actions left-actions">
+                  <a
+                    href="https://youtube.com/@david22_war?si=wIDFdfQJrDutXG2r"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="action-link action-link-ghost"
+                    data-i18n="david_youtube"
+                    >YouTube</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="panel friend-panel" data-reveal>
+              <div class="panel-heading">
+                <div class="card-avatar">
+                  <img
+                    src="/assets/profile-gf.png"
+                    alt="Christian"
+                    class="profile-img"
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <p class="panel-kicker" data-i18n="squad_label">Squad Card</p>
+                  <h3 class="panel-title">Christian</h3>
+                </div>
+              </div>
+
+              <ul class="identity-list">
+                <li>
+                  <span>Name:</span>
+                  <strong>Christian</strong>
+                </li>
+                <li>
+                  <span data-i18n="info_lang_label">Languages:</span>
+                  <strong>RU / EN / CH / ES</strong>
+                </li>
+                <li>
+                  <span data-i18n="info_role_label">Role:</span>
+                  <strong data-i18n="info_role_not_staff"
+                    >notStaff @MCSH</strong
+                  >
+                </li>
+                <li>
+                  <span data-i18n="info_focus_label">Focus:</span>
+                  <strong data-i18n="info_status_sleeping">Sleeping</strong>
+                </li>
+                <li>
+                  <span data-i18n="info_status_label">Status:</span>
+                  <strong data-i18n="info_status_gooning">Gooning</strong>
+                </li>
+              </ul>
+
+              <div class="card-story">
+                <p data-i18n="role_chris_desc">Hi, I'm Christian!</p>
+                <div class="action-row compact-actions left-actions">
+                  <a
+                    href="https://chr1sti4nz.edgeone.dev/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="action-link action-link-ghost"
+                    data-i18n="chris_web"
+                    >Website</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="panel community-panel panel-wide" data-reveal>
+              <div class="panel-heading">
+                <div>
+                  <p class="panel-kicker" data-i18n="community_label">
+                    Community Link
+                  </p>
+                  <h3 class="panel-title" data-i18n="title_mcsh">MCSH</h3>
+                </div>
+              </div>
+
+              <div class="card-story">
+                <p class="callout-title">
+                  <strong data-i18n="mcsh_question">What is MCSH?</strong>
+                </p>
+                <p data-i18n="mcsh_support_txt">
+                  MCServerHost alias MCSH is a premium quality minecraft server
+                  host, with tons of features, friendly people and even free
+                  servers
+                </p>
+                <div class="action-row compact-actions left-actions">
+                  <a
+                    href="https://discord.gg/mcserverhost"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="action-link action-link-primary"
+                    data-i18n="btn_discord"
+                    >Join Discord</a
+                  >
+                  <a
+                    href="https://www.trustpilot.com/review/mcserverhost.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="action-link action-link-ghost"
+                    data-i18n="btn_trustpilot"
+                    >Trustpilot</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="projects" class="page-section" data-title-key="projects">
+          <div class="section-heading" data-reveal>
+            <p class="section-kicker" data-i18n="projects_heading_kicker">
+              Project Queue
+            </p>
+            <h2 class="section-title" data-i18n="title_projects">Projects</h2>
+            <p class="section-copy" data-i18n="projects_intro">
+              Here are some of the projects I've been working on.
+            </p>
+          </div>
+
+          <div class="projects-layout">
+            <article class="panel project-panel" data-reveal>
+              <div class="project-header">
+                <div class="project-icon" aria-hidden="true">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <span class="project-status" data-i18n="project_status_learning"
+                  >In Progress</span
+                >
+              </div>
+
+              <h3 class="panel-title" data-i18n="project_secret_title">
+                Secret Project
+              </h3>
+              <p
+                class="card-story compact-story"
+                data-i18n="project_secret_desc"
+              >
+                A secret project that can't be disclosed yet
+              </p>
+
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">JavaScript</span>
+              </div>
+            </article>
+
+            <article class="panel project-support" data-reveal>
+              <div class="partner-heading">
+                <img
+                  src="/assets/mcsh.png"
+                  alt="MCSH Logo"
+                  class="partner-logo"
+                />
+                <div>
+                  <p class="panel-kicker" data-i18n="projects_partner_label">
+                    Powered By
+                  </p>
+                  <h3 class="panel-title" data-i18n="projects_powered_by">
+                    Powered by MCServerHost
+                  </h3>
+                </div>
+              </div>
+
+              <p
+                class="card-story compact-story"
+                data-i18n="projects_partner_desc"
+              >
+                Premium Minecraft Server Hosting Partner
+              </p>
+
+              <div class="action-row compact-actions left-actions">
+                <a
+                  href="https://mcserverhost.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="action-link action-link-ghost"
+                  data-i18n="btn_website"
+                  >Website</a
+                >
+                <a
+                  href="https://discord.gg/mcserverhost"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="action-link action-link-primary"
+                  data-i18n="btn_discord"
+                  >Discord</a
+                >
+                <a
+                  href="https://www.trustpilot.com/review/mcserverhost.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="action-link action-link-ghost"
+                  data-i18n="btn_trustpilot"
+                  >Trustpilot</a
+                >
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="gaming" class="page-section" data-title-key="gaming">
+          <div class="section-heading" data-reveal>
+            <p class="section-kicker" data-i18n="gaming_heading_kicker">
+              Loadout
+            </p>
+            <h2 class="section-title" data-i18n="title_games">
+              Favorite Games
+            </h2>
+            <p class="section-copy" data-i18n="gaming_section_desc">
+              The games that shape the vibe, pacing, and creativity behind the
+              profile.
+            </p>
+          </div>
+
+          <div class="game-grid">
+            <article class="panel game-card" data-reveal>
+              <div class="game-media">
+                <img
+                  src="/assets/minecraft.jpeg"
+                  alt="Minecraft cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="game-copy">
+                <h3 class="panel-title">Minecraft</h3>
+                <p data-i18n="game_mc_desc">
+                  Surviving in endless worlds, building complex Redstone
+                  machines, and connecting with the community on servers
+                </p>
+              </div>
+            </article>
+
+            <article class="panel game-card" data-reveal>
+              <div class="game-media">
+                <img
+                  src="/assets/portal.png"
+                  alt="Portal cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="game-copy">
+                <h3 class="panel-title">Portal 1 &amp; 2</h3>
+                <p data-i18n="game_portal_desc">
+                  Challenging logic puzzles and a unique story, all in the name
+                  of science
+                </p>
+              </div>
+            </article>
+
+            <article class="panel game-card" data-reveal>
+              <div class="game-media">
+                <img
+                  src="/assets/hollowknight.jpeg"
+                  alt="Hollow Knight cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="game-copy">
+                <h3 class="panel-title">Hollow Knight</h3>
+                <p data-i18n="game_hollow_desc">
+                  Exploring a vast, ruined kingdom, mastering challenging
+                  combat, and uncovering a deep, atmospheric story
+                </p>
+              </div>
+            </article>
+
+            <article class="panel game-card" data-reveal>
+              <div class="game-media">
+                <img src="/assets/hades.jpeg" alt="Hades cover" loading="lazy" />
+              </div>
+              <div class="game-copy">
+                <h3 class="panel-title">Hades</h3>
+                <p data-i18n="game_hades_desc">
+                  Battle out of hell, master godly powers, and experience a
+                  gripping story in this fast-paced rogue-like
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section
+          id="settings"
+          class="page-section"
+          data-title-key="settings_nav"
+        >
+          <div class="section-heading" data-reveal>
+            <p class="section-kicker" data-i18n="settings_heading_kicker">
+              Control Center
+            </p>
+            <h2 class="section-title" data-i18n="settings_title">
+              Control Center
+            </h2>
+            <p class="section-copy" data-i18n="settings_intro">
+              Tune the profile experience with language and theme controls.
+            </p>
+          </div>
+
+          <div class="control-grid">
+            <article class="panel control-panel" data-reveal>
+              <div class="panel-heading">
+                <div>
+                  <p class="panel-kicker" data-i18n="settings_lang_label">
+                    Language
+                  </p>
+                  <h3 class="panel-title" data-i18n="settings_lang_title">
+                    Language
+                  </h3>
+                </div>
+              </div>
+
+              <p
+                class="card-story compact-story"
+                data-i18n="settings_lang_desc"
+              >
+                Choose your preferred language.
+              </p>
+
+              <button
+                id="lang-setting"
+                class="action-link action-link-secondary"
+                type="button"
+                data-lang-toggle
+              >
+                German
+              </button>
+
+              <p class="control-hint" data-i18n="settings_shortcut_hint">
+                Shortcut: press L to switch language.
+              </p>
+            </article>
+
+            <article class="panel control-panel" data-reveal>
+              <div class="panel-heading">
+                <div>
+                  <p class="panel-kicker" data-i18n="settings_theme_label">
+                    Appearance
+                  </p>
+                  <h3 class="panel-title" data-i18n="settings_theme_title">
+                    Appearance
+                  </h3>
+                </div>
+              </div>
+
+              <p
+                class="card-story compact-story"
+                data-i18n="settings_theme_desc"
+              >
+                Select a theme color for the website.
+              </p>
+
+              <div class="theme-grid" role="group" aria-label="Theme selection">
+                <button class="theme-option" type="button" data-theme="default">
+                  <span class="theme-preview purple" aria-hidden="true"></span>
+                  <span data-i18n="theme_purple">Purple</span>
+                </button>
+                <button
+                  class="theme-option"
+                  type="button"
+                  data-theme="theme-red"
+                >
+                  <span class="theme-preview red" aria-hidden="true"></span>
+                  <span data-i18n="theme_red">Red</span>
+                </button>
+                <button
+                  class="theme-option"
+                  type="button"
+                  data-theme="theme-blue"
+                >
+                  <span class="theme-preview blue" aria-hidden="true"></span>
+                  <span data-i18n="theme_blue">Blue</span>
+                </button>
+                <button
+                  class="theme-option"
+                  type="button"
+                  data-theme="theme-yellow"
+                >
+                  <span class="theme-preview yellow" aria-hidden="true"></span>
+                  <span data-i18n="theme_yellow">Yellow</span>
+                </button>
+              </div>
+
+              <p class="control-hint" data-i18n="settings_theme_hint">
+                Shortcut: press T to cycle through the four themes.
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <span class="brand-mark footer-mark">BB</span>
+            <div>
+              <span class="footer-logo">BananaBrother77</span>
+              <p class="footer-copy" data-i18n="footer_tagline">
+                Modern gamer-inspired portfolio with a community focus.
+              </p>
+            </div>
+          </div>
+
+          <div class="footer-social">
+            <a
+              href="https://discord.gg/mcserverhost"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+              title="Discord"
+              aria-label="Discord"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://github.com/BananaBrother77"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+              title="GitHub"
+              aria-label="GitHub"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span data-i18n="footer_made">Made with</span>
+          <span class="footer-heart" aria-hidden="true">❤</span>
+          <span data-i18n="footer_and">and</span>
+          <span class="footer-code" data-i18n="footer_code">code</span>
+          <span class="footer-separator">/</span>
+          <span data-i18n="footer_rights">All rights reserved.</span>
+        </div>
+      </footer>
+    </div>
+
+    <script src="/translations.js"></script>
+    <script src="./ai.js"></script>
+  </body>
+</html>
