@@ -14,11 +14,12 @@ navLinks.forEach((link) => {
 });
 
 function renderPage(path) {
-  let page = path.replace('/', '');
-
-  if (page === '') {
-    page = 'home';
+  if (path === '/') {
+    history.pushState({}, '', '/home');
+    path = '/home';
   }
+
+  let page = path.replace('/', '');
 
   allTabs.forEach((tab) => tab.classList.remove('active'));
   navLinks.forEach((link) => link.classList.remove('active'));
@@ -219,13 +220,7 @@ if (statsSection) {
 
 // Page load
 document.addEventListener('DOMContentLoaded', () => {
-  if (location.pathname === '/' || location.pathname === '/index.html') {
-    window.location.replace('/home');
-    return;
-  }
-  if (location.pathname !== '/404.html') {
-    renderPage(location.pathname);
-  }
+  renderPage(location.pathname);
   applyTranslations();
   initScrollReveal();
 });
