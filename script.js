@@ -1,132 +1,140 @@
-const navLinks = document.querySelectorAll('.nav-link');
-const allTabs = document.querySelectorAll('.tab-content');
-
-navLinks.forEach((link) => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-
-    const path = link.getAttribute('href');
-
-    history.pushState({}, '', path);
-
-    renderPage(path);
-  });
-});
-
-function renderPage(path) {
-  if (path === '/') {
-    history.pushState({}, '', '/home');
-    path = '/home';
-  }
-
-  let page = path.replace('/', '');
-
-  allTabs.forEach((tab) => tab.classList.remove('active'));
-  navLinks.forEach((link) => link.classList.remove('active'));
-
-  const activeTab = document.getElementById(page);
-  const activeLink = document.querySelector(`.nav-link[href="${path}"]`);
-
-  if (activeLink) {
-    activeLink.classList.add('active');
-  }
-
-  if (activeTab) {
-    activeTab.classList.add('active');
-  }
-
-  updateTitle(page);
-  window.scrollTo(0, 0);
-}
-
-window.addEventListener('popstate', () => {
-  renderPage(location.pathname);
-});
-
-function updateTitle(page) {
-  const titles = {
-    home: 'BananaBrother77 | Home',
-    information: 'BananaBrother77 | Information',
-    projects: 'BananaBrother77 | Projects',
-    gaming: 'BananaBrother77 | Gaming',
-    settings: 'BananaBrother77 | Settings',
-  };
-
-  document.title = titles[page] || 'BananBrother77';
-}
-
-// Theme Switching
-let savedTheme = localStorage.getItem('savedTheme');
-
-if (savedTheme && savedTheme !== 'default') {
-  document.body.classList.add(savedTheme);
-}
-
-document.querySelectorAll('.theme-option').forEach((option) => {
-  option.addEventListener('click', () => {
-    const theme = option.getAttribute('data-theme');
-    document.body.classList.className = '';
-
-    changeTheme(theme);
-
-    localStorage.setItem('savedTheme', theme);
-  });
-});
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 't') checkTheme();
-});
-
-function checkTheme() {
-  if (savedTheme == 'default') {
-    changeTheme('theme-red');
-    return;
-  }
-  if (savedTheme == 'theme-red') {
-    changeTheme('theme-blue');
-    return;
-  }
-  if (savedTheme == 'theme-blue') {
-    changeTheme('theme-yellow');
-    return;
-  }
-  if (savedTheme == 'theme-yellow') {
-    changeTheme('default');
-    return;
-  }
-}
-
-function changeTheme(theme) {
-  document.body.className = '';
-  document.body.classList.add(theme);
-  localStorage.setItem('savedTheme', theme);
-  savedTheme = theme;
-}
-
-// Language Toggle
+const tabNavLinks = Array.from(document.querySelectorAll('.nav-link[href]'));
+const allTabs = Array.from(document.querySelectorAll('.tab-content'));
+const themeOptions = Array.from(document.querySelectorAll('.theme-option[data-theme]'));
 const langBtn = document.getElementById('lang-switch');
 const langSetting = document.getElementById('lang-setting');
+const statsSection = document.querySelector('.stats-section');
+const validPages = new Set(allTabs.map((tab) => tab.id));
+const themeOrder = ['default', 'theme-red', 'theme-blue', 'theme-yellow'];
+const titleKeys = {
+  home: 'home',
+  information: 'information',
+  projects: 'projects',
+  gaming: 'gaming',
+  settings: 'settings',
+};
+
+let savedTheme = localStorage.getItem('savedTheme') || 'default';
 let currentLang = localStorage.getItem('language') || 'en';
+let currentPage = validPages.has(getPageFromPath(location.pathname))
+  ? getPageFromPath(location.pathname)
+  : 'home';
+
+function getTranslation(key) {
+  return translations[currentLang]?.[key] || translations.en?.[key] || '';
+}
+
+function normalizePath(path) {
+  if (!path || path === '/') return '/home';
+
+  return path.endsWith('/') ? path.replace(/\/+$/, '') || '/home' : path;
+}
+
+function getPageFromPath(path) {
+  return normalizePath(path).replace(/^\/+/, '');
+}
+
+function syncHistory(path, replace = false) {
+  if (location.pathname === path) return;
+
+  history[replace ? 'replaceState' : 'pushState']({}, '', path);
+}
+
+function updateTitle(page = currentPage) {
+  if (!validPages.size) return;
+
+  const titleKey = titleKeys[page];
+  const label = getTranslation(titleKey) || 'Home';
+  document.title = `BananaBrother77 | ${label}`;
+}
+
+function setActivePage(page) {
+  currentPage = page;
+
+  allTabs.forEach((tab) => {
+    tab.classList.toggle('active', tab.id === page);
+  });
+
+  tabNavLinks.forEach((link) => {
+    const isActive = link.getAttribute('href') === `/${page}`;
+    link.classList.toggle('active', isActive);
+
+    if (isActive) {
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.removeAttribute('aria-current');
+    }
+  });
+}
+
+function renderPage(path, { replace = false, scroll = true } = {}) {
+  if (!validPages.size) return false;
+
+  let nextPath = normalizePath(path);
+  let page = getPageFromPath(nextPath);
+
+  if (!validPages.has(page)) {
+    nextPath = '/home';
+    page = 'home';
+    replace = true;
+  }
+
+  syncHistory(nextPath, replace);
+  setActivePage(page);
+  updateTitle(page);
+
+  if (scroll) {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }
+
+  return true;
+}
+
+function applyTheme(theme) {
+  const nextTheme = themeOrder.includes(theme) ? theme : 'default';
+
+  document.body.classList.remove('theme-red', 'theme-blue', 'theme-yellow');
+
+  if (nextTheme !== 'default') {
+    document.body.classList.add(nextTheme);
+  }
+
+  savedTheme = nextTheme;
+  localStorage.setItem('savedTheme', nextTheme);
+
+  themeOptions.forEach((option) => {
+    const isActive = option.dataset.theme === nextTheme;
+    option.setAttribute('aria-pressed', String(isActive));
+  });
+}
+
+function cycleTheme() {
+  const currentIndex = themeOrder.indexOf(savedTheme);
+  const nextTheme = themeOrder[(currentIndex + 1) % themeOrder.length];
+  applyTheme(nextTheme);
+}
 
 function applyTranslations() {
-  const elements = document.querySelectorAll('[data-i18n]');
-  elements.forEach((element) => {
+  document.querySelectorAll('[data-i18n]').forEach((element) => {
     const key = element.getAttribute('data-i18n');
-    if (translations[currentLang] && translations[currentLang][key]) {
-      element.textContent = translations[currentLang][key];
+    const value = getTranslation(key);
+
+    if (value) {
+      element.textContent = value;
     }
   });
 
-  // Set html lang attribute dynamically
   document.documentElement.lang = currentLang;
 
-  // Update language button text
   if (langBtn) {
     langBtn.textContent = currentLang === 'de' ? 'EN / DE' : 'DE / EN';
   }
+
   if (langSetting) {
-    langSetting.textContent = currentLang === 'de' ? 'Englisch' : 'German';
+    langSetting.textContent = getTranslation('language_switch_target');
   }
+
+  updateTitle();
 }
 
 function toggleLanguage() {
@@ -135,27 +143,82 @@ function toggleLanguage() {
   applyTranslations();
 }
 
-if (langBtn) langBtn.addEventListener('click', toggleLanguage);
-if (langSetting) langSetting.addEventListener('click', toggleLanguage);
+function initNavigation() {
+  if (!validPages.size) return;
 
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'l') toggleLanguage();
-});
+  tabNavLinks.forEach((link) => {
+    const path = link.getAttribute('href');
+    const page = getPageFromPath(path);
 
-// Scroll Reveal Animation
+    if (!validPages.has(page)) return;
+
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      renderPage(path);
+    });
+  });
+
+  window.addEventListener('popstate', () => {
+    renderPage(location.pathname, { replace: true, scroll: false });
+  });
+}
+
+function initThemeControls() {
+  themeOptions.forEach((option) => {
+    option.addEventListener('click', () => {
+      applyTheme(option.dataset.theme || 'default');
+    });
+  });
+}
+
+function isTypingTarget(target) {
+  return (
+    target instanceof HTMLElement &&
+    (target.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName))
+  );
+}
+
+function initShortcuts() {
+  document.addEventListener('keydown', (event) => {
+    if (isTypingTarget(event.target)) return;
+
+    const key = event.key.toLowerCase();
+
+    if (key === 't') {
+      cycleTheme();
+    }
+
+    if (key === 'l') {
+      toggleLanguage();
+    }
+  });
+}
+
 function initScrollReveal() {
   const revealElements = document.querySelectorAll(
-    '.card, .stats-section, .contact-section, .game-card, .project-card',
+    '.card, .settings-card, .stats-section, .contact-section, .game-card, .project-card, .projects-partner, .mcsh-feature',
   );
+
+  if (!revealElements.length) return;
+
+  revealElements.forEach((element) => {
+    element.classList.add('reveal');
+  });
+
+  if (!('IntersectionObserver' in window)) {
+    revealElements.forEach((element) => {
+      element.classList.add('is-visible');
+    });
+    return;
+  }
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
       });
     },
     {
@@ -164,64 +227,74 @@ function initScrollReveal() {
     },
   );
 
-  revealElements.forEach((el) => {
-    el.classList.add('reveal');
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'all 0.8s ease';
-    observer.observe(el);
+  revealElements.forEach((element) => {
+    observer.observe(element);
   });
 }
 
-// Animate stat numbers
 function animateStats() {
-  const statNumbers = document.querySelectorAll('.stat-number');
+  const statNumbers = document.querySelectorAll('.stat-number[data-value]');
 
   statNumbers.forEach((stat) => {
-    const finalValue = stat.getAttribute('data-value');
-    if (!finalValue) return;
+    const finalValue = parseInt(stat.dataset.value || '', 10);
+    if (Number.isNaN(finalValue)) return;
 
     const duration = 2000;
     const steps = 60;
-    const increment = parseInt(finalValue) / steps;
+    const increment = finalValue / steps;
     let current = 0;
     let step = 0;
 
-    const timer = setInterval(() => {
-      step++;
-      current = Math.min(current + increment, parseInt(finalValue));
-      stat.textContent = Math.round(current);
+    const timer = window.setInterval(() => {
+      step += 1;
+      current = Math.min(current + increment, finalValue);
+      stat.textContent = String(Math.round(current));
 
       if (step >= steps) {
-        clearInterval(timer);
-        stat.textContent = finalValue;
+        window.clearInterval(timer);
+        stat.textContent = String(finalValue);
       }
     }, duration / steps);
   });
 }
 
-// Trigger stat animation when stats section is visible
-const statsObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
+function initStats() {
+  if (!statsSection || !('IntersectionObserver' in window)) return;
+
+  const statsObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
         animateStats();
         statsObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.5 },
-);
+      });
+    },
+    { threshold: 0.5 },
+  );
 
-const statsSection = document.querySelector('.stats-section');
-if (statsSection) {
   statsObserver.observe(statsSection);
 }
 
-// Page load
+if (langBtn) {
+  langBtn.addEventListener('click', toggleLanguage);
+}
+
+if (langSetting) {
+  langSetting.addEventListener('click', toggleLanguage);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  if (location.pathname === '/' || location.pathname === '')
-    renderPage(location.pathname);
+  applyTheme(savedTheme);
   applyTranslations();
+  initNavigation();
+  initThemeControls();
+  initShortcuts();
+
+  if (validPages.size) {
+    renderPage(location.pathname, { replace: true, scroll: false });
+  }
+
   initScrollReveal();
+  initStats();
 });

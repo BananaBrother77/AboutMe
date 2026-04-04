@@ -27,21 +27,13 @@
     <nav class="navbar">
       <div class="nav-logo">BananaBrother77</div>
       <div class="nav-links">
-        <a class="nav-link active" href="/">
-          <p data-i18n="home">Home</p>
-        </a>
-        <a class="nav-link" href="/information">
-          <p data-i18n="information">Information</p>
-        </a>
-        <a class="nav-link" href="/projects">
-          <p data-i18n="projects">Projects</p>
-        </a>
-        <a class="nav-link" href="/gaming">
-          <p data-i18n="gaming">Gaming</p>
-        </a>
-        <a class="nav-link" href="/settings">
-          <p data-i18n="settings">Settings</p>
-        </a>
+        <a class="nav-link active" href="/" data-i18n="home">Home</a>
+        <a class="nav-link" href="/information" data-i18n="information"
+          >Information</a
+        >
+        <a class="nav-link" href="/projects" data-i18n="projects">Projects</a>
+        <a class="nav-link" href="/gaming" data-i18n="gaming">Gaming</a>
+        <a class="nav-link" href="/settings" data-i18n="settings">Settings</a>
         <button id="lang-switch" class="nav-link lang-toggle">EN / DE</button>
       </div>
     </nav>
@@ -61,13 +53,12 @@
         <p class="subtitle" data-i18n="404_subtitle"></p>
 
         <div class="mcsh-action" style="margin-top: 35px">
-          <a href="/" class="action-link discord" style="margin-right: 15px">
+          <a href="/" class="action-link primary" style="margin-right: 15px">
             <span data-i18n="404_btn_home">Go Home</span>
           </a>
           <button
             onclick="location.reload()"
-            class="action-link review"
-            style="cursor: pointer"
+            class="action-link secondary"
           >
             <span data-i18n="404_btn_reload">Reload (Won't help)</span>
           </button>
@@ -129,8 +120,13 @@
         </div>
       </div>
       <div class="footer-bottom">
-        Made with <span style="color: #ff4d4d">❤</span> and code — All rights
-        reserved.
+        <span data-i18n="footer_made">Made with</span>
+        <span style="color: #ff4d4d">❤</span>
+        <span data-i18n="footer_and">and</span>
+        <span style="color: var(--accent-color)" data-i18n="footer_code"
+          >code</span
+        >
+        — <span data-i18n="footer_rights">All rights reserved.</span>
       </div>
     </footer>
   </body>

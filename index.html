@@ -31,21 +31,13 @@
     <nav class="navbar">
       <div class="nav-logo">BananaBrother77</div>
       <div class="nav-links">
-        <a class="nav-link active" href="/home">
-          <p data-i18n="home">Home</p>
-        </a>
-        <a class="nav-link" href="/information">
-          <p data-i18n="information">Information</p>
-        </a>
-        <a class="nav-link" href="/projects">
-          <p data-i18n="projects">Projects</p>
-        </a>
-        <a class="nav-link" href="/gaming">
-          <p data-i18n="gaming">Gaming</p>
-        </a>
-        <a class="nav-link" href="/settings">
-          <p data-i18n="settings">Settings</p>
-        </a>
+        <a class="nav-link active" href="/home" data-i18n="home">Home</a>
+        <a class="nav-link" href="/information" data-i18n="information"
+          >Information</a
+        >
+        <a class="nav-link" href="/projects" data-i18n="projects">Projects</a>
+        <a class="nav-link" href="/gaming" data-i18n="gaming">Gaming</a>
+        <a class="nav-link" href="/settings" data-i18n="settings">Settings</a>
         <button id="lang-switch" class="nav-link lang-toggle">EN / DE</button>
       </div>
     </nav>
@@ -71,7 +63,7 @@
             <span class="badge" data-i18n="badge_learning"
               >Learning Frontend</span
             >
-            <span class="badge discord" data-i18n="mcsh_partner"
+            <span class="badge badge-accent" data-i18n="mcsh_partner"
               >Official Partner</span
             >
           </div>
@@ -206,7 +198,7 @@
                 href="https://discord.gg/mcserverhost"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="action-link discord"
+                class="action-link primary"
                 data-i18n="btn_discord"
                 >Join Discord</a
               >
@@ -214,7 +206,7 @@
                 href="https://www.trustpilot.com/review/mcserverhost.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="action-link review"
+                class="action-link secondary"
                 >Trustpilot</a
               >
             </div>
@@ -224,7 +216,9 @@
 
       <!-- INFORMATION SECTION -->
       <section id="information" class="tab-content">
-        <h2 class="section-title" data-i18n="title_roles">Information</h2>
+        <h2 class="section-title" data-i18n="title_information">
+          Information
+        </h2>
 
         <div class="card info-card">
           <div class="info-top">
@@ -266,7 +260,7 @@
                 href="https://github.com/BananaBrother77"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="action-link review"
+                class="action-link secondary"
                 >GitHub</a
               >
             </div>
@@ -309,8 +303,8 @@
                 href="https://youtube.com/@david22_war?si=wIDFdfQJrDutXG2r"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="action-link review"
-                data-i18n="david-youtube"
+                class="action-link secondary"
+                data-i18n="david_youtube"
                 >YouTube</a
               >
             </div>
@@ -355,8 +349,8 @@
                 href="https://chr1sti4nz.edgeone.dev/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="action-link review"
-                data-i18n="chris-web"
+                class="action-link secondary"
+                data-i18n="chris_web"
                 >Website</a
               >
             </div>
@@ -381,7 +375,7 @@
                 href="https://discord.gg/mcserverhost"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="action-link discord"
+                class="action-link primary"
                 data-i18n="btn_discord"
                 >Join Discord</a
               >
@@ -389,7 +383,7 @@
                 href="https://www.trustpilot.com/review/mcserverhost.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="action-link review"
+                class="action-link secondary"
                 >Trustpilot</a
               >
             </div>
@@ -590,7 +584,8 @@
           <p data-i18n="settings_lang_desc">Choose your preferred language.</p>
           <button
             id="lang-setting"
-            class="action-link review badge lang-setting-btn"
+            type="button"
+            class="action-link secondary lang-setting-btn"
           >
             German
           </button>
@@ -603,22 +598,42 @@
           </p>
 
           <div class="theme-grid">
-            <div class="theme-option purple" data-theme="default">
+            <button
+              class="theme-option purple"
+              type="button"
+              data-theme="default"
+              aria-pressed="true"
+            >
               <div class="theme-preview purple"></div>
               <span data-i18n="theme_purple">Purple</span>
-            </div>
-            <div class="theme-option red" data-theme="theme-red">
+            </button>
+            <button
+              class="theme-option red"
+              type="button"
+              data-theme="theme-red"
+              aria-pressed="false"
+            >
               <div class="theme-preview red"></div>
               <span data-i18n="theme_red">Red</span>
-            </div>
-            <div class="theme-option blue" data-theme="theme-blue">
+            </button>
+            <button
+              class="theme-option blue"
+              type="button"
+              data-theme="theme-blue"
+              aria-pressed="false"
+            >
               <div class="theme-preview blue"></div>
               <span data-i18n="theme_blue">Blue</span>
-            </div>
-            <div class="theme-option yellow" data-theme="theme-yellow">
+            </button>
+            <button
+              class="theme-option yellow"
+              type="button"
+              data-theme="theme-yellow"
+              aria-pressed="false"
+            >
               <div class="theme-preview yellow"></div>
               <span data-i18n="theme_yellow">Yellow</span>
-            </div>
+            </button>
           </div>
         </div>
       </section>
