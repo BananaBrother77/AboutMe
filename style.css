@@ -456,11 +456,6 @@ body {
   justify-content: flex-start;
 }
 
-/* Settings Card Variations */
-.settings-card-lang {
-  /* Language settings card specific styles if needed */
-}
-
 .lang-setting-btn {
   margin-top: 15px;
   cursor: pointer;

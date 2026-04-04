@@ -219,6 +219,10 @@ if (statsSection) {
 
 // Page load
 document.addEventListener('DOMContentLoaded', () => {
+  if (location.pathname === '/' || location.pathname === '/index.html') {
+    window.location.replace('/home');
+    return;
+  }
   if (location.pathname !== '/404.html') {
     renderPage(location.pathname);
   }
