@@ -4,7 +4,7 @@
 
 <img src="https://raw.githubusercontent.com/BananaBrother77/global-assets/refs/heads/main/profile.jpeg" alt="Portfolio Preview" width="120" height="120" style="border-radius: 50%;">
 
-_A modern, responsive personal portfolio showcasing roles, skills, and favorite games_
+_A static personal portfolio with bilingual UI, theme switching, and client-side routes._
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -16,100 +16,107 @@ _A modern, responsive personal portfolio showcasing roles, skills, and favorite 
 
 ## ✨ Features
 
-### 🌍 Internationalization (i18n)
+- Bilingual interface with shared **English** and **German** translations
+- **4 theme presets** saved in `localStorage`
+- Client-side route navigation for `/home`, `/information`, `/projects`, `/gaming`, and `/settings`
+- Animated stat counters, reveal transitions, and responsive layouts
+- Keyboard shortcuts: `L` for language, `T` for theme cycling
+- Custom `404.html`, `humans.txt`, `sitemap.xml`, favicons, and redirect rules for static hosting
 
-- Full **English** and **German** language support
-- Automatic language detection based on browser settings
-- Language preference persisted in localStorage
-- Seamless switching without page reload
+---
 
-### 🎨 Theme System
+## 🌐 Routes
 
-- **4 color themes**: Purple (default), Red, Blue, Yellow
-- Theme preference saved in localStorage
-- Smooth transitions between themes
-- Custom CSS variables for easy customization
+### Main Portfolio
 
-### 📑 Tab Navigation
+- `/` → redirects in-app to `/home`
+- `/home`
+- `/information`
+- `/projects`
+- `/gaming`
+- `/settings`
 
-- **Home** - Hero section with profile and badges
-- **Information** - Personal details and role descriptions
-- **Projects** - Showcase of current projects
-- **Gaming** - Favorite games
-- **Settings** - Language and theme preferences
+### Extra Pages
 
-### 📱 Responsive Design
-
-- Mobile-first approach
-- Adaptive layouts for all screen sizes
-- Touch-friendly navigation
-- Optimized performance
-
-### ⚡ Interactive Elements
-
-- Smooth animations and transitions
-- Hover effects on cards and buttons
-- Tab switching with slide-up animation
-- Animated particle background
-- Stat counter animations
-- Scroll-to-top on navigation
+- `/github` → redirects to the GitHub profile
+- `/maxim` → redirects to `maximerix.dev`
+- `/humans` → `humans.txt`
+- Unknown routes fall back to `index.html` through `_redirects`
+- `404.html` is included as a standalone error page
 
 ---
 
 ## 🚀 Live Site
 
-Check out the live portfolio at: **[bananabrother77.online](https://bananabrother77.online)**
+- Main site: [bananabrother77.online](https://bananabrother77.online)
 
 ---
 
-## 📁 Project Structure
+## 🧱 Project Structure
 
-```
+```text
 AboutMe/
-├── assets/                    # Static assets
-│   ├── profile-gf.png        # Secondary profile image
-│   ├── minecraft.jpeg        # Game cover image
-│   ├── portal.png            # Game cover image
-│   ├── hollowknight.jpeg     # Game cover image
-│   ├── hades.jpeg            # Game cover image
-│   └── mcsh.png              # MCServerHost logo
-├── index.html                # Main HTML structure
-├── style.css                 # All styling and themes
-├── script.js                 # JavaScript logic
-└── translations.js           # i18n translations
+├── assets/                    # Images and logos used across the site
+├── 404.html                   # Standalone not-found page
+├── _redirects                 # Static host rewrite and redirect rules
+├── favicon.ico
+├── favicon.png
+├── humans.txt                 # Small human-readable site note
+├── index.html                 # Main portfolio shell
+├── README.md
+├── script.js                  # Routing, theme, language, and animation logic
+├── sitemap.xml                # Search engine sitemap
+├── style.css                  # Main portfolio styling
+└── translations.js            # Shared EN/DE translation strings
 ```
 
 ---
 
 ## 🛠️ Technologies
 
-- **HTML5** - Semantic markup
-- **CSS3** - Modern styling with CSS variables
-- **JavaScript (ES6+)** - Vanilla JavaScript
-- **Google Fonts** - Inter font family
-- **Devicon** - Technology icons via CDN
+- **HTML5** for markup
+- **CSS3** with custom properties and theme classes
+- **Vanilla JavaScript** for routing, translations, theme switching, and UI behavior
+- **Google Fonts** (`Inter`)
+- **Devicon/CDN assets** for platform icons
+
+No framework or build step is required for the main site.
+
+---
+
+## ▶️ Local Development
+
+Serve the repository with any static file server.
+
+```bash
+python -m http.server 8080
+```
+
+Then open [http://localhost:8080/](http://localhost:8080/).
+
+Note: direct deep links like `/projects` need rewrite support from the host. The repo includes `_redirects` for deployment, but a basic local server may only work reliably if you start at `/` and navigate inside the site.
+
+---
+
+## 🚢 Deployment Notes
+
+- This project is designed for static hosting
+- `_redirects` handles SPA-style rewrites plus shortcut redirects like `/github` and `/maxim`
+- `sitemap.xml`, `humans.txt`, and the favicon files are shipped as static assets
 
 ---
 
 ## 🔗 Links
 
-- **Portfolio**: [bananabrother77.online](https://bananabrother77.online)
-- **GitHub**: [@BananaBrother77](https://github.com/BananaBrother77)
-- **Discord**: [MCServerHost Community](https://discord.gg/mcserverhost)
+- Portfolio: [bananabrother77.online](https://bananabrother77.online)
+- GitHub: [@BananaBrother77](https://github.com/BananaBrother77)
+- Discord: [MCServerHost Community](https://discord.gg/mcserverhost)
 
 ---
 
 ## 📝 License
 
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-## 🙏 Acknowledgments
-
-- [MCServerHost](https://mcserverhost.com) - Hosting partner
-- [Devicon](https://devicon.dev) - Technology icons
-- [Google Fonts](https://fonts.google.com) - Inter font family
+This repository does not currently include a license file.
 
 ---
 
