@@ -220,7 +220,8 @@ if (statsSection) {
 
 // Page load
 document.addEventListener('DOMContentLoaded', () => {
-  renderPage(location.pathname);
+  if (location.pathname === '/' || location.pathname === '')
+    renderPage(location.pathname);
   applyTranslations();
   initScrollReveal();
 });
