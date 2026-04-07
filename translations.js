@@ -44,7 +44,12 @@ const translations = {
     projects_intro: "Here are some of the projects I've been working on.",
     project_secret_title: 'Secret Project',
     project_secret_desc: "A secret project that can't be disclosed yet",
+    project_mcserverstatus_title: 'MCServerStatus',
+    project_mcserverstatus_desc:
+      'Made to check my private server status but that is boring, check every java server status by yourself.',
     project_status_learning: 'In Progress',
+    project_status_active: 'Active',
+    project_view: 'View Project',
     projects_powered_by: 'Powered by MCServerHost',
     projects_partner_desc: 'Premium Minecraft Server Hosting Partner',
     title_games: 'Favorite Games',
@@ -126,7 +131,12 @@ const translations = {
     project_secret_title: 'Geheimes Projekt',
     project_secret_desc:
       'Ein geheimes Projekt, das noch nicht bekannt gegeben werden kann',
+    project_mcserverstatus_title: 'MCServerStatus',
+    project_mcserverstatus_desc:
+      'Erstellt, um den Status meines privaten Servers zu überprüfen, aber das ist langweilig. Überprüfe jeden Java-Serverstatus selbst.',
     project_status_learning: 'In Arbeit',
+    project_status_active: 'Aktiv',
+    project_view: 'Projekt ansehen',
     projects_powered_by: 'Unterstützt von MCServerHost',
     projects_partner_desc: 'Premium Minecraft Server Hosting Partner',
     title_games: 'Lieblingsspiele',

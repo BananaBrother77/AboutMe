@@ -744,6 +744,36 @@ body {
   color: var(--accent-color);
 }
 
+.project-actions {
+  margin-bottom: 20px;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--accent-color);
+  color: white !important;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+.project-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--accent-glow);
+  filter: brightness(1.1);
+}
+
+.project-link svg {
+  width: 18px;
+  height: 18px;
+}
+
 /* Partner Section */
 .projects-partner {
   background: var(--card-bg);
