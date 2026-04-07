@@ -15,7 +15,7 @@
 
   function isAllowed(pathname) {
     const clean = normalize(pathname);
-    if (clean === '' || clean === '/') return false;
+    if (clean === '' || clean === '/') return true;
     return ALLOWED_PATHS.some((p) => clean === p || clean.startsWith(p + '/'));
   }
 
