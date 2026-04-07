@@ -1,6 +1,8 @@
 const tabNavLinks = Array.from(document.querySelectorAll('.nav-link[href]'));
 const allTabs = Array.from(document.querySelectorAll('.tab-content'));
-const themeOptions = Array.from(document.querySelectorAll('.theme-option[data-theme]'));
+const themeOptions = Array.from(
+  document.querySelectorAll('.theme-option[data-theme]'),
+);
 const langBtn = document.getElementById('lang-switch');
 const langSetting = document.getElementById('lang-setting');
 const statsSection = document.querySelector('.stats-section');
@@ -73,12 +75,16 @@ function renderPage(path, { replace = false, scroll = true } = {}) {
   let nextPath = normalizePath(path);
   let page = getPageFromPath(nextPath);
 
-  if (!validPages.has(page)) {
+  // Always allow root as home, no fallback redirect
+  if (path === '/' || path === '' || !validPages.has(page)) {
     nextPath = '/home';
     page = 'home';
     replace = true;
   }
 
+  console.log(
+    `[Router] Rendering "${path}" -> "${page}" (replace: ${replace})`,
+  );
   syncHistory(nextPath, replace);
   setActivePage(page);
   updateTitle(page);
@@ -174,7 +180,8 @@ function initThemeControls() {
 function isTypingTarget(target) {
   return (
     target instanceof HTMLElement &&
-    (target.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName))
+    (target.isContentEditable ||
+      ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName))
   );
 }
 

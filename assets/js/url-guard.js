@@ -1,5 +1,6 @@
 (function () {
   const ALLOWED_PATHS = [
+    '/',
     '/home',
     '/information',
     '/projects',
@@ -16,6 +17,7 @@
   function isAllowed(pathname) {
     const clean = normalize(pathname);
     if (clean === '' || clean === '/') return true;
+    console.log(`[URL Guard] Checking path: "${clean}"`); // Debug
     return ALLOWED_PATHS.some((p) => clean === p || clean.startsWith(p + '/'));
   }
 
@@ -23,10 +25,13 @@
     const pathname = window.location.pathname;
 
     if (!isAllowed(pathname)) {
-      console.warn(
-        `[URL Guard] Path not allowed:"${pathname}" - redirect to ${REDIRECT_TO}`,
+      console.error(
+        // error for visibility
+        `[URL Guard] Path not allowed: "${pathname}" -> ${REDIRECT_TO}`,
       );
       window.location.replace(REDIRECT_TO);
+    } else {
+      console.log(`[URL Guard] Allowed: ${pathname}`);
     }
   }
 
