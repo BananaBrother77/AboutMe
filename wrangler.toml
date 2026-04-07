@@ -1,0 +1,17 @@
+name = "aboutme"
+main = "index.html"
+compatibility_date = "2024-10-01"
+
+# Cloudflare Pages SPA Rewrite Rule
+[[rules]]
+type = "PageRule"
+matchers = [
+  { type = "path", value = "*" }
+]
+actions = [
+  { type = "Rewrite", source = "/index.html" }
+]
+
+# Alternative dashboard rule:
+# * mysubdomain.online/*
+# Forwarding URL: https://mysubdomain.online/index.html (200)
