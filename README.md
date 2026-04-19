@@ -111,6 +111,7 @@ Note: direct deep links like `/projects` need rewrite support from the host. The
 - Portfolio: [bananabrother77.online](https://bananabrother77.online)
 - GitHub: [@BananaBrother77](https://github.com/BananaBrother77)
 - Discord: [MCServerHost Community](https://discord.gg/mcserverhost)
+- Discord: [Banana Studios](https://discord.gg/mtzPBcjUHN)
 
 ---
 
