@@ -3,86 +3,115 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Web Development & Community Support. Staff @MCServerHost." />
+    <meta property="og:title" content="BananaBrother77" />
+    <meta property="og:description" content="Web Development & Community Integration." />
+    <meta property="og:image" content="https://raw.githubusercontent.com/BananaBrother77/global-assets/refs/heads/main/profile.jpeg" />
+    <meta name="theme-color" content="#7c58cc" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     <title>BananaBrother77</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <nav class="navbar">
+    <nav class="navbar reveal">
       <div class="nav-links">
-        <a href="#home" class="nav-link active">Home</a>
-        <a href="#information" class="nav-link">Information</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#gaming" class="nav-link">Gaming</a>
-        <a href="#settings" class="nav-link">Settings</a>
+        <a href="#home" class="nav-link active">
+          <i data-lucide="home" width="16" height="16"></i>
+          Home
+        </a>
+        <a href="#information" class="nav-link">
+          <i data-lucide="info" width="16" height="16"></i>
+          Information
+        </a>
+        <a href="#projects" class="nav-link">
+          <i data-lucide="code" width="16" height="16"></i>
+          Projects
+        </a>
+        <a href="#gaming" class="nav-link">
+          <i data-lucide="gamepad-2" width="16" height="16"></i>
+          Gaming
+        </a>
+        <a href="#settings" class="nav-link">
+          <i data-lucide="settings" width="16" height="16"></i>
+          Settings
+        </a>
       </div>
     </nav>
 
     <main class="app-wrapper">
-      <!-- Main content -->
-      <div class="hero-row">
-        <section class="start-profile">
-          <div class="container">
-            <img
-              src="https://raw.githubusercontent.com/BananaBrother77/global-assets/refs/heads/main/profile.jpeg"
-              alt="Profile Picture"
-              class="pfp"
-            />
+      <!-- ============================================================
+           TOP ROW: Profile | Stats | Socials
+           ============================================================ -->
+      <div class="top-row">
+        <section class="profile-card panel reveal">
+          <img
+            src="https://raw.githubusercontent.com/BananaBrother77/global-assets/refs/heads/main/profile.jpeg"
+            alt="Profile Picture"
+            class="pfp"
+          />
+          <h1 class="profile-name">BananaBrother77</h1>
+          <p class="profile-description">
+            I love spending my time with funny people that have the same
+            interests as me and I love learning new stuff. That's why I'm
+            enjoying my time as a staff member at MCSH.
+          </p>
+          <div class="badge-container">
+            <span class="badge">Learning Frontend</span>
+            <span class="badge badge-accent">Official Partner</span>
           </div>
-          <div class="profile-information">
-            <h1 class="profile-name">BananaBrother77</h1>
-            <p class="profile-description">
-              I love spending my time with funny people that have the same
-              interests as me and I love learning new stuff. That's why I'm
-              enjoying my time as a staff member at MCSH.
-            </p>
+          <div class="platform-icons">
+            <img src="assets/mcsh.png" title="MCServerHost" alt="MCSH" class="mini-logo" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" title="JavaScript" alt="JS" class="mini-logo" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" title="HTML5" alt="HTML" class="mini-logo" />
           </div>
         </section>
 
         <div class="right-column">
-          <section class="stats-section">
+          <section class="stats-section panel reveal">
             <div class="stat-card">
-              <span class="stat-number" data-value="8">8</span>
+              <span class="stat-number">8</span>
               <div class="divider"></div>
               <span class="stat-label">Months Coding</span>
             </div>
             <div class="stat-card">
-              <span class="stat-number" data-value="3">3</span>
+              <span class="stat-number">3</span>
               <div class="divider"></div>
               <span class="stat-label">Projects</span>
             </div>
             <div class="stat-card">
-              <span class="stat-number" data-value="1">1</span>
+              <span class="stat-number">1</span>
               <div class="divider"></div>
               <span class="stat-label">Servers Managed</span>
             </div>
             <div class="stat-card">
-              <span class="stat-number" data-value="27021">27021</span>
+              <span class="stat-number">27021</span>
               <div class="divider"></div>
-              <span class="stat-label">MCSH Community Members</span>
+              <span class="stat-label">Community Members</span>
             </div>
           </section>
 
-          <section class="socials-section">
-            <h2 class="section-title">Get in Touch</h2>
+          <section class="socials-section panel reveal">
+            <div class="section-header">
+              <i data-lucide="send" width="24" height="24" class="section-icon"></i>
+              <h2 class="section-title">Get in Touch</h2>
+            </div>
             <p class="section-subtitle">
               Have a question or want to collaborate? Feel free to reach out!
             </p>
             <div class="socials-row">
               <a href="mailto:support@bananabrother77.online" class="social-button email">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
+                <i data-lucide="mail" width="18" height="18"></i>
                 <span>Email</span>
               </a>
               <a href="https://discord.gg/mtzPBcjUHN" target="_blank" rel="noopener noreferrer" class="social-button discord">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"></path>
                 </svg>
                 <span>Join Discord</span>
               </a>
               <a href="https://github.com/BananaBrother77" target="_blank" rel="noopener noreferrer" class="social-button github">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
                 </svg>
                 <span>GitHub</span>
@@ -91,10 +120,243 @@
           </section>
         </div>
       </div>
+
+      <!-- ============================================================
+           MIDDLE ROW: Friends / Community
+           ============================================================ -->
+      <section class="friends-section panel reveal">
+        <div class="section-header">
+          <i data-lucide="users" width="24" height="24" class="section-icon"></i>
+          <h2 class="section-title">Friends & Community</h2>
+        </div>
+        <div class="friend-grid">
+          <!-- Villana5874 -->
+          <div class="friend-card">
+            <div class="friend-top">
+              <img src="assets/villana.png" alt="Villana5874" class="friend-img" />
+              <div class="friend-bullets">
+                <ul>
+                  <li><strong>Name:</strong> Villana5874</li>
+                  <li><strong>Languages:</strong> FIL / EN</li>
+                  <li><strong>Focus:</strong> Writing, Social, Divination</li>
+                  <li><strong>Status:</strong> Gaming</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- David22 -->
+          <div class="friend-card">
+            <div class="friend-top">
+              <img src="assets/friend.jpeg" alt="David22" class="friend-img" />
+              <div class="friend-bullets">
+                <ul>
+                  <li><strong>Name:</strong> David22</li>
+                  <li><strong>Languages:</strong> DE / EN</li>
+                  <li><strong>Role:</strong> YouTuber</li>
+                  <li><strong>Focus:</strong> Watching YouTube</li>
+                  <li><strong>Status:</strong> YouTubing</li>
+                </ul>
+              </div>
+            </div>
+            <div class="friend-action">
+              <p>Subscribe to David22_Kaiser</p>
+              <a href="https://youtube.com/@david22_war?si=wIDFdfQJrDutXG2r" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                <i data-lucide="youtube" width="20" height="20"></i>
+                YouTube
+              </a>
+            </div>
+          </div>
+
+          <!-- Christian -->
+          <div class="friend-card">
+            <div class="friend-top">
+              <img src="assets/profile-chris.png" alt="Christian" class="friend-img" />
+              <div class="friend-bullets">
+                <ul>
+                  <li><strong>Name:</strong> Christian</li>
+                  <li><strong>Languages:</strong> RU / EN / CH / ES</li>
+                  <li><strong>Role:</strong> notStaff @MCSH</li>
+                  <li><strong>Focus:</strong> Sleeping</li>
+                  <li><strong>Status:</strong> Gooning</li>
+                </ul>
+              </div>
+            </div>
+            <div class="friend-action">
+              <p>Hi, I'm Christian!</p>
+              <a href="https://chr1sti4nz.edgeone.dev/" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                <i data-lucide="globe" width="20" height="20"></i>
+                Website
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           PROJECTS SECTION
+           ============================================================ -->
+      <section class="projects-section panel reveal">
+        <div class="section-header">
+          <i data-lucide="briefcase" width="24" height="24" class="section-icon"></i>
+          <h2 class="section-title">Projects</h2>
+        </div>
+        <p class="section-subtitle">Here are some of the projects I've been working on.</p>
+        <div class="projects-grid">
+          <!-- MCServerStatus -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i data-lucide="server" width="24" height="24"></i>
+              </div>
+              <span class="project-status active">Active</span>
+            </div>
+            <h3 class="project-title">MCServerStatus</h3>
+            <p class="project-desc">
+              Made to check my private server status but that is boring, check
+              every java server status by yourself.
+            </p>
+            <div class="project-actions">
+              <a href="https://mcserverstatus.bananabrother77.online/" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                <span>View Project</span>
+                <i data-lucide="external-link" width="20" height="20"></i>
+              </a>
+            </div>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+          </div>
+
+          <!-- Secret Project -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i data-lucide="code-2" width="24" height="24"></i>
+              </div>
+              <span class="project-status learning">In Progress</span>
+            </div>
+            <h3 class="project-title">Secret Project</h3>
+            <p class="project-desc">
+              A secret project that can't be disclosed yet
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           GAMING SECTION
+           ============================================================ -->
+      <section class="gaming-section panel reveal">
+        <div class="section-header">
+          <i data-lucide="gamepad-2" width="24" height="24" class="section-icon"></i>
+          <h2 class="section-title">Favorite Games</h2>
+        </div>
+        <div class="game-grid">
+          <div class="game-card">
+            <div class="game-img game-img--minecraft"></div>
+            <div class="game-info">
+              <h4>Minecraft</h4>
+              <p>Surviving in endless worlds, building complex Redstone machines, and connecting with the community on servers</p>
+            </div>
+          </div>
+          <div class="game-card">
+            <div class="game-img game-img--portal"></div>
+            <div class="game-info">
+              <h4>Portal 1 &amp; 2</h4>
+              <p>Challenging logic puzzles and a unique story, all in the name of science</p>
+            </div>
+          </div>
+          <div class="game-card">
+            <div class="game-img game-img--hollowknight"></div>
+            <div class="game-info">
+              <h4>Hollow Knight</h4>
+              <p>Exploring a vast, ruined kingdom, mastering challenging combat, and uncovering a deep, atmospheric story</p>
+            </div>
+          </div>
+          <div class="game-card">
+            <div class="game-img game-img--hades"></div>
+            <div class="game-info">
+              <h4>Hades</h4>
+              <p>Battle out of hell, master godly powers, and experience a gripping story in this fast-paced rogue-like</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           BOTTOM ROW: MCServerHost Info
+           ============================================================ -->
+      <section class="mcsh-section panel reveal">
+        <div class="mcsh-content">
+          <div class="mcsh-header">
+            <img src="assets/mcsh.png" alt="MCSH Logo" class="mcsh-logo" />
+            <div class="mcsh-title">
+              <h2 class="section-title">MCServerHost</h2>
+              <p class="mcsh-desc">
+                MCServerHost alias MCSH is a premium quality minecraft server
+                host, with tons of features, friendly people and even free
+                servers.
+              </p>
+            </div>
+          </div>
+          <div class="mcsh-actions">
+            <a href="https://discord.gg/mcserverhost" target="_blank" rel="noopener noreferrer" class="btn-primary discord-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"></path>
+              </svg>
+              Join Discord
+            </a>
+            <a href="https://www.trustpilot.com/review/mcserverhost.com" target="_blank" rel="noopener noreferrer" class="btn-primary trustpilot-btn">
+              <i data-lucide="star" width="20" height="20"></i>
+              Trustpilot
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer class="site-footer">
-      <!-- Footer content -->
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="site-footer reveal">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h2 class="footer-logo">BananaBrother77</h2>
+        </div>
+        <div class="footer-social">
+          <a href="https://bananabrother77.online/" target="_blank" rel="noopener noreferrer" class="social-link" title="Website">
+            <i data-lucide="home" width="32" height="32"></i>
+          </a>
+          <a href="https://discord.gg/mtzPBcjUHN" target="_blank" rel="noopener noreferrer" class="social-link" title="Discord">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"></path>
+            </svg>
+          </a>
+          <a href="https://github.com/BananaBrother77" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Made with</span>
+        <span class="text-heart">❤</span>
+        <span>and</span>
+        <span class="text-code-muted">code</span>
+        <span>— All rights reserved.</span>
+      </div>
     </footer>
+
+    <script src="assets/js/meow.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="assets/js/icons.js"></script>
   </body>
 </html>
