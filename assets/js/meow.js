@@ -20,8 +20,8 @@ document.querySelectorAll('.reveal').forEach((el, index) => {
   observer.observe(el);
 });
 
-const sections = document.querySelectorAll('section[id], nav[id]');
-const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link[href]');
 
 const navObserver = new IntersectionObserver(
   (entries) => {
@@ -40,24 +40,15 @@ const navObserver = new IntersectionObserver(
 
 sections.forEach((section) => navObserver.observe(section));
 
-// Scroll to section based on URL on page load
+// Scroll to section from clean URL like /information on page load
 const path = window.location.pathname.replace('/', '');
 if (path) {
   const target = document.getElementById(path);
   if (target) {
-    setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 300);
+    target.scrollIntoView({ behavior: 'smooth' });
+    history.replaceState(null, '', `/#${path}`);
   }
 }
-
-// Update URL when clicking nav links
-navLinks.forEach((link) => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    const id = link.getAttribute('href').replace('#', '');
-    window.history.pushState({}, '', `/${id}`);
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-  });
-});
 
 // Elements
 const memberCountEl = document.getElementById('memberCount');
