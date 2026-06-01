@@ -60,6 +60,7 @@ navLinks.forEach(link => {
 });
 
 // Elements
+const memberCountEl = document.getElementById('memberCount');
 
 const settingsBtn = document.getElementById('settingsBtn');
 const settingsModal = document.getElementById('settingsModal');
@@ -83,3 +84,24 @@ document.addEventListener('keydown', (e) => {
     closeSettingsModal();
   }
 });
+
+// DISCORD COMMUNITY MEMBER COUNT
+
+async function fetchDiscordMemberCount() {
+  try {
+    const res = await fetch('https://discord.com/api/v9/invites/mcserverhost?with_counts=true');
+    const data = await res.json();
+
+    const count = data.approximate_member_count || 'N/A';
+
+    if (memberCountEl) {
+      memberCountEl.textContent = count.toLocaleString();
+    }
+  } catch (error) {
+    console.error('Error fetching Discord member count:', error);
+  }
+
+  setTimeout(fetchDiscordMemberCount, 120000); // Refresh every 120 seconds (2 minutes)
+}
+
+fetchDiscordMemberCount();
