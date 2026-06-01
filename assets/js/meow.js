@@ -66,6 +66,7 @@ const settingsBtn = document.getElementById('settingsBtn');
 const settingsModal = document.getElementById('settingsModal');
 const closeModalBtn = document.getElementById('closeModalBtn');
 const langSwitchBtn = document.getElementById('langSwitchBtn');
+const themeBtns = document.querySelectorAll('.theme-btn');
 
 settingsBtn.addEventListener('click', () => {
   settingsModal.classList.add('show');
@@ -76,6 +77,25 @@ closeModalBtn.addEventListener('click', closeSettingsModal);
 function closeSettingsModal() {
   settingsModal.classList.remove('show');
 }
+
+// Theme Switch
+
+const savedTheme = localStorage.getItem('theme') || 'purple';
+
+function applyTheme(theme) {
+  document.body.classList.remove('theme-green', 'theme-red', 'theme-yellow', 'theme-blue');
+  if (theme !== 'purple') document.body.classList.add(`theme-${theme}`);
+  localStorage.setItem('theme', theme);
+  document.querySelectorAll('.theme-btn').forEach((btn) => {
+    btn.classList.toggle('active', btn.dataset.theme === theme);
+  });
+}
+
+applyTheme(savedTheme);
+
+document.querySelectorAll('.theme-btn').forEach((btn) => {
+  btn.addEventListener('click', () => applyTheme(btn.dataset.theme));
+});
 
 // Language Switch
 

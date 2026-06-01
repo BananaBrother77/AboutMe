@@ -40,6 +40,8 @@
   --focus-ring: rgba(124, 88, 204, 0.18);
   --border-light: rgba(255, 255, 255, 0.15);
   --input-bg: rgba(255, 255, 255, 0.04);
+  --theme-default-border: #7c58cc;
+  --theme-default-text: #b49cec;
 }
 
 .theme-green {
@@ -1079,8 +1081,8 @@ body {
 }
 
 .theme-btn--default {
-  border-color: var(--accent-purple);
-  color: var(--text-muted-bright);
+  border-color: var(--theme-default-border);
+  color: var(--theme-default-text);
 }
 
 .theme-btn--default:hover {
@@ -1125,8 +1127,8 @@ body {
 
 .theme-btn.active,
 .theme-btn--default.active {
-  border-color: var(--accent-purple);
-  color: var(--text-main);
+  border-color: var(--theme-default-border);
+  color: var(--theme-default-text);
   background: rgba(124, 88, 204, 0.15);
 }
 
