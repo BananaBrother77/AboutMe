@@ -65,6 +65,7 @@ const memberCountEl = document.getElementById('memberCount');
 const settingsBtn = document.getElementById('settingsBtn');
 const settingsModal = document.getElementById('settingsModal');
 const closeModalBtn = document.getElementById('closeModalBtn');
+const langSwitchBtn = document.getElementById('langSwitchBtn');
 
 
 settingsBtn.addEventListener('click', () => {
@@ -84,6 +85,40 @@ document.addEventListener('keydown', (e) => {
     closeSettingsModal();
   }
 });
+
+// Language Switch
+
+const savedLang = localStorage.getItem('language');
+let currentLang = savedLang || 'en';
+
+document.documentElement.lang = currentLang;
+
+function getTranslation(key) {
+  return translations[currentLang]?.[key] || translations.en?.[key] || '';
+}
+
+function applyTranslations() {
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.getAttribute('data-i18n');
+    const value = getTranslation(key);
+    if (value) {
+      el.textContent = value;
+    }
+  });
+}
+
+function toggleLanguage() {
+  currentLang = currentLang === 'en' ? 'de' : 'en';
+  localStorage.setItem('language', currentLang);
+  document.documentElement.lang = currentLang;
+  applyTranslations();
+}
+
+applyTranslations();
+
+if (langSwitchBtn) {
+  langSwitchBtn.addEventListener('click', toggleLanguage);
+}
 
 // DISCORD COMMUNITY MEMBER COUNT
 
