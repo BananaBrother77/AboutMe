@@ -131,7 +131,7 @@ async function fetchDiscordMemberCount() {
     );
     const data = await res.json();
 
-    const count = data.approximate_member_count || 'N/A';
+    const count = data.approximate_member_count ?? 'N/A';
 
     if (memberCountEl) {
       memberCountEl.textContent = count.toLocaleString();

@@ -1,10 +1,8 @@
-# 🍌 AboutMe — Personal Portfolio Website
+# AboutMe — Personal Portfolio Website 2.0
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/BananaBrother77/global-assets/refs/heads/main/profile.jpeg" alt="Portfolio Preview" width="120" height="120" style="border-radius: 50%;">
-
-_A static personal portfolio with bilingual UI, theme switching, and client-side routes._
+_A personal portfolio with bilingual UI, theme switching, and live Discord member count._
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -14,108 +12,85 @@ _A static personal portfolio with bilingual UI, theme switching, and client-side
 
 ---
 
-## ✨ Features
+## Features
 
-- Bilingual interface with shared **English** and **German** translations
-- **4 theme presets** saved in `localStorage`
-- Client-side route navigation for `/home`, `/information`, `/projects`, `/gaming`, and `/settings`
-- Animated stat counters, reveal transitions, and responsive layouts
-- Keyboard shortcuts: `L` for language, `T` for theme cycling
-- Custom `404.html`, `humans.txt`, `sitemap.xml`, favicons, and redirect rules for static hosting
-
----
-
-## 🌐 Routes
-
-### Main Portfolio
-
-- `/` → redirects in-app to `/home`
-- `/home`
-- `/information`
-- `/projects`
-- `/gaming`
-- `/settings`
-
-### Extra Pages
-
-- `/github` → redirects to the GitHub profile
-- `/maxim` → redirects to `maximerix.dev`
-- `/humans` → `humans.txt`
-- Unknown routes fall back to `index.html` through `_redirects`
-- `404.html` is included as a standalone error page
+- Bilingual interface with **English** and **German** translations (persisted in localStorage)
+- **5 theme presets** (Purple, Green, Red, Yellow, Blue) saved in localStorage
+- Hash-based navigation (`/#information`, `/#projects`, `/#gaming`)
+- Live Discord member count from the MCSH community
+- Scroll reveal animations and intersection-based nav highlighting
+- Styled `404.html` with language/theme restore
+- Keyboard shortcuts: `S` to open settings, `L` to switch language, `Escape` to close settings
+- No frameworks or build steps — pure vanilla JS
 
 ---
 
-## 🚀 Live Site
-
-- Main site: [bananabrother77.online](https://bananabrother77.online)
-
----
-
-## 🧱 Project Structure
+## File Structure
 
 ```text
 AboutMe/
-├── assets/                    # Images and logos used across the site
-├── 404.html                   # Standalone not-found page
-├── _redirects                 # Static host rewrite and redirect rules
-├── favicon.ico
-├── favicon.png
-├── humans.txt                 # Small human-readable site note
-├── index.html                 # Main portfolio shell
-├── README.md
-├── script.js                  # Routing, theme, language, and animation logic
-├── sitemap.xml                # Search engine sitemap
-├── style.css                  # Main portfolio styling
-└── translations.js            # Shared EN/DE translation strings
+├── assets/
+│   ├── js/
+│   │   ├── meow.js           # Main JS: nav, theme, language, Discord, keyboard, modal
+│   │   ├── translations.js   # EN/DE translation dictionary
+│   │   ├── icons.js          # Lucide icon initialization
+│   │   └── 404.js            # 404 page logic
+│   └── *.jpeg / *.png        # Images
+├── 404.html                  # Standalone error page
+├── _redirects                # Static host rewrite rules
+├── favicon.ico / favicon.png
+├── humans.txt
+├── index.html                # Main portfolio page
+├── sitemap.xml
+├── style.css                 # All styles (no inline CSS)
+└── wrangler.toml             # Cloudflare Pages config
 ```
 
 ---
 
-## 🛠️ Technologies
+## Technologies
 
 - **HTML5** for markup
 - **CSS3** with custom properties and theme classes
-- **Vanilla JavaScript** for routing, translations, theme switching, and UI behavior
-- **Google Fonts** (`Inter`)
-- **Devicon/CDN assets** for platform icons
+- **Vanilla JavaScript** for translations, theme switching, Discord API, and UI behavior
+- **Google Fonts** (Poppins)
+- **Lucide** icons (v1.17.0 via unpkg CDN)
+- **Cloudflare Pages** for hosting
 
-No framework or build step is required for the main site.
+No framework or build step required.
 
 ---
 
-## ▶️ Local Development
+## Local Development
 
-Serve the repository with any static file server.
+Serve the repository with any static file server:
 
 ```bash
 python -m http.server 8080
 ```
 
-Then open [http://localhost:8080/](http://localhost:8080/).
-
-Note: direct deep links like `/projects` need rewrite support from the host. The repo includes `_redirects` for deployment, but a basic local server may only work reliably if you start at `/` and navigate inside the site.
+Then open http://localhost:8080/.
 
 ---
 
-## 🚢 Deployment Notes
+## Deployment
 
-- This project is designed for static hosting
-- `_redirects` handles SPA-style rewrites plus shortcut redirects like `/github` and `/maxim`
-- `sitemap.xml`, `humans.txt`, and the favicon files are shipped as static assets
-
----
-
-## 🔗 Links
-
-- Portfolio: [bananabrother77.online](https://bananabrother77.online)
-- GitHub: [@BananaBrother77](https://github.com/BananaBrother77)
-- Discord: [MCServerHost Community](https://discord.gg/mcserverhost)
-- Discord: [Banana Studios](https://discord.gg/mtzPBcjUHN)
+- Designed for static hosting via Cloudflare Pages
+- `wrangler.toml` configures the build output directory
+- `_redirects` provides `/* /index.html 200` for SPA-style fallback
+- `sitemap.xml`, `humans.txt`, and favicon files ship as static assets
 
 ---
 
-## 📝 License
+## Links
+
+- Portfolio: https://bananabrother77.online
+- GitHub: https://github.com/BananaBrother77
+- Discord: https://discord.gg/mtzPBcjUHN
+
+---
+
+## License
 
 This repository does not currently include a license file.
 

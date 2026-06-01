@@ -5,8 +5,8 @@ const translations = {
     nav_gaming: 'Gaming',
     nav_settings: 'Settings',
     profile_desc:
-      "I love spending my time with funny people that have the same interests as me and I love learning new stuff. That's why I'm enjoying my time as a staff member at MCSH.",
-    badge_learning: 'Learning Frontend',
+      "I'm a casual dev who loves spending time with funny people that share the same interests. I still enjoy learning new stuff and hanging out as a staff member at MCSH.",
+    badge_learning: 'Learning Fullstack',
     badge_partner: 'Official Partner',
     stats_years: 'Months Coding',
     stats_projects: 'Projects',
@@ -21,8 +21,6 @@ const translations = {
     friends_title: 'Friends & Community',
     david_subscribe: 'Subscribe to David22_Kaiser',
     david_youtube: 'YouTube',
-    chris_hello: "Hi, I'm Christian!",
-    chris_website: 'Website',
     projects_title: 'Projects',
     projects_intro: "Here are some of the projects I've been working on.",
     status_active: 'Active',
@@ -57,7 +55,13 @@ const translations = {
     theme_yellow: 'Yellow',
     theme_blue: 'Blue',
     lang_name: 'English',
+    lang_flag: '🇺🇸',
     language_switch_target: 'German',
+    '404_subtitle':
+      "Where are you trying to go? What are you looking for? I, of course, don't know that, but I know that you won't find it here.",
+    '404_btn_home': 'Go Home',
+    '404_btn_reload': "Reload (Won't help)",
+    '404_protip': "Pro Tip: I don't know, what did you expect?",
   },
   de: {
     nav_information: 'Informationen',
@@ -65,8 +69,8 @@ const translations = {
     nav_gaming: 'Gaming',
     nav_settings: 'Einstellungen',
     profile_desc:
-      'Ich verbringe gerne Zeit mit lustigen Leuten, die die gleichen Interessen haben wie ich, und ich liebe es, neue Dinge zu lernen. Deshalb genieße ich meine Zeit als Teammitglied bei MCSH.',
-    badge_learning: 'Frontend-Kenntnisse verbessern',
+      'Ich bin ein entspannter Entwickler, der gerne Zeit mit lustigen Leuten verbringt, die die gleichen Interessen teilen. Ich lerne immer noch gerne Neues und verbringe meine Zeit als Teammitglied bei MCSH.',
+    badge_learning: 'Lerne Fullstack',
     badge_partner: 'Offizieller Partner',
     stats_years: 'Monate Code',
     stats_projects: 'Projekte',
@@ -81,8 +85,6 @@ const translations = {
     friends_title: 'Freunde & Community',
     david_subscribe: 'Abonniere David22_Kaiser',
     david_youtube: 'YouTube',
-    chris_hello: 'Hallo, ich bin Christian!',
-    chris_website: 'Webseite',
     projects_title: 'Projekte',
     projects_intro:
       'Hier sind einige Projekte, an denen ich gearbeitet habe.',
@@ -119,6 +121,12 @@ const translations = {
     theme_yellow: 'Gelb',
     theme_blue: 'Blau',
     lang_name: 'Deutsch',
+    lang_flag: '🇩🇪',
     language_switch_target: 'English',
+    '404_subtitle':
+      'Wohin versuchst du zu gehen? Was suchst du? Ich weiß das natürlich nicht, aber ich weiß, dass du es hier nicht findest.',
+    '404_btn_home': 'Zur Startseite',
+    '404_btn_reload': 'Neu laden (Hilft nicht)',
+    '404_protip': 'Pro-Tipp: Keine Ahnung. Was hast du erwartet?',
   },
 };
