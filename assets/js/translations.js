@@ -1,6 +1,7 @@
 const translations = {
   en: {
     nav_information: 'Information',
+    nav_home: 'Home',
     nav_projects: 'Projects',
     nav_gaming: 'Gaming',
     nav_settings: 'Settings',
@@ -21,6 +22,24 @@ const translations = {
     friends_title: 'Friends & Community',
     david_subscribe: 'Subscribe to David22_Kaiser',
     david_youtube: 'YouTube',
+    friend_label_languages: 'Languages',
+    friend_label_name: 'Name',
+    friend_label_role: 'Role',
+    friend_label_focus: 'Focus',
+    friend_label_status: 'Status',
+    btn_github: 'GitHub',
+    mcsh_title: 'MCServerHost',
+    maxim_website: 'Website',
+    villana_focus: 'Writing, Social, Divination',
+    villana_status: 'Gaming',
+    david_role: 'YouTuber',
+    david_focus: 'Watching YouTube',
+    david_status: 'YouTubing',
+    maxim_focus: 'Drinking Coffee',
+    maxim_status: 'Meow',
+    eanukes_role: 'Nuke',
+    eanukes_focus: 'Nuking',
+    eanukes_status: 'Nuking you',
     projects_title: 'Projects',
     projects_intro: "Here are some of the projects I've been working on.",
     status_active: 'Active',
@@ -62,9 +81,11 @@ const translations = {
     '404_btn_home': 'Go Home',
     '404_btn_reload': "Reload (Won't help)",
     '404_protip': "Pro Tip: I don't know, what did you expect?",
+    e404_heading: '— Page Not Found',
   },
   de: {
     nav_information: 'Informationen',
+    nav_home: 'Startseite',
     nav_projects: 'Projekte',
     nav_gaming: 'Gaming',
     nav_settings: 'Einstellungen',
@@ -85,6 +106,24 @@ const translations = {
     friends_title: 'Freunde & Community',
     david_subscribe: 'Abonniere David22_Kaiser',
     david_youtube: 'YouTube',
+    friend_label_languages: 'Sprachen',
+    friend_label_name: 'Name',
+    friend_label_role: 'Rolle',
+    friend_label_focus: 'Fokus',
+    friend_label_status: 'Status',
+    btn_github: 'GitHub',
+    mcsh_title: 'MCServerHost',
+    maxim_website: 'Webseite',
+    villana_focus: 'Schreiben, Soziales, Wahrsagerei',
+    villana_status: 'Zocken',
+    david_role: 'YouTuber',
+    david_focus: 'YouTube schauen',
+    david_status: 'YouTuben',
+    maxim_focus: 'Kaffee trinken',
+    maxim_status: 'Miau',
+    eanukes_role: 'Nuke',
+    eanukes_focus: 'Nuking',
+    eanukes_status: 'Nuking you',
     projects_title: 'Projekte',
     projects_intro:
       'Hier sind einige Projekte, an denen ich gearbeitet habe.',
@@ -128,5 +167,27 @@ const translations = {
     '404_btn_home': 'Zur Startseite',
     '404_btn_reload': 'Neu laden (Hilft nicht)',
     '404_protip': 'Pro-Tipp: Keine Ahnung. Was hast du erwartet?',
+    e404_heading: '— Seite nicht gefunden',
   },
 };
+
+const savedLang = localStorage.getItem('language');
+let currentLang = savedLang || 'en';
+
+document.documentElement.lang = currentLang;
+
+function getTranslation(key) {
+  return translations[currentLang]?.[key] || translations.en?.[key] || '';
+}
+
+function applyTranslations() {
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.getAttribute('data-i18n');
+    const value = getTranslation(key);
+    if (value) {
+      el.textContent = value;
+    }
+  });
+}
+
+applyTranslations();
