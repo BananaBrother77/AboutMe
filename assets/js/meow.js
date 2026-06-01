@@ -50,7 +50,7 @@ if (path) {
 }
 
 // Update URL when clicking nav links
-navLinks.forEach(link => {
+navLinks.forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     const id = link.getAttribute('href').replace('#', '');
@@ -67,7 +67,6 @@ const settingsModal = document.getElementById('settingsModal');
 const closeModalBtn = document.getElementById('closeModalBtn');
 const langSwitchBtn = document.getElementById('langSwitchBtn');
 
-
 settingsBtn.addEventListener('click', () => {
   settingsModal.classList.add('show');
 });
@@ -77,14 +76,6 @@ closeModalBtn.addEventListener('click', closeSettingsModal);
 function closeSettingsModal() {
   settingsModal.classList.remove('show');
 }
-
-// Keyboard shortcuts
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && settingsModal.classList.contains('show')) {
-    closeSettingsModal();
-  }
-});
 
 // Language Switch
 
@@ -124,7 +115,9 @@ if (langSwitchBtn) {
 
 async function fetchDiscordMemberCount() {
   try {
-    const res = await fetch('https://discord.com/api/v9/invites/mcserverhost?with_counts=true');
+    const res = await fetch(
+      'https://discord.com/api/v9/invites/mcserverhost?with_counts=true',
+    );
     const data = await res.json();
 
     const count = data.approximate_member_count || 'N/A';
@@ -138,5 +131,25 @@ async function fetchDiscordMemberCount() {
 
   setTimeout(fetchDiscordMemberCount, 120000); // Refresh every 120 seconds (2 minutes)
 }
+
+// Keyboard shortcuts
+
+document.addEventListener('keydown', (e) => {
+  switch (e.key) {
+    case 's':
+      if (!settingsModal.classList.contains('show')) {
+        settingsModal.classList.add('show');
+      }
+      break;
+    case 'Escape':
+      if (settingsModal.classList.contains('show')) {
+        closeSettingsModal();
+      }
+      break;
+    case 'l':
+      toggleLanguage();
+      break;
+  }
+});
 
 fetchDiscordMemberCount();
