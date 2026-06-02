@@ -44,8 +44,8 @@ const translations = {
     projects_intro: "Here are some of the projects I've been working on.",
     status_active: 'Active',
     status_learning: 'In Progress',
-    project_mcserverstatus_desc:
-      'Made to check my private server status but that is boring, check every java server status by yourself.',
+    project_mctoolkit_desc:
+      'Made because I was bored and now it is growing for some reason, a Minecraft Server Status website that shows live status of servers and some other info. More coming soon!',
     project_view: 'View Project',
     project_secret_desc: "A secret project that can't be disclosed yet",
     games_title: 'Favorite Games',
@@ -129,8 +129,8 @@ const translations = {
       'Hier sind einige Projekte, an denen ich gearbeitet habe.',
     status_active: 'Aktiv',
     status_learning: 'In Arbeit',
-    project_mcserverstatus_desc:
-      'Erstellt, um den Status meines privaten Servers zu prüfen, aber das ist langweilig. Prüfe jeden Java-Serverstatus selbst.',
+    project_mctoolkit_desc:
+      'Erstellt, weil ich gelangweilt war, und jetzt wächst es aus irgendeinem Grund. Eine Minecraft-Server-Status-Website, die Live-Status von Servern und andere Informationen anzeigt. Bald kommen weitere Funktionen!',
     project_view: 'Projekt anzeigen',
     project_secret_desc:
       'Ein geheimes Projekt, das noch nicht bekannt gegeben werden kann',
