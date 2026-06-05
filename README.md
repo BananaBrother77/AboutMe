@@ -21,7 +21,6 @@ _A personal portfolio with bilingual UI, theme switching, and live Discord membe
 - Scroll reveal animations and intersection-based nav highlighting
 - Styled `404.html` with language/theme restore
 - Keyboard shortcuts: `S` to open settings, `L` to switch language, `Escape` to close settings
-- No frameworks or build steps — pure vanilla JS
 
 ---
 
