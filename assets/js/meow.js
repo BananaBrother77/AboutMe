@@ -53,6 +53,14 @@ if (path) {
 // Elements
 const memberCountEl = document.getElementById('memberCount');
 
+const mcshStatsEls = {
+  accounts: document.getElementById('mcshTotalAccounts'),
+  activeServers: document.getElementById('mcshActiveServers'),
+  players: document.getElementById('mcshTotalPlayers'),
+  servers: document.getElementById('mcshTotalServers'),
+  created: document.getElementById('mcshServersCreated'),
+};
+
 const settingsBtn = document.getElementById('settingsBtn');
 const settingsModal = document.getElementById('settingsModal');
 const closeModalBtn = document.getElementById('closeModalBtn');
@@ -142,4 +150,26 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+// MCSH PLATFORM STATS
+
+async function fetchMCSHStats() {
+  try {
+    const res = await fetch(
+      'https://api.mcserverhost.com/user/public/server-stats?include_content=false&include_servers=false',
+    );
+    const data = await res.json();
+
+    mcshStatsEls.accounts.textContent = data.total_accounts?.toLocaleString() ?? '--';
+    mcshStatsEls.activeServers.textContent = data.total_active_servers?.toLocaleString() ?? '--';
+    mcshStatsEls.players.textContent = data.total_players?.toLocaleString() ?? '--';
+    mcshStatsEls.servers.textContent = data.total_servers?.toLocaleString() ?? '--';
+    mcshStatsEls.created.textContent = data.total_servers_created?.toLocaleString() ?? '--';
+  } catch (error) {
+    console.error('Error fetching MCSH stats:', error);
+  }
+
+  setTimeout(fetchMCSHStats, 300000); // Refresh every 5 minutes
+}
+
 fetchDiscordMemberCount();
+fetchMCSHStats();

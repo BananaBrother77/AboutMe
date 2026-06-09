@@ -59,6 +59,11 @@ const translations = {
       'Battle out of hell, master godly powers, and experience a gripping story in this fast-paced rogue-like',
     mcsh_desc:
       'MCServerHost alias MCSH is a premium quality minecraft server host, with tons of features, friendly people and even free servers.',
+    mcsh_stat_accounts: 'Total Accounts',
+    mcsh_stat_active: 'Active Servers',
+    mcsh_stat_players: 'Total Players',
+    mcsh_stat_servers: 'Total Servers',
+    mcsh_stat_created: 'Servers Created',
     btn_discord: 'Join Discord',
     btn_trustpilot: 'Trustpilot',
     footer_made: 'Made with',
@@ -145,6 +150,11 @@ const translations = {
       'Kämpfe dich aus der Hölle, meistere göttliche Kräfte und erlebe eine fesselnde Geschichte in diesem rasanten Rogue-like.',
     mcsh_desc:
       'MCServerHost alias MCSH ist ein Premium-Minecraft-Server-Host mit vielen Funktionen, freundlichen Leuten und sogar kostenlosen Servern.',
+    mcsh_stat_accounts: 'Konten insgesamt',
+    mcsh_stat_active: 'Aktive Server',
+    mcsh_stat_players: 'Spieler insgesamt',
+    mcsh_stat_servers: 'Server insgesamt',
+    mcsh_stat_created: 'Server erstellt',
     btn_discord: 'Discord beitreten',
     btn_trustpilot: 'Trustpilot',
     footer_made: 'Gemacht mit',
