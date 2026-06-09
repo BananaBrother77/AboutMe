@@ -109,6 +109,17 @@ if (langSwitchBtn) {
   langSwitchBtn.addEventListener('click', toggleLanguage);
 }
 
+// CODING MONTHS
+
+function fetchCodingMonths() {
+  const start = new Date('2025-10-01');
+  const now = new Date();
+  const months = (now.getFullYear() - start.getFullYear()) * 12
+    + (now.getMonth() - start.getMonth());
+  const el = document.getElementById('codingMonths');
+  if (el) el.textContent = Math.max(months, 1);
+}
+
 // DISCORD COMMUNITY MEMBER COUNT
 
 async function fetchDiscordMemberCount() {
@@ -171,5 +182,6 @@ async function fetchMCSHStats() {
   setTimeout(fetchMCSHStats, 300000); // Refresh every 5 minutes
 }
 
+fetchCodingMonths();
 fetchDiscordMemberCount();
 fetchMCSHStats();
