@@ -90,11 +90,20 @@ function setThemeCookie(theme) {
   document.cookie = `theme=${theme}; domain=${COOKIE_DOMAIN}; path=/; max-age=31536000; SameSite=Lax`;
 }
 
-const cookieTheme = getThemeCookie();
+function deleteThemeCookie() {
+  document.cookie = `theme=; domain=${COOKIE_DOMAIN}; path=/; max-age=0; SameSite=Lax`;
+}
+
+function shouldSyncTheme() {
+  return localStorage.getItem('syncTheme') !== 'false';
+}
+
+const syncEnabled = shouldSyncTheme();
+const cookieTheme = syncEnabled ? getThemeCookie() : null;
 const localTheme = localStorage.getItem('theme');
 const savedTheme = cookieTheme || localTheme || 'purple';
 
-if (cookieTheme && cookieTheme !== localTheme) {
+if (syncEnabled && cookieTheme && cookieTheme !== localTheme) {
   localStorage.setItem('theme', cookieTheme);
 }
 
@@ -102,7 +111,9 @@ function applyTheme(theme) {
   document.body.classList.remove('theme-green', 'theme-red', 'theme-yellow', 'theme-blue');
   if (theme !== 'purple') document.body.classList.add(`theme-${theme}`);
   localStorage.setItem('theme', theme);
-  setThemeCookie(theme);
+  if (shouldSyncTheme()) {
+    setThemeCookie(theme);
+  }
   document.querySelectorAll('.theme-btn').forEach((btn) => {
     btn.classList.toggle('active', btn.dataset.theme === theme);
   });
@@ -113,6 +124,19 @@ applyTheme(savedTheme);
 document.querySelectorAll('.theme-btn').forEach((btn) => {
   btn.addEventListener('click', () => applyTheme(btn.dataset.theme));
 });
+
+const syncThemeCheckbox = document.getElementById('syncThemeCheckbox');
+if (syncThemeCheckbox) {
+  syncThemeCheckbox.checked = syncEnabled;
+  syncThemeCheckbox.addEventListener('change', () => {
+    localStorage.setItem('syncTheme', syncThemeCheckbox.checked);
+    if (syncThemeCheckbox.checked) {
+      setThemeCookie(localStorage.getItem('theme') || 'purple');
+    } else {
+      deleteThemeCookie();
+    }
+  });
+}
 
 // Language Switch
 
@@ -176,6 +200,18 @@ document.addEventListener('keydown', (e) => {
     case 'l':
       toggleLanguage();
       break;
+  }
+});
+
+// Tooltip toggle — works on mobile (tap) and desktop (hover)
+
+document.addEventListener('click', (e) => {
+  const icon = e.target.closest('.hint-icon');
+  document.querySelectorAll('.hint-icon.show').forEach((el) => {
+    if (el !== icon) el.classList.remove('show');
+  });
+  if (icon) {
+    icon.classList.toggle('show');
   }
 });
 
