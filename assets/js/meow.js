@@ -81,25 +81,27 @@ function closeSettingsModal() {
 
 const COOKIE_DOMAIN = '.bananabrother77.online';
 
-function getThemeCookie() {
-  const match = document.cookie.match(/(?:^|;\s*)theme=([^;]*)/);
+function getCookie(name) {
+  const match = document.cookie.match(new RegExp(`(?:^|;\\s*)${name}=([^;]*)`));
   return match ? match[1] : null;
 }
 
-function setThemeCookie(theme) {
-  document.cookie = `theme=${theme}; domain=${COOKIE_DOMAIN}; path=/; max-age=31536000; SameSite=Lax`;
+function setCookie(name, value) {
+  document.cookie = `${name}=${value}; domain=${COOKIE_DOMAIN}; path=/; max-age=31536000; SameSite=Lax`;
 }
 
-function deleteThemeCookie() {
-  document.cookie = `theme=; domain=${COOKIE_DOMAIN}; path=/; max-age=0; SameSite=Lax`;
+function deleteCookie(name) {
+  document.cookie = `${name}=; domain=${COOKIE_DOMAIN}; path=/; max-age=0; SameSite=Lax`;
 }
 
 function shouldSyncTheme() {
+  const cookie = getCookie('syncTheme');
+  if (cookie !== null) return cookie === 'true';
   return localStorage.getItem('syncTheme') !== 'false';
 }
 
 const syncEnabled = shouldSyncTheme();
-const cookieTheme = syncEnabled ? getThemeCookie() : null;
+const cookieTheme = syncEnabled ? getCookie('theme') : null;
 const localTheme = localStorage.getItem('theme');
 const savedTheme = cookieTheme || localTheme || 'purple';
 
@@ -112,7 +114,7 @@ function applyTheme(theme) {
   if (theme !== 'purple') document.body.classList.add(`theme-${theme}`);
   localStorage.setItem('theme', theme);
   if (shouldSyncTheme()) {
-    setThemeCookie(theme);
+    setCookie('theme', theme);
   }
   document.querySelectorAll('.theme-btn').forEach((btn) => {
     btn.classList.toggle('active', btn.dataset.theme === theme);
@@ -129,11 +131,13 @@ const syncThemeCheckbox = document.getElementById('syncThemeCheckbox');
 if (syncThemeCheckbox) {
   syncThemeCheckbox.checked = syncEnabled;
   syncThemeCheckbox.addEventListener('change', () => {
-    localStorage.setItem('syncTheme', syncThemeCheckbox.checked);
-    if (syncThemeCheckbox.checked) {
-      setThemeCookie(localStorage.getItem('theme') || 'purple');
+    const enabled = syncThemeCheckbox.checked;
+    localStorage.setItem('syncTheme', enabled);
+    setCookie('syncTheme', enabled);
+    if (enabled) {
+      setCookie('theme', localStorage.getItem('theme') || 'purple');
     } else {
-      deleteThemeCookie();
+      deleteCookie('theme');
     }
   });
 }
