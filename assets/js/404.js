@@ -4,7 +4,12 @@ const reloadBtn = document.getElementById('reloadBtn');
 
 // Theme
 
-const savedTheme = localStorage.getItem('theme') || 'purple';
+function getThemeCookie() {
+  const match = document.cookie.match(/(?:^|;\s*)theme=([^;]*)/);
+  return match ? match[1] : null;
+}
+
+const savedTheme = getThemeCookie() || localStorage.getItem('theme') || 'purple';
 if (savedTheme !== 'purple') {
   document.body.classList.add(`theme-${savedTheme}`);
 }

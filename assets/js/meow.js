@@ -79,12 +79,30 @@ function closeSettingsModal() {
 
 // Theme Switch
 
-const savedTheme = localStorage.getItem('theme') || 'purple';
+const COOKIE_DOMAIN = '.bananabrother77.online';
+
+function getThemeCookie() {
+  const match = document.cookie.match(/(?:^|;\s*)theme=([^;]*)/);
+  return match ? match[1] : null;
+}
+
+function setThemeCookie(theme) {
+  document.cookie = `theme=${theme}; domain=${COOKIE_DOMAIN}; path=/; max-age=31536000; SameSite=Lax`;
+}
+
+const cookieTheme = getThemeCookie();
+const localTheme = localStorage.getItem('theme');
+const savedTheme = cookieTheme || localTheme || 'purple';
+
+if (cookieTheme && cookieTheme !== localTheme) {
+  localStorage.setItem('theme', cookieTheme);
+}
 
 function applyTheme(theme) {
   document.body.classList.remove('theme-green', 'theme-red', 'theme-yellow', 'theme-blue');
   if (theme !== 'purple') document.body.classList.add(`theme-${theme}`);
   localStorage.setItem('theme', theme);
+  setThemeCookie(theme);
   document.querySelectorAll('.theme-btn').forEach((btn) => {
     btn.classList.toggle('active', btn.dataset.theme === theme);
   });
