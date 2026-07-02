@@ -503,6 +503,12 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
+.social-button.linktree:hover {
+  background: var(--accent-purple);
+  border-color: var(--accent-purple);
+  box-shadow: 0 10px 25px var(--accent-bright-shadow);
+}
+
 .friends-section {
   padding: 40px;
   text-align: center;
@@ -1621,3 +1627,5 @@ body {
   font-style: italic;
   font-size: 0.9rem;
 }
+
+
