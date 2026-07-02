@@ -4,6 +4,7 @@ const translations = {
     nav_home: 'Home',
     nav_projects: 'Projects',
     nav_gaming: 'Gaming',
+    nav_feedback: 'Feedback',
     nav_settings: 'Settings',
     profile_desc:
       "I'm a casual dev who loves spending time with funny people that share the same interests. I still enjoy learning new stuff and hanging out as a staff member at MCSH.",
@@ -74,7 +75,8 @@ const translations = {
     settings_theme_title: 'Theme',
     settings_lang_title: 'Language',
     settings_sync_theme: 'Sync theme across sites',
-    settings_sync_theme_hint: 'When enabled, your theme preference is shared across all BananaBrother77 websites via a cookie.',
+    settings_sync_theme_hint:
+      'When enabled, your theme preference is shared across all BananaBrother77 websites via a cookie.',
     theme_purple: 'Purple',
     theme_green: 'Green',
     theme_red: 'Red',
@@ -89,12 +91,27 @@ const translations = {
     '404_btn_reload': "Reload (Won't help)",
     '404_protip': "Pro Tip: I don't know, what did you expect?",
     e404_heading: '— Page Not Found',
+    feedback_title: 'Feedback',
+    feedback_desc: 'Help me improve the site. All feedback is appreciated!',
+    feedback_category: 'Category',
+    feedback_rating: 'Rating',
+    feedback_text_label: 'Your feedback',
+    feedback_contact_label: 'Contact',
+    feedback_submit: 'Send Feedback',
+    feedback_success_title: 'Thank you!',
+    feedback_success_text: 'I read every submission and use it to improve.',
+    cat_general: 'General',
+    cat_bug: 'Bug Report',
+    cat_feature: 'Feature Request',
+    cat_mctoolkit: 'MCToolkit',
+    cat_other: 'Other',
   },
   de: {
     nav_information: 'Informationen',
     nav_home: 'Startseite',
     nav_projects: 'Projekte',
     nav_gaming: 'Gaming',
+    nav_feedback: 'Feedback',
     nav_settings: 'Einstellungen',
     profile_desc:
       'Ich bin ein entspannter Entwickler, der gerne Zeit mit lustigen Leuten verbringt, die die gleichen Interessen teilen. Ich lerne immer noch gerne Neues und verbringe meine Zeit als Teammitglied bei MCSH.',
@@ -132,8 +149,7 @@ const translations = {
     eanukes_focus: 'Nuking',
     eanukes_status: 'Nuking you',
     projects_title: 'Projekte',
-    projects_intro:
-      'Hier sind einige Projekte, an denen ich gearbeitet habe.',
+    projects_intro: 'Hier sind einige Projekte, an denen ich gearbeitet habe.',
     status_active: 'Aktiv',
     status_learning: 'In Arbeit',
     project_mctoolkit_desc:
@@ -167,7 +183,8 @@ const translations = {
     settings_theme_title: 'Erscheinungsbild',
     settings_lang_title: 'Sprache',
     settings_sync_theme: 'Theme seitenübergreifend synchronisieren',
-    settings_sync_theme_hint: 'Wenn aktiviert, wird deine Theme-Auswahl auf allen BananaBrother77-Webseiten per Cookie geteilt.',
+    settings_sync_theme_hint:
+      'Wenn aktiviert, wird deine Theme-Auswahl auf allen BananaBrother77-Webseiten per Cookie geteilt.',
     theme_purple: 'Lila',
     theme_green: 'Grün',
     theme_red: 'Rot',
@@ -182,6 +199,22 @@ const translations = {
     '404_btn_reload': 'Neu laden (Hilft nicht)',
     '404_protip': 'Pro-Tipp: Keine Ahnung. Was hast du erwartet?',
     e404_heading: '— Seite nicht gefunden',
+    feedback_title: 'Feedback',
+    feedback_desc:
+      'Hilf mir, die Seite zu verbessern. Jedes Feedback ist willkommen!',
+    feedback_category: 'Kategorie',
+    feedback_rating: 'Bewertung',
+    feedback_text_label: 'Dein Feedback',
+    feedback_contact_label: 'Kontakt',
+    feedback_submit: 'Feedback senden',
+    feedback_success_title: 'Danke!',
+    feedback_success_text:
+      'Ich lese jede Einsendung und nutze sie zur Verbesserung.',
+    cat_general: 'Allgemein',
+    cat_bug: 'Fehler melden',
+    cat_feature: 'Funktionswunsch',
+    cat_mctoolkit: 'MCToolkit',
+    cat_other: 'Sonstiges',
   },
 };
 
