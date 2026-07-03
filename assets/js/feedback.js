@@ -1,8 +1,6 @@
-// Reveal animation
-
 const revealObserver = new IntersectionObserver(
-  function (entries) {
-    entries.forEach(function (entry) {
+  (entries) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
       }
@@ -11,41 +9,16 @@ const revealObserver = new IntersectionObserver(
   { threshold: 0.1 },
 );
 
-document.querySelectorAll('.reveal').forEach(function (el, index) {
-  let rect = el.getBoundingClientRect();
-  let isOnScreen = rect.top < window.innerHeight;
+document.querySelectorAll('.reveal').forEach((el, index) => {
+  const rect = el.getBoundingClientRect();
+  const isOnScreen = rect.top < window.innerHeight;
 
   if (isOnScreen) {
-    el.style.transitionDelay = index * 0.1 + 's';
+    el.style.transitionDelay = `${index * 0.1}s`;
   }
 
   revealObserver.observe(el);
 });
-
-// Theme
-
-function getCookie(name) {
-  let match = document.cookie.match(
-    new RegExp('(?:^|;\\s*)' + name + '=([^;]*)'),
-  );
-  return match ? match[1] : null;
-}
-
-function shouldSyncTheme() {
-  let cookie = getCookie('syncTheme');
-  if (cookie !== null) return cookie === 'true';
-  return localStorage.getItem('syncTheme') !== 'false';
-}
-
-let savedTheme =
-  (shouldSyncTheme() ? getCookie('theme') : null) ||
-  localStorage.getItem('theme') ||
-  'purple';
-if (savedTheme !== 'purple') {
-  document.body.classList.add('theme-' + savedTheme);
-}
-
-// Form
 
 const feedbackForm = document.getElementById('feedbackForm');
 const feedbackSuccess = document.getElementById('feedbackSuccess');

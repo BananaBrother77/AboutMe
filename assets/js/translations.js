@@ -105,6 +105,12 @@ const translations = {
     cat_feature: 'Feature Request',
     cat_mctoolkit: 'MCToolkit',
     cat_other: 'Other',
+    social_linktree: 'Linktree',
+    feedback_bullet_read: 'Every submission is read and considered',
+    feedback_bullet_shape: 'Your input shapes what I build next',
+    feedback_bullet_anon: 'Anonymous unless you choose to share contact',
+    feedback_placeholder_text: "What's on your mind?",
+    feedback_placeholder_contact: 'e.g. Discord username, email',
   },
   de: {
     nav_information: 'Informationen',
@@ -215,6 +221,12 @@ const translations = {
     cat_feature: 'Funktionswunsch',
     cat_mctoolkit: 'MCToolkit',
     cat_other: 'Sonstiges',
+    social_linktree: 'Linktree',
+    feedback_bullet_read: 'Jede Einsendung wird gelesen und berücksichtigt',
+    feedback_bullet_shape: 'Dein Input formt, was ich als Nächstes baue',
+    feedback_bullet_anon: 'Anonym, es sei denn, du teilst deine Kontaktdaten',
+    feedback_placeholder_text: 'Was liegt dir auf dem Herzen?',
+    feedback_placeholder_contact: 'z.B. Discord-Name, E-Mail',
   },
 };
 
@@ -231,8 +243,16 @@ function applyTranslations() {
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.getAttribute('data-i18n');
     const value = getTranslation(key);
-    if (value) {
+    if (value && !el.hasAttribute('data-i18n-placeholder')) {
       el.textContent = value;
+    }
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    const value = getTranslation(key);
+    if (value) {
+      el.placeholder = value;
     }
   });
 }
