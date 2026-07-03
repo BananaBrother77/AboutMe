@@ -798,6 +798,14 @@ body {
   background-image: url('assets/hollowknight.jpeg');
 }
 
+.game-img--celeste {
+  background-image: url('assets/celeste.jpeg');
+}
+
+.game-img--zelda {
+  background-image: url('assets/zelda.jpeg');
+}
+
 .game-img--hades {
   background-image: url('assets/hades.jpeg');
 }
@@ -1652,5 +1660,3 @@ body {
   font-style: italic;
   font-size: 0.9rem;
 }
-
-

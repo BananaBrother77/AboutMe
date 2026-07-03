@@ -56,6 +56,10 @@ const translations = {
       'Challenging logic puzzles and a unique story, all in the name of science',
     game_hollow_desc:
       'Exploring a vast, ruined kingdom, mastering challenging combat, and uncovering a deep, atmospheric story',
+    game_celeste_desc:
+      'Challenging precision platforming and a beautiful, heartfelt story about self-discovery, all while climbing a mystical mountain.',
+    game_zelda_desc:
+      'Exploring vast kingdoms, solving intricate dungeons, and wielding the Triforce to protect the realm from ancient darkness across generations',
     game_hades_desc:
       'Battle out of hell, master godly powers, and experience a gripping story in this fast-paced rogue-like',
     mcsh_desc:
@@ -172,6 +176,10 @@ const translations = {
       'Erkunde ein riesiges, verfallenes Königreich, meistere herausfordernde Kämpfe und enthülle eine tiefgründige, atmosphärische Geschichte.',
     game_hades_desc:
       'Kämpfe dich aus der Hölle, meistere göttliche Kräfte und erlebe eine fesselnde Geschichte in diesem rasanten Rogue-like.',
+    game_zelda_desc:
+      'Das Erkunden gewaltiger Königreiche, das Lösen kniffliger Dungeons und das Führen des Triforce, um das Reich über Generationen hinweg vor uralter Dunkelheit zu schützen',
+    game_celeste_desc:
+      'Anspruchsvolles Präzisions-Platforming und eine wunderschöne, herzerwärmende Geschichte über Selbstfindung, und das alles beim Erklimmen eines mystischen Berges.',
     mcsh_desc:
       'MCServerHost alias MCSH ist ein Premium-Minecraft-Server-Host mit vielen Funktionen, freundlichen Leuten und sogar kostenlosen Servern.',
     mcsh_stat_accounts: 'Konten insgesamt',
