@@ -2,10 +2,15 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJCCV8RPV4"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TJCCV8RPV4"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag('js', new Date());
 
       gtag('config', 'G-TJCCV8RPV4');
@@ -28,7 +33,10 @@
   </head>
   <body>
     <nav class="navbar reveal">
-      <a href="/" class="navbar-brand">BananaBrother77</a>
+      <a href="/" class="navbar-brand">
+        <img src="assets/banana-icon.svg" alt="" class="navbar-brand-icon" />
+        BananaBrother77
+      </a>
       <div class="nav-links">
         <a href="/#information" class="nav-link">
           <i data-lucide="info" width="16" height="16"></i>
@@ -116,19 +124,19 @@
                   </div>
                   <div
                     class="feedback-category"
-                    data-category="Feature Request"
-                    tabindex="0"
-                  >
-                    <i data-lucide="lightbulb"></i
-                    ><span data-i18n="cat_feature">Feature Request</span>
-                  </div>
-                  <div
-                    class="feedback-category"
                     data-category="MCToolkit"
                     tabindex="0"
                   >
                     <i data-lucide="server"></i
                     ><span data-i18n="cat_mctoolkit">MCToolkit</span>
+                  </div>
+                  <div
+                    class="feedback-category"
+                    data-category="BananaDashboard"
+                    tabindex="0"
+                  >
+                    <img src="assets/banana-icon.svg" alt="" class="cat-icon-banana" />
+                    <span data-i18n="cat_bananadashboard">BananaDashboard</span>
                   </div>
                   <div
                     class="feedback-category"

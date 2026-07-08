@@ -187,8 +187,11 @@ body {
 }
 
 .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-weight: 800;
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   background: linear-gradient(
     147deg,
     var(--grad-text-start) 0%,
@@ -201,6 +204,12 @@ body {
   text-decoration: none;
   white-space: nowrap;
   letter-spacing: -0.5px;
+}
+
+.navbar-brand-icon {
+  width: 26px;
+  height: 30px;
+  display: block;
 }
 
 .nav-links {
