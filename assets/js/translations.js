@@ -48,7 +48,8 @@ const translations = {
     project_mctoolkit_desc:
       'Made because I was bored and now it is growing for some reason, a Minecraft Server Status website that shows live status of servers and some other info. More coming soon!',
     project_view: 'View Project',
-    project_secret_desc: "A secret project that can't be disclosed yet",
+    project_bananadashboard_desc:
+      'A cross-platform desktop utility with system overview, live resource monitoring, file manager, process manager, themes, and more.',
     games_title: 'Favorite Games',
     game_minecraft_desc:
       'Surviving in endless worlds, building complex Redstone machines, and connecting with the community on servers',
@@ -165,8 +166,8 @@ const translations = {
     project_mctoolkit_desc:
       'Erstellt, weil ich gelangweilt war, und jetzt wächst es aus irgendeinem Grund. Eine Minecraft-Server-Status-Website, die Live-Status von Servern und andere Informationen anzeigt. Bald kommen weitere Funktionen!',
     project_view: 'Projekt anzeigen',
-    project_secret_desc:
-      'Ein geheimes Projekt, das noch nicht bekannt gegeben werden kann',
+    project_bananadashboard_desc:
+      'Ein plattformübergreifendes Desktop-Tool mit Systemübersicht, Live-Ressourcenüberwachung, Dateimanager, Prozessmanager, Themes und mehr.',
     games_title: 'Lieblingsspiele',
     game_minecraft_desc:
       'Überleben in unendlichen Welten, Bauen komplexer Redstone-Maschinen und Austausch mit der Community.',

@@ -2,10 +2,15 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJCCV8RPV4"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TJCCV8RPV4"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag('js', new Date());
 
       gtag('config', 'G-TJCCV8RPV4');
@@ -522,24 +527,41 @@
             </div>
           </div>
 
-          <!-- Secret Project -->
+          <!-- BananaDashboard -->
           <div class="project-card">
             <div class="project-header">
               <div class="project-icon">
-                <i data-lucide="code-2" width="24" height="24"></i>
+                <img
+                  src="assets/banana-icon.svg"
+                  alt="BananaDashboard"
+                  class="project-icon-img"
+                />
               </div>
-              <span class="project-status learning" data-i18n="status_learning"
-                >In Progress</span
+              <span class="project-status active" data-i18n="status_active"
+                >Active</span
               >
             </div>
-            <h3 class="project-title">Secret Project</h3>
-            <p class="project-desc" data-i18n="project_secret_desc">
-              A secret project that can't be disclosed yet
+            <h3 class="project-title">BananaDashboard</h3>
+            <p class="project-desc" data-i18n="project_bananadashboard_desc">
+              A cross-platform desktop utility with system overview, live
+              resource monitoring, file manager, process manager, themes, and
+              more.
             </p>
+            <div class="project-actions">
+              <a
+                href="https://dashboard.bananabrother77.online/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-primary"
+              >
+                <span data-i18n="project_view">View Project</span>
+                <i data-lucide="external-link" width="20" height="20"></i>
+              </a>
+            </div>
             <div class="project-tags">
-              <span class="project-tag">HTML</span>
-              <span class="project-tag">CSS</span>
-              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Electron</span>
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">Chart.js</span>
             </div>
           </div>
         </div>

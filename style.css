@@ -683,6 +683,16 @@ body {
   transform: scale(1.1);
 }
 
+.project-card:hover .project-icon-img {
+  filter: brightness(0) invert(1);
+}
+
+.project-icon-img {
+  width: 46px;
+  height: 46px;
+  display: block;
+}
+
 .project-status {
   padding: 6px 14px;
   border-radius: 20px;
