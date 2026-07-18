@@ -702,26 +702,6 @@ body {
   display: block;
 }
 
-.project-status {
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.project-status.active {
-  background: rgba(80, 250, 123, 0.15);
-  color: var(--online-green);
-  border: 1px solid rgba(80, 250, 123, 0.3);
-}
-
-.project-status.learning {
-  background: rgba(241, 250, 140, 0.15);
-  color: var(--warn-yellow);
-  border: 1px solid rgba(241, 250, 140, 0.3);
-}
 
 .project-title {
   font-size: 1.4rem;

@@ -43,8 +43,7 @@ const translations = {
     eanukes_status: 'Nuking you',
     projects_title: 'Projects',
     projects_intro: "Here are some of the projects I've been working on.",
-    status_active: 'Active',
-    status_learning: 'In Progress',
+
     project_mctoolkit_desc:
       'Made because I was bored and now it is growing for some reason, a Minecraft Server Status website that shows live status of servers and some other info. More coming soon!',
     project_view: 'View Project',
@@ -161,8 +160,7 @@ const translations = {
     eanukes_status: 'Nuking you',
     projects_title: 'Projekte',
     projects_intro: 'Hier sind einige Projekte, an denen ich gearbeitet habe.',
-    status_active: 'Aktiv',
-    status_learning: 'In Arbeit',
+
     project_mctoolkit_desc:
       'Erstellt, weil ich gelangweilt war, und jetzt wächst es aus irgendeinem Grund. Eine Minecraft-Server-Status-Website, die Live-Status von Servern und andere Informationen anzeigt. Bald kommen weitere Funktionen!',
     project_view: 'Projekt anzeigen',
