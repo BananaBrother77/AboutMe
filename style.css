@@ -334,6 +334,16 @@ body {
   margin-top: 6px;
 }
 
+.tech-item-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+}
+
+.tech-item-link:hover .tech-icon {
+  filter: brightness(1.2);
+}
+
 .tech-item {
   display: flex;
   flex-direction: column;
