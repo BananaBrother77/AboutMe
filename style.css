@@ -908,21 +908,13 @@ body {
 
 .mcsh-stats {
   display: flex;
-  flex-wrap: wrap;
   gap: 12px;
   margin-top: 24px;
   width: 100%;
 }
-t
-￼
-HTML5
-￼
-Node.js
-￼
-Cloudflare
+
 .mcsh-stats .stat-card {
   flex: 1;
-  min-width: 130px;
   padding: 14px 20px;
 }
 
