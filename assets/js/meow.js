@@ -1,25 +1,3 @@
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  },
-  { threshold: 0.1 },
-);
-
-document.querySelectorAll('.reveal').forEach((el, index) => {
-  const rect = el.getBoundingClientRect();
-  const isOnScreen = rect.top < window.innerHeight;
-
-  if (isOnScreen) {
-    el.style.transitionDelay = `${index * 0.1}s`;
-  }
-
-  observer.observe(el);
-});
-
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link[href]');
 
@@ -42,11 +20,16 @@ sections.forEach((section) => navObserver.observe(section));
 
 // Scroll to section from clean URL like /information on page load
 const path = window.location.pathname.replace('/', '');
-if (path) {
-  const target = document.getElementById(path);
+const hash = window.location.hash.replace('#', '');
+const sectionId = path || hash;
+
+if (sectionId) {
+  const target = document.getElementById(sectionId);
   if (target) {
     target.scrollIntoView({ behavior: 'smooth' });
-    history.replaceState(null, '', `/#${path}`);
+    history.replaceState(null, '', `/#${sectionId}`);
+  } else {
+    window.location.href = '/404';
   }
 }
 

@@ -7,10 +7,9 @@
   --bg-gradient-3: #1a1a1a;
   --panel-bg: rgba(255, 255, 255, 0.03);
   --panel-border: rgba(255, 255, 255, 0.08);
-  --online-green: #50fa7b;
-  --online-green-shadow: rgba(80, 250, 123, 0.5);
-  --warn-yellow: #f1fa8c;
-  --offline-red: #ff5555;
+  --card-bg: rgba(255, 255, 255, 0.02);
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --accent-bg-subtle: rgba(124, 88, 204, 0.1);
   --text-main: #f8f8f2;
   --text-muted: #9d7ee0;
   --text-muted-bright: #b49cec;
@@ -19,25 +18,13 @@
   --grad-title-start: #7c58cc;
   --accent-purple: #7c58cc;
   --accent-purple-dark: #6a47b8;
-  --accent-bright-shadow: rgba(124, 88, 204, 0.3);
   --accent-focus-ring: rgba(124, 88, 204, 0.18);
-  --cancel-bg: #a19c9c;
-  --cancel-bg-end: #a2a2a2;
-  --cancel-shadow: rgba(207, 204, 213, 0.3);
-  --select-start: #7c58cc;
-  --select-end: #3d2488;
-  --select-border: #222;
-  --delete-hover: #f13434;
-  --delete-hover-shadow: rgba(220, 38, 38, 0.3);
   --heart: #ff4d4d;
   --btn-text: #ffffff;
-  --shadow-sm: rgba(0, 0, 0, 0.4);
   --shadow-md: rgba(0, 0, 0, 0.5);
   --shadow-lg: rgba(0, 0, 0, 0.6);
   --shadow-xl: rgba(0, 0, 0, 0.7);
   --hover-bg: rgba(255, 255, 255, 0.05);
-  --focus-bg: rgba(255, 255, 255, 0.06);
-  --focus-ring: rgba(124, 88, 204, 0.18);
   --border-light: rgba(255, 255, 255, 0.15);
   --input-bg: rgba(255, 255, 255, 0.04);
   --theme-default-border: #7c58cc;
@@ -52,11 +39,7 @@
   --grad-title-start: #1ad76f;
   --accent-purple: #1ad76f;
   --accent-purple-dark: #16b85e;
-  --accent-bright-shadow: rgba(26, 215, 111, 0.3);
   --accent-focus-ring: rgba(26, 215, 111, 0.18);
-  --select-start: #1ad76f;
-  --select-end: #112418;
-  --focus-ring: rgba(74, 222, 128, 0.25);
 }
 
 .theme-red {
@@ -67,11 +50,7 @@
   --grad-title-start: #a51111;
   --accent-purple: #c74343;
   --accent-purple-dark: #af3636;
-  --accent-bright-shadow: rgba(237, 58, 58, 0.3);
   --accent-focus-ring: rgba(199, 67, 67, 0.2);
-  --select-start: #d63a3a;
-  --select-end: #782222;
-  --focus-ring: rgba(247, 168, 168, 0.18);
 }
 
 .theme-yellow {
@@ -82,11 +61,7 @@
   --grad-title-start: #a59011;
   --accent-purple: #c7a043;
   --accent-purple-dark: #af8836;
-  --accent-bright-shadow: rgba(237, 180, 58, 0.3);
   --accent-focus-ring: rgba(199, 160, 67, 0.2);
-  --select-start: #d6a43a;
-  --select-end: #785a22;
-  --focus-ring: rgba(247, 220, 168, 0.18);
 }
 
 .theme-blue {
@@ -97,11 +72,7 @@
   --grad-title-start: #1155a5;
   --accent-purple: #4372c7;
   --accent-purple-dark: #3660af;
-  --accent-bright-shadow: rgba(58, 120, 237, 0.3);
   --accent-focus-ring: rgba(67, 114, 199, 0.2);
-  --select-start: #3a72d6;
-  --select-end: #223c78;
-  --focus-ring: rgba(168, 200, 247, 0.18);
 }
 
 * {
@@ -325,7 +296,6 @@ body {
   margin-top: 6px;
 }
 
-
 .platform-icons {
   display: flex;
   justify-content: center;
@@ -357,7 +327,7 @@ body {
   border-radius: 10px;
   padding: 6px;
   background: color-mix(in srgb, var(--brand-color) 18%, transparent);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--panel-border);
 }
 
 .tech-label {
@@ -482,20 +452,19 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 18px;
-  background: rgba(255, 255, 255, 0.04);
+  padding: 8px 16px;
+  background: var(--glass-bg);
   backdrop-filter: blur(5px);
-  border: 1px solid var(--panel-border);
-  border-radius: 12px;
+  border: 2px solid var(--panel-border);
+  border-radius: 10px;
   color: var(--text-main);
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   transition:
     transform 0.2s ease,
     background 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+    border-color 0.2s ease;
 }
 
 .social-button svg {
@@ -504,32 +473,28 @@ body {
   flex-shrink: 0;
 }
 
-.social-button:hover {
-  transform: translateY(-3px);
-}
-
 .social-button.email:hover {
-  background: var(--accent-purple);
+  background: transparent;
   border-color: var(--accent-purple);
-  box-shadow: 0 10px 25px var(--accent-bright-shadow);
+  color: var(--accent-purple);
 }
 
 .social-button.discord:hover {
-  background: #5865f2;
+  background: transparent;
   border-color: #5865f2;
-  box-shadow: 0 10px 25px rgba(88, 101, 242, 0.4);
+  color: #5865f2;
 }
 
 .social-button.github:hover {
-  background: #333;
+  background: transparent;
   border-color: #666;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  color: #a0a0a0;
 }
 
 .social-button.linktree:hover {
-  background: var(--accent-purple);
+  background: transparent;
   border-color: var(--accent-purple);
-  box-shadow: 0 10px 25px var(--accent-bright-shadow);
+  color: var(--accent-purple);
 }
 
 .friends-section {
@@ -549,20 +514,18 @@ body {
   flex-direction: column;
   gap: 18px;
   padding: 28px;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--card-bg);
   border: 1px solid var(--panel-border);
   border-radius: 20px;
   text-align: left;
   transition:
     transform 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+    border-color 0.2s ease;
 }
 
 .friend-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   border-color: var(--accent-purple);
-  box-shadow: 0 10px 30px var(--accent-bright-shadow);
 }
 
 .friend-top {
@@ -579,7 +542,7 @@ body {
   object-fit: cover;
   border: 1px solid var(--panel-border);
   padding: 6px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--panel-bg);
   flex-shrink: 0;
 }
 
@@ -640,20 +603,18 @@ body {
   flex-direction: column;
   gap: 18px;
   padding: 28px;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--card-bg);
   border: 1px solid var(--panel-border);
   border-radius: 20px;
   text-align: left;
   transition:
     transform 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+    border-color 0.2s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   border-color: var(--accent-purple);
-  box-shadow: 0 10px 30px var(--accent-bright-shadow);
 }
 
 .project-header {
@@ -666,7 +627,7 @@ body {
   width: 52px;
   height: 52px;
   border-radius: 14px;
-  background: rgba(124, 88, 204, 0.1);
+  background: var(--accent-bg-subtle);
   border: 1px solid var(--panel-border);
   display: flex;
   align-items: center;
@@ -675,18 +636,16 @@ body {
   flex-shrink: 0;
   transition:
     background 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
+    color 0.2s ease;
 }
 
 .project-card:hover .project-icon {
-  background: var(--accent-purple);
-  color: var(--btn-text);
-  transform: scale(1.1);
+  background: var(--accent-focus-ring);
+  color: var(--accent-purple);
 }
 
 .project-card:hover .project-icon-img {
-  filter: brightness(0) invert(1);
+  filter: brightness(1.2);
 }
 
 .project-icon-img {
@@ -694,7 +653,6 @@ body {
   height: 46px;
   display: block;
 }
-
 
 .project-title {
   font-size: 1.4rem;
@@ -725,7 +683,7 @@ body {
 
 .project-tag {
   padding: 6px 12px;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--glass-bg);
   border: 1px solid var(--panel-border);
   border-radius: 8px;
   font-size: 0.8rem;
@@ -760,15 +718,13 @@ body {
   text-align: left;
   transition:
     transform 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
-  background: rgba(255, 255, 255, 0.02);
+    border-color 0.2s ease;
+  background: var(--card-bg);
 }
 
 .game-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   border-color: var(--accent-purple);
-  box-shadow: 0 10px 30px var(--accent-bright-shadow);
 }
 
 .game-img {
@@ -831,43 +787,39 @@ body {
 .btn-primary {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  background: linear-gradient(
-    135deg,
-    var(--accent-purple),
-    var(--accent-purple-dark)
-  );
-  border: 1px solid var(--border-light);
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background: var(--accent-purple);
   color: var(--btn-text);
-  padding: 12px 22px;
-  border-radius: 12px;
-  font-family: inherit;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 0 10px 20px var(--shadow-sm);
+  border: 2px solid transparent;
+  font-family: inherit;
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    filter 0.2s ease;
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.1s ease;
   white-space: nowrap;
 }
 
 .btn-primary svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 25px var(--accent-bright-shadow);
-  filter: brightness(1.1);
+  background: transparent;
+  border-color: var(--accent-purple);
+  color: var(--accent-purple);
 }
 
 .btn-primary:active {
-  transform: translateY(1px) scale(0.99);
+  transform: scale(0.97);
 }
 
 .mcsh-section {
@@ -894,7 +846,7 @@ body {
   border-radius: 16px;
   border: 1px solid var(--panel-border);
   padding: 10px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--panel-bg);
   flex-shrink: 0;
 }
 
@@ -930,14 +882,28 @@ body {
   padding: 14px 20px;
 }
 
+.discord-btn {
+  background: var(--glass-bg);
+  backdrop-filter: blur(5px);
+  border-color: var(--panel-border);
+}
+
 .discord-btn:hover {
-  background: linear-gradient(135deg, #5865f2, #4752c4) !important;
-  box-shadow: 0 15px 25px rgba(88, 101, 242, 0.4) !important;
+  background: transparent;
+  border-color: #5865f2;
+  color: #5865f2;
+}
+
+.trustpilot-btn {
+  background: var(--glass-bg);
+  backdrop-filter: blur(5px);
+  border-color: var(--panel-border);
 }
 
 .trustpilot-btn:hover {
-  background: linear-gradient(135deg, #00b67a, #009e6a) !important;
-  box-shadow: 0 15px 25px rgba(0, 182, 122, 0.4) !important;
+  background: transparent;
+  border-color: #00b67a;
+  color: #00b67a;
 }
 
 .site-footer {
@@ -1147,7 +1113,7 @@ body {
 }
 
 .theme-btn--default:hover {
-  background: rgba(124, 88, 204, 0.1);
+  background: var(--accent-bg-subtle);
 }
 
 .theme-btn--green {
@@ -1285,7 +1251,7 @@ body {
 }
 
 .custom-checkbox:hover input ~ .checkmark {
-  box-shadow: 0 8px 10px var(--accent-bright-shadow);
+  border-color: var(--accent-purple);
 }
 
 .custom-checkbox input:checked ~ .checkmark {
@@ -1423,6 +1389,10 @@ body {
 
   .profile-description {
     font-size: 0.85rem;
+  }
+
+  .platform-icons {
+    max-width: 200px;
   }
 
   .stats-section {
@@ -1616,9 +1586,6 @@ body {
 .e404-img {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
-  border: 3px solid var(--accent-purple);
-  object-fit: cover;
 }
 
 .e404-heading {
