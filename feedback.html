@@ -205,13 +205,16 @@
               />
             </div>
 
-            <button
-              class="btn-primary feedback-submit"
-              id="btnFeedbackSubmit"
-              disabled
-            >
-              <span data-i18n="feedback_submit">Send Feedback</span>
-            </button>
+            <div class="feedback-submit-wrapper">
+              <button
+                class="btn-primary feedback-submit"
+                id="btnFeedbackSubmit"
+                disabled
+              >
+                <i data-lucide="send" width="18" height="18"></i>
+                <span data-i18n="feedback_submit">Send Feedback</span>
+              </button>
+            </div>
           </div>
 
           <div id="feedbackSuccess" class="feedback-success">
@@ -333,6 +336,13 @@
                 data-i18n="theme_blue"
               >
                 Blue
+              </button>
+              <button
+                class="theme-btn theme-btn--pink"
+                data-theme="pink"
+                data-i18n="theme_pink"
+              >
+                Pink
               </button>
             </div>
           </div>

@@ -75,6 +75,17 @@
   --accent-focus-ring: rgba(67, 114, 199, 0.2);
 }
 
+.theme-pink {
+  --text-muted: #ff7eb3;
+  --text-muted-bright: #ff9ec8;
+  --grad-text-start: #ff4080;
+  --grad-text-end: #ff7eb3;
+  --grad-title-start: #ff4080;
+  --accent-purple: #ff7eb3;
+  --accent-purple-dark: #e85a9a;
+  --accent-focus-ring: rgba(255, 126, 179, 0.2);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -149,7 +160,7 @@ body {
   padding: 0 35px;
   height: 64px;
   background: var(--bg-purple-light);
-  border: 1px solid var(--panel-border);
+  border: 2px solid transparent;
   border-radius: 20px;
   box-shadow: 0 10px 30px var(--shadow-md);
   position: sticky;
@@ -229,7 +240,7 @@ body {
 .panel {
   background: var(--panel-bg);
   backdrop-filter: blur(10px);
-  border: 1px solid var(--panel-border);
+  border: 2px solid transparent;
   border-radius: 20px;
   box-shadow: 0 10px 30px var(--shadow-md);
 }
@@ -262,7 +273,7 @@ body {
   width: 130px;
   height: 130px;
   object-fit: cover;
-  border: 1px solid var(--panel-border);
+  border: 2px solid transparent;
   border-radius: 50%;
   padding: 8px;
   backdrop-filter: blur(5px);
@@ -327,7 +338,7 @@ body {
   border-radius: 10px;
   padding: 6px;
   background: color-mix(in srgb, var(--brand-color) 18%, transparent);
-  border: 1px solid var(--panel-border);
+  border: 2px solid transparent;
 }
 
 .tech-label {
@@ -353,7 +364,7 @@ body {
   padding: 10px 12px;
   background: var(--panel-bg);
   backdrop-filter: blur(10px);
-  border: 1px solid var(--panel-border);
+  border: 2px solid transparent;
   border-radius: 12px;
   box-shadow: 0 10px 30px var(--shadow-md);
 }
@@ -515,7 +526,7 @@ body {
   gap: 18px;
   padding: 28px;
   background: var(--card-bg);
-  border: 1px solid var(--panel-border);
+  border: 2px solid transparent;
   border-radius: 20px;
   text-align: left;
   transition:
@@ -540,7 +551,7 @@ body {
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  border: 1px solid var(--panel-border);
+  border: 2px solid transparent;
   padding: 6px;
   background: var(--panel-bg);
   flex-shrink: 0;
@@ -604,7 +615,7 @@ body {
   gap: 18px;
   padding: 28px;
   background: var(--card-bg);
-  border: 1px solid var(--panel-border);
+  border: 2px solid transparent;
   border-radius: 20px;
   text-align: left;
   transition:
@@ -627,8 +638,9 @@ body {
   width: 52px;
   height: 52px;
   border-radius: 14px;
-  background: var(--accent-bg-subtle);
-  border: 1px solid var(--panel-border);
+  border-color: #7c58cc;
+  background: rgba(124, 88, 204, 0.1);
+  border: 2px solid transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -684,7 +696,7 @@ body {
 .project-tag {
   padding: 6px 12px;
   background: var(--glass-bg);
-  border: 1px solid var(--panel-border);
+  border: 2px solid transparent;
   border-radius: 8px;
   font-size: 0.8rem;
   color: var(--text-muted);
@@ -714,7 +726,7 @@ body {
 .game-card {
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid var(--panel-border);
+  border: 2px solid transparent;
   text-align: left;
   transition:
     transform 0.2s ease,
@@ -844,7 +856,7 @@ body {
   width: 80px;
   height: 80px;
   border-radius: 16px;
-  border: 1px solid var(--panel-border);
+  border: 2px solid transparent;
   padding: 10px;
   background: var(--panel-bg);
   flex-shrink: 0;
@@ -918,7 +930,7 @@ body {
   text-align: center;
   background: var(--panel-bg);
   backdrop-filter: blur(10px);
-  border: 1px solid var(--panel-border);
+  border: 2px solid transparent;
   border-radius: 20px;
   box-shadow: 0 10px 30px var(--shadow-md);
 }
@@ -1009,7 +1021,7 @@ body {
 
 .modal {
   background: var(--bg-purple-light);
-  border: 1px solid var(--panel-border);
+  border: 2px solid transparent;
   border-radius: 20px;
   padding: 32px;
   width: 100%;
@@ -1087,7 +1099,7 @@ body {
   justify-content: center;
   padding: 12px 8px;
   border-radius: 12px;
-  border: 1px solid var(--panel-border);
+  border: 2px solid transparent;
   background: var(--panel-bg);
   color: var(--text-muted);
   font-size: 0.75rem;
@@ -1095,7 +1107,6 @@ body {
   font-family: inherit;
   cursor: pointer;
   transition:
-    transform 0.2s ease,
     border-color 0.2s ease,
     color 0.2s ease,
     background 0.2s ease;
@@ -1103,53 +1114,58 @@ body {
   letter-spacing: 0.5px;
 }
 
-.theme-btn:hover {
-  transform: translateY(-2px);
-}
-
 .theme-btn--default {
-  border-color: var(--theme-default-border);
   color: var(--theme-default-text);
 }
 
 .theme-btn--default:hover {
-  background: var(--accent-bg-subtle);
+  border-color: #7c58cc;
+  background: rgba(124, 88, 204, 0.1);
 }
 
 .theme-btn--green {
-  border-color: #1ad76f;
   color: #1ad76f;
 }
 
 .theme-btn--green:hover {
+  border-color: #1ad76f;
   background: rgba(26, 215, 111, 0.1);
 }
 
 .theme-btn--red {
-  border-color: #c74343;
   color: #f99393;
 }
 
 .theme-btn--red:hover {
+  border-color: #c74343;
   background: rgba(199, 67, 67, 0.1);
 }
 
 .theme-btn--yellow {
-  border-color: #c7a043;
   color: #f9d993;
 }
 
 .theme-btn--yellow:hover {
+  border-color: #c7a043;
   background: rgba(199, 160, 67, 0.1);
 }
 
 .theme-btn--blue {
-  border-color: #4372c7;
   color: #93b8f9;
 }
 
 .theme-btn--blue:hover {
+  border-color: #4372c7;
   background: rgba(67, 114, 199, 0.1);
+}
+
+.theme-btn--pink {
+  color: #ff7eb3;
+}
+
+.theme-btn--pink:hover {
+  border-color: #ff7eb3;
+  background: rgba(255, 126, 179, 0.1);
 }
 
 .theme-btn.active,
@@ -1183,6 +1199,12 @@ body {
   background: rgba(67, 114, 199, 0.15);
 }
 
+.theme-btn--pink.active {
+  border-color: #ff7eb3;
+  color: #ff7eb3;
+  background: rgba(255, 126, 179, 0.15);
+}
+
 .lang-btn {
   display: flex;
   align-items: center;
@@ -1190,21 +1212,19 @@ body {
   width: 100%;
   padding: 14px 18px;
   border-radius: 12px;
-  border: 1px solid var(--panel-border);
-  background: var(--panel-bg);
+  border: 2px solid transparent;
+  background: transparent;
   color: var(--text-main);
   font-size: 1rem;
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
   transition:
-    transform 0.2s ease,
     border-color 0.2s ease;
 }
 
 .lang-btn:hover {
-  transform: translateY(-2px);
-  border-color: var(--text-muted);
+  border-color: var(--accent-purple);
 }
 
 .lang-flag {
@@ -1306,7 +1326,7 @@ body {
   transform: translateX(-50%);
   background: var(--panel-bg);
   color: var(--text-main);
-  border: 1px solid var(--panel-border);
+  border: 2px solid transparent;
   border-radius: 8px;
   padding: 8px 12px;
   font-size: 13px;
@@ -1551,7 +1571,7 @@ body {
 
 .lang-toggle {
   background: none;
-  border: 1px solid var(--panel-border);
+  border: 2px solid transparent;
   color: var(--text-muted);
   font-family: inherit;
   font-size: 0.85rem;

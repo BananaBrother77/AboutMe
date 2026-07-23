@@ -54,12 +54,16 @@ function applyTheme(theme) {
     'theme-red',
     'theme-yellow',
     'theme-blue',
+    'theme-pink',
   );
+
   if (theme !== 'purple') document.body.classList.add(`theme-${theme}`);
   localStorage.setItem('theme', theme);
+
   if (shouldSyncTheme()) {
     setCookie('theme', theme);
   }
+
   document.querySelectorAll('.theme-btn').forEach((btn) => {
     btn.classList.toggle('active', btn.dataset.theme === theme);
   });
@@ -77,6 +81,7 @@ if (syncThemeCheckbox) {
     const enabled = syncThemeCheckbox.checked;
     localStorage.setItem('syncTheme', enabled);
     setCookie('syncTheme', enabled);
+
     if (enabled) {
       setCookie('theme', localStorage.getItem('theme') || 'purple');
     } else {
@@ -91,6 +96,7 @@ function toggleLanguage() {
   currentLang = currentLang === 'en' ? 'de' : 'en';
   localStorage.setItem('language', currentLang);
   document.documentElement.lang = currentLang;
+
   applyTranslations();
 }
 
@@ -98,10 +104,20 @@ if (langSwitchBtn) {
   langSwitchBtn.addEventListener('click', toggleLanguage);
 }
 
+// Is typing check
+
+function isTypingTarget(target) {
+  return (
+    target instanceof HTMLElement &&
+    (target.isContentEditable ||
+      ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName))
+  );
+}
+
 // Keyboard shortcuts
 
 document.addEventListener('keydown', (e) => {
-  if (!settingsModal) return;
+  if (!settingsModal || isTypingTarget(e.target)) return;
   switch (e.key) {
     case 's':
       if (!settingsModal.classList.contains('show')) {
@@ -123,9 +139,11 @@ document.addEventListener('keydown', (e) => {
 
 document.addEventListener('click', (e) => {
   const icon = e.target.closest('.hint-icon');
+  
   document.querySelectorAll('.hint-icon.show').forEach((el) => {
     if (el !== icon) el.classList.remove('show');
   });
+
   if (icon) {
     icon.classList.toggle('show');
   }

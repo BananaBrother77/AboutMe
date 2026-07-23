@@ -86,8 +86,8 @@ const translations = {
     theme_red: 'Red',
     theme_yellow: 'Yellow',
     theme_blue: 'Blue',
+    theme_pink: 'Pink',
     lang_name: 'English',
-    lang_flag: '🇺🇸',
     language_switch_target: 'German',
     '404_subtitle':
       "Where are you trying to go? What are you looking for? I, of course, don't know that, but I know that you won't find it here.",
@@ -203,8 +203,8 @@ const translations = {
     theme_red: 'Rot',
     theme_yellow: 'Gelb',
     theme_blue: 'Blau',
+    theme_pink: 'Rosa',
     lang_name: 'Deutsch',
-    lang_flag: '🇩🇪',
     language_switch_target: 'English',
     '404_subtitle':
       'Wohin versuchst du zu gehen? Was suchst du? Ich weiß das natürlich nicht, aber ich weiß, dass du es hier nicht findest.',

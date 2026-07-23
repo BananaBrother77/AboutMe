@@ -38,7 +38,7 @@
   gap: 4px;
   padding: 8px 8px;
   background: var(--panel-bg);
-  border: 1px solid var(--panel-border);
+  border: 2px solid var(--panel-border);
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.15s ease;
@@ -147,9 +147,14 @@
   box-shadow: 0 0 0 3px var(--accent-focus-ring);
 }
 
-.feedback-submit {
-  width: 100%;
+.feedback-submit-wrapper {
+  display: flex;
+  justify-content: center;
   margin-top: 8px;
+}
+
+.feedback-submit {
+  max-width: 240px;
   justify-content: center;
 }
 
