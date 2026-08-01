@@ -4,7 +4,7 @@
     "dev": "wrangler pages dev -- vite",
     "build": "vite build",
     "preview": "npm run build && wrangler pages dev dist",
-    "deploy": "npm run build && wrangler pages deploy dist"
+    "deploy": "npm run build && wrangler pages deploy dist --project-name bananabrother77 --branch main"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.0.0",
