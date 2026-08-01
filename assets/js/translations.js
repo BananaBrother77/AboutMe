@@ -115,6 +115,11 @@ const translations = {
     feedback_bullet_anon: 'Anonymous unless you choose to share contact',
     feedback_placeholder_text: "What's on your mind?",
     feedback_placeholder_contact: 'e.g. Discord username, email',
+    cookie_title: 'Privacy Notice',
+    cookie_text:
+      'This site uses Google Analytics for anonymous traffic measurement.',
+    cookie_accept: 'Accept',
+    cookie_decline: 'Decline',
   },
   de: {
     nav_information: 'Informationen',
@@ -234,19 +239,24 @@ const translations = {
     feedback_bullet_anon: 'Anonym, es sei denn, du teilst deine Kontaktdaten',
     feedback_placeholder_text: 'Was liegt dir auf dem Herzen?',
     feedback_placeholder_contact: 'z.B. Discord-Name, E-Mail',
+    cookie_title: 'Datenschutzhinweis',
+    cookie_text:
+      'Diese Seite nutzt Google Analytics für anonyme Verkehrsmessung.',
+    cookie_accept: 'Akzeptieren',
+    cookie_decline: 'Ablehnen',
   },
 };
 
 const savedLang = localStorage.getItem('language');
-let currentLang = savedLang || 'en';
+export let currentLang = savedLang || 'en';
 
 document.documentElement.lang = currentLang;
 
-function getTranslation(key) {
+export function getTranslation(key) {
   return translations[currentLang]?.[key] || translations.en?.[key] || '';
 }
 
-function applyTranslations() {
+export function applyTranslations() {
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.getAttribute('data-i18n');
     const value = getTranslation(key);
@@ -262,6 +272,13 @@ function applyTranslations() {
       el.placeholder = value;
     }
   });
+}
+
+export function toggleLanguage() {
+  currentLang = currentLang === 'en' ? 'de' : 'en';
+  localStorage.setItem('language', currentLang);
+  document.documentElement.lang = currentLang;
+  applyTranslations();
 }
 
 applyTranslations();

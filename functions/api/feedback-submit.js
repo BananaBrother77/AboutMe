@@ -85,11 +85,6 @@ export async function onRequest(context) {
         value: data.contact || '—',
         inline: true,
       },
-      {
-        name: 'IP Address',
-        value: `||${ip}||`,
-        inline: true,
-      },
     ],
     footer: {
       text: 'Portfolio Feedback',

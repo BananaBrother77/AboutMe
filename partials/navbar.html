@@ -1,0 +1,40 @@
+<nav class="navbar reveal">
+  <a href="/" class="navbar-brand">
+    <img src="assets/banana-icon.svg" alt="" class="navbar-brand-icon" />
+    BananaBrother77
+  </a>
+  <div class="nav-links">
+    <a
+      href="<%= ['terms', 'privacy', 'feedback', '404'].includes(page) ? '/#information' : '#information' %>"
+      class="nav-link"
+    >
+      <i data-lucide="info" width="16" height="16"></i>
+      <span data-i18n="nav_information">Information</span>
+    </a>
+    <a
+      href="<%= ['terms', 'privacy', 'feedback', '404'].includes(page) ? '/#projects' : '#projects' %>"
+      class="nav-link"
+    >
+      <i data-lucide="code" width="16" height="16"></i>
+      <span data-i18n="nav_projects">Projects</span>
+    </a>
+    <a
+      href="<%= ['terms', 'privacy', 'feedback', '404'].includes(page) ? '/#gaming' : '#gaming' %>"
+      class="nav-link"
+    >
+      <i data-lucide="gamepad-2" width="16" height="16"></i>
+      <span data-i18n="nav_gaming">Gaming</span>
+    </a>
+    <a
+      href="/feedback"
+      class="nav-link<%= page === 'feedback' ? ' active' : '' %>"
+    >
+      <i data-lucide="message-square" width="16" height="16"></i>
+      <span data-i18n="nav_feedback">Feedback</span>
+    </a>
+    <button class="nav-link" id="settingsBtn" type="button">
+      <i data-lucide="settings" width="16" height="16"></i>
+      <span data-i18n="nav_settings">Settings</span>
+    </button>
+  </div>
+</nav>

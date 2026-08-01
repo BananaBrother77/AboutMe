@@ -1,0 +1,15 @@
+<script type="module" src="/assets/js/reveal.js"></script>
+<script type="module" src="/assets/js/translations.js"></script>
+<script type="module" src="/assets/js/settings.js"></script>
+<script src="https://unpkg.com/lucide@1.17.0"></script>
+<% if (page === 'index') { %>
+<script type="module" src="/assets/js/meow.js"></script>
+<script type="module" src="/assets/js/icons.js"></script>
+<% } else if (page === 'feedback') { %>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
+<script type="module" src="/assets/js/feedback.js"></script>
+<% } else if (page === '404') { %>
+<script type="module" src="/assets/js/404.js"></script>
+<% } else { %>
+<script type="module" src="/assets/js/icons.js"></script>
+<% } %> <%- include('cookie-banner.html') %>

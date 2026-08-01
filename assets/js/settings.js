@@ -1,3 +1,5 @@
+import { toggleLanguage } from './translations.js';
+
 const settingsBtn = document.getElementById('settingsBtn');
 const settingsModal = document.getElementById('settingsModal');
 const closeModalBtn = document.getElementById('closeModalBtn');
@@ -90,21 +92,11 @@ if (syncThemeCheckbox) {
   });
 }
 
-// Language Switch
-
-function toggleLanguage() {
-  currentLang = currentLang === 'en' ? 'de' : 'en';
-  localStorage.setItem('language', currentLang);
-  document.documentElement.lang = currentLang;
-
-  applyTranslations();
-}
-
 if (langSwitchBtn) {
   langSwitchBtn.addEventListener('click', toggleLanguage);
 }
 
-// Is typing check
+// Keyboard shortcuts
 
 function isTypingTarget(target) {
   return (
@@ -139,7 +131,7 @@ document.addEventListener('keydown', (e) => {
 
 document.addEventListener('click', (e) => {
   const icon = e.target.closest('.hint-icon');
-  
+
   document.querySelectorAll('.hint-icon.show').forEach((el) => {
     if (el !== icon) el.classList.remove('show');
   });
