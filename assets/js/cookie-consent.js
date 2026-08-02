@@ -1,38 +1,62 @@
 (function () {
   const KEY = 'cookie-consent';
-  const GA_ID = 'G-B33EM55J3N';
+  const GA_ID = 'G-TJCCV8RPV4';
 
   const elements = {
     banner: document.getElementById('cookieBanner'),
+    acceptBtn: document.getElementById('acceptCookiesBtn'),
+    declineBtn: document.getElementById('declineCookiesBtn'),
   };
 
   const consent = localStorage.getItem(KEY);
 
   if (consent === 'accepted') {
     loadGA();
-  } else {
+  } else if (consent !== 'declined') {
     document.addEventListener('DOMContentLoaded', showBanner);
   }
 
   function showBanner() {
-    if (elements.banner) elements.banner.classList.add('show');
+    if (!elements.banner) return;
+
+    elements.banner.classList.add('show');
+    forceVisible();
   }
 
-  window.acceptCookies = function () {
+  function forceVisible() {
+    if (!elements.banner || !elements.banner.classList.contains('show')) return;
+
+    elements.banner.style.setProperty('display', 'flex', 'important');
+    elements.banner.style.setProperty('visibility', 'visible', 'important');
+
+    requestAnimationFrame(forceVisible);
+  }
+
+  function acceptCookies() {
     localStorage.setItem(KEY, 'accepted');
 
     hideBanner();
     loadGA();
-  };
+  }
 
-  window.declineCookies = function () {
+  function declineCookies() {
     localStorage.setItem(KEY, 'declined');
 
     hideBanner();
-  };
+  }
+
+  elements.acceptBtn.addEventListener('click', acceptCookies);
+  elements.declineBtn.addEventListener('click', declineCookies);
+
+  window.acceptCookies = acceptCookies;
+  window.declineCookies = declineCookies;
 
   function hideBanner() {
-    if (elements.banner) elements.banner.classList.remove('show');
+    if (!elements.banner) return;
+
+    elements.banner.classList.remove('show');
+    elements.banner.style.removeProperty('display');
+    elements.banner.style.removeProperty('visibility');
   }
 
   function loadGA() {

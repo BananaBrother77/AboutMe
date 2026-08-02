@@ -1520,7 +1520,7 @@ body {
 
 .hint-icon:hover,
 .hint-icon:focus {
-  color: var(--text-main);
+  color: var(--text-muted-bright);
 }
 
 .hint-tooltip {
@@ -1528,9 +1528,9 @@ body {
   bottom: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%);
-  background: var(--panel-bg);
+  background: var(--bg-purple-light);
   color: var(--text-main);
-  border: 2px solid transparent;
+  border: 2px solid var(--panel-border);
   border-radius: 8px;
   padding: 8px 12px;
   font-size: 13px;

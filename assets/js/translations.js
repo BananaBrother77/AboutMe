@@ -78,6 +78,9 @@ const translations = {
     settings_title: 'Settings',
     settings_theme_title: 'Theme',
     settings_lang_title: 'Language',
+    settings_privacy_title: 'Privacy',
+    privacy_on: 'Analytics: On',
+    privacy_off: 'Analytics: Off',
     settings_sync_theme: 'Sync theme across sites',
     settings_sync_theme_hint:
       'When enabled, your theme preference is shared across all BananaBrother77 websites via a cookie.',
@@ -120,6 +123,8 @@ const translations = {
       'This site uses Google Analytics for anonymous traffic measurement.',
     cookie_accept: 'Accept',
     cookie_decline: 'Decline',
+    footer_terms: 'Terms',
+    footer_privacy: 'Privacy',
   },
   de: {
     nav_information: 'Informationen',
@@ -200,6 +205,9 @@ const translations = {
     settings_title: 'Einstellungen',
     settings_theme_title: 'Erscheinungsbild',
     settings_lang_title: 'Sprache',
+    settings_privacy_title: 'Datenschutz',
+    privacy_on: 'Analytics: An',
+    privacy_off: 'Analytics: Aus',
     settings_sync_theme: 'Theme seitenübergreifend synchronisieren',
     settings_sync_theme_hint:
       'Wenn aktiviert, wird deine Theme-Auswahl auf allen BananaBrother77-Webseiten per Cookie geteilt.',
@@ -244,11 +252,14 @@ const translations = {
       'Diese Seite nutzt Google Analytics für anonyme Verkehrsmessung.',
     cookie_accept: 'Akzeptieren',
     cookie_decline: 'Ablehnen',
+    footer_terms: 'AGB',
+    footer_privacy: 'Datenschutz',
   },
 };
 
 const savedLang = localStorage.getItem('language');
-export let currentLang = savedLang || 'en';
+export let currentLang =
+  savedLang || (document.documentElement.lang === 'de' ? 'de' : 'en');
 
 document.documentElement.lang = currentLang;
 
@@ -279,6 +290,9 @@ export function toggleLanguage() {
   localStorage.setItem('language', currentLang);
   document.documentElement.lang = currentLang;
   applyTranslations();
+  document.dispatchEvent(
+    new CustomEvent('langchange', { detail: currentLang }),
+  );
 }
 
 applyTranslations();

@@ -1,10 +1,13 @@
-import { toggleLanguage } from './translations.js';
+import { toggleLanguage, getTranslation } from './translations.js';
 
 const settingsBtn = document.getElementById('settingsBtn');
 const settingsModal = document.getElementById('settingsModal');
 const closeModalBtn = document.getElementById('closeModalBtn');
 const langSwitchBtn = document.getElementById('langSwitchBtn');
 const syncThemeCheckbox = document.getElementById('syncThemeCheckbox');
+const privacyToggleBtn = document.getElementById('privacyToggleBtn');
+
+const CONSENT_KEY = 'cookie-consent';
 
 if (settingsBtn) {
   settingsBtn.addEventListener('click', () => {
@@ -95,6 +98,36 @@ if (syncThemeCheckbox) {
 if (langSwitchBtn) {
   langSwitchBtn.addEventListener('click', toggleLanguage);
 }
+
+function isAnalyticsEnabled() {
+  return localStorage.getItem(CONSENT_KEY) === 'accepted';
+}
+
+function updatePrivacyLabel() {
+  if (!privacyToggleBtn) return;
+
+  const key = isAnalyticsEnabled() ? 'privacy_on' : 'privacy_off';
+  const label = privacyToggleBtn.querySelector('.lang-name');
+
+  if (!label) return;
+
+  label.setAttribute('data-i18n', key);
+  label.textContent = getTranslation(key);
+}
+
+if (privacyToggleBtn) {
+  privacyToggleBtn.addEventListener('click', () => {
+    if (isAnalyticsEnabled()) {
+      if (typeof window.declineCookies === 'function') window.declineCookies();
+    } else if (typeof window.acceptCookies === 'function') {
+      window.acceptCookies();
+    }
+    
+    updatePrivacyLabel();
+  });
+}
+
+updatePrivacyLabel();
 
 // Keyboard shortcuts
 

@@ -10,6 +10,10 @@
 <script type="module" src="/assets/js/feedback.js"></script>
 <% } else if (page === '404') { %>
 <script type="module" src="/assets/js/404.js"></script>
+<% } else if (page === 'privacy' || page === 'terms' || page === 'privacy-de' ||
+page === 'terms-de') { %>
+<script type="module" src="/assets/js/legal-lang.js"></script>
+<script type="module" src="/assets/js/icons.js"></script>
 <% } else { %>
 <script type="module" src="/assets/js/icons.js"></script>
 <% } %> <%- include('cookie-banner.html') %>

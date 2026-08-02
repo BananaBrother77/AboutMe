@@ -91,6 +91,30 @@
   color: var(--text-muted-bright);
 }
 
+.legal-langs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  margin: -12px 0 20px;
+  color: var(--text-muted);
+}
+
+.legal-langs a {
+  color: var(--accent-purple);
+}
+
+.legal-langs a:hover {
+  color: var(--text-muted-bright);
+  text-decoration: underline;
+}
+
+.legal-lang-active {
+  font-weight: 600;
+  color: var(--text-main);
+  opacity: 0.9;
+}
+
 .legal-table-wrap {
   overflow-x: auto;
   margin: 12px 0;

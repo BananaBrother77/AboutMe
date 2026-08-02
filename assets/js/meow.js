@@ -25,10 +25,11 @@ const sectionId = path || hash;
 
 if (sectionId) {
   const target = document.getElementById(sectionId);
+
   if (target) {
     target.scrollIntoView({ behavior: 'smooth' });
     history.replaceState(null, '', `/#${sectionId}`);
-  } else {
+  } else if (window.location.pathname !== '/404') {
     window.location.href = '/404';
   }
 }

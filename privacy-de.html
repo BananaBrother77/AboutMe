@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Datenschutzerklärung für bananabrother77.online."
+    />
+    <meta
+      property="og:title"
+      content="Datenschutzerklärung | BananaBrother77"
+    />
+    <meta
+      property="og:description"
+      content="Welche Daten ich erhebe und wie ich sie verarbeite."
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/BananaBrother77/global-assets/refs/heads/main/profile.jpeg"
+    />
+    <meta name="theme-color" content="#7c58cc" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <title>Datenschutzerklärung | BananaBrother77</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="assets/css/legal.css" />
+  </head>
+  <body data-legal-lang="de">
+    <%- include('navbar.html') %>
+
+    <main>
+      <article class="legal-card reveal">
+        <a class="legal-back" href="/">
+          <svg
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m12 19-7-7 7-7" />
+            <path d="M19 12H5" />
+          </svg>
+          Zur Startseite
+        </a>
+        <div class="legal-langs">
+          <a class="legal-lang-link" href="/privacy" data-legal-lang-target="en"
+            >English</a
+          >
+          <span class="footer-sep" aria-hidden="true">|</span>
+          <span class="legal-lang-active">Deutsch</span>
+        </div>
+        <h1>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+            />
+            <path d="m9 12 2 2 4-4" />
+          </svg>
+          <span>Datenschutzerklärung</span>
+        </h1>
+        <p class="legal-updated">Zuletzt aktualisiert: 1. August 2026</p>
+
+        <h2>1. Wer betreibt diese Website</h2>
+        <p>
+          Diese private Website wird von einer Einzelperson („ich", „meiner") in
+          Deutschland betrieben. Ich entscheide, warum und wie die hier
+          beschriebenen Daten verarbeitet werden. Datenschutzfragen und
+          -anfragen können an
+          <a href="mailto:support@bananabrother77.online"
+            >support@bananabrother77.online</a
+          >
+          gesendet werden.
+        </p>
+
+        <h2>2. Welche Daten erfasst werden</h2>
+        <div class="legal-table-wrap">
+          <table class="legal-table">
+            <thead>
+              <tr>
+                <th>Wann</th>
+                <th>Daten</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Jede Anfrage</td>
+                <td>
+                  Deine IP-Adresse und übliche Anfrage-Header erreichen das CDN
+                  und den Server, damit diese die Seite ausliefern und den
+                  Dienst schützen können.
+                </td>
+              </tr>
+              <tr>
+                <td>Google Analytics</td>
+                <td>
+                  Seitenpfad und Query-String, Referrer, Browser- und Gerätetyp,
+                  ungefährer Standort aus der IP-Adresse sowie Cookies
+                  (<code>_ga</code>, <code>_ga_G-TJCCV8RPV4</code>,
+                  <code>_gid</code>).
+                </td>
+              </tr>
+              <tr>
+                <td>Feedback-Formular</td>
+                <td>
+                  Kategorie, Bewertung, Feedback-Text, optionale Kontaktdaten
+                  (E-Mail, Discord-Name usw.), Cloudflare-Turnstile-Token,
+                  User-Agent und Zeitstempel. Einsendungen werden mir über einen
+                  Webhook via Discord zugestellt. Deine IP wird für
+                  Ratenbegrenzung und Turnstile-Prüfung verwendet, aber nicht an
+                  Discord weitergegeben.
+                </td>
+              </tr>
+              <tr>
+                <td>Theme-Sync (optional)</td>
+                <td>
+                  Wenn du in den Einstellungen „Design über Websites
+                  synchronisieren" aktivierst, wird ein
+                  <code>theme</code>-Cookie gesetzt, damit deine Einstellung auf
+                  allen BananaBrother77-Websites geteilt wird. Ein
+                  <code>syncTheme</code>-Cookie verfolgt, ob die
+                  Synchronisierung aktiviert ist. Es wird nie ohne dein
+                  ausdrückliches Zutun gesetzt.
+                </td>
+              </tr>
+              <tr>
+                <td>Einstellungen (localStorage)</td>
+                <td>
+                  Design-Einstellung, Sprachauswahl und
+                  Synchronisierungs-Einstellung werden im localStorage deines
+                  Browsers gespeichert. Sie werden mir nicht gesendet, es sei
+                  denn, du aktivierst Theme-Sync.
+                </td>
+              </tr>
+              <tr>
+                <td>Externe Inhalte</td>
+                <td>
+                  Die Seiten laden Icons (Lucide via unpkg), Schriftarten (lokal
+                  über jsDelivr gehostet) und Bilder (GitHub raw) von CDNs.
+                  Diese Dienste erhalten übliche Anfragedaten.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>3. Wozu die Daten verwendet werden</h2>
+        <ul>
+          <li>um Seiten und Funktionen bereitzustellen, die du anforderst</li>
+          <li>
+            um den Datenverkehr zu messen und zu verstehen, welche Teile der
+            Website genutzt werden
+          </li>
+          <li>um Missbrauch zu erkennen und Ratenbegrenzungen durchzusetzen</li>
+          <li>um Feedback, Support und Sicherheitsmeldungen zu bearbeiten</li>
+          <li>
+            um deine Design-Einstellung über Websites hinweg zu synchronisieren
+            (nur nachdem du sie aktivierst)
+          </li>
+        </ul>
+        <p>
+          Ich verkaufe keine personenbezogenen Daten und nutze sie nicht für
+          Werbung.
+        </p>
+
+        <h2>4. Rechtsgrundlagen, soweit die DSGVO gilt</h2>
+        <p>
+          Dienstsicherheit, Feedback-Bearbeitung und der Betrieb angeforderter
+          Funktionen stützen sich auf berechtigte Interessen nach Art. 6 Abs. 1
+          lit. f DSGVO. Google Analytics beruht auf deiner Einwilligung (Art. 6
+          Abs. 1 lit. a DSGVO, § 25 TTDSG), die du durch Akzeptieren des
+          Cookie-Banners gibst und die du jederzeit im Einstellungsmenü einer
+          beliebigen BananaBrother77-Website ändern kannst. Die optionalen
+          Theme-Sync-Cookies beruhen ebenfalls auf deiner Einwilligung, die du
+          durch Aktivieren der Einstellung gibst und durch Deaktivieren
+          widerrufen kannst. Cloudflare Turnstile wird nur auf der
+          Feedback-Seite geladen und stützt sich auf ein eigenes berechtigtes
+          Interesse an Bot-Erkennung.
+        </p>
+
+        <h2>5. Cookies und Browser-Speicher</h2>
+        <div class="legal-table-wrap">
+          <table class="legal-table">
+            <thead>
+              <tr>
+                <th>Cookie</th>
+                <th>Zweck</th>
+                <th>Dauer</th>
+                <th>Gesetzt von</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code>_ga</code>, <code>_ga_G-TJCCV8RPV4</code>,
+                  <code>_gid</code>
+                </td>
+                <td>Google-Analytics-Tracking</td>
+                <td>Bis zu 2 Jahre</td>
+                <td>Google Analytics</td>
+              </tr>
+              <tr>
+                <td><code>theme</code></td>
+                <td>Website-übergreifender Theme-Sync (optional)</td>
+                <td>1 Jahr</td>
+                <td>Ich, nur wenn du es aktivierst</td>
+              </tr>
+              <tr>
+                <td><code>syncTheme</code></td>
+                <td>Synchronisierungs-Einstellung (optional)</td>
+                <td>1 Jahr</td>
+                <td>Ich, nur wenn du es aktivierst</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          localStorage speichert deine Design-, Sprach- und
+          Synchronisierungs-Einstellung. Dabei handelt es sich nicht um Cookies,
+          und sie werden mir nicht automatisch gesendet.
+        </p>
+
+        <h2>6. Wer Daten empfängt</h2>
+        <div class="legal-table-wrap">
+          <table class="legal-table">
+            <thead>
+              <tr>
+                <th>Empfänger</th>
+                <th>Rolle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cloudflare</td>
+                <td>
+                  Stellt CDN, DNS, DDoS-Schutz und das Turnstile-CAPTCHA bereit.
+                  Erhält Anfragedaten einschließlich deiner IP.
+                </td>
+              </tr>
+              <tr>
+                <td>Google Analytics</td>
+                <td>
+                  Stellt Seitenaufruf-Analysen bereit. Erhält Seitenbesuche,
+                  Geräteinformationen, ungefähren Standort und setzt Cookies.
+                </td>
+              </tr>
+              <tr>
+                <td>Discord</td>
+                <td>
+                  Erhält Feedback-Inhalte, Kontaktdaten und Metadaten, wenn du
+                  das Feedback-Formular absendest. Deine IP wird nicht an
+                  Discord weitergeleitet.
+                </td>
+              </tr>
+              <tr>
+                <td>jsDelivr / unpkg / GitHub</td>
+                <td>
+                  Externe Inhaltsanbieter. Erhalten übliche Anfragedaten beim
+                  Laden von Ressourcen.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>7. Speicherdauer</h2>
+        <p>
+          Feedback-Einsendungen werden in Discord aufbewahrt, solange sie zur
+          Bearbeitung des Gesprächs oder zur Untersuchung von Missbrauch
+          benötigt werden. Du kannst mich bitten, einen Feedback-Eintrag zu
+          löschen. Ich entferne ihn dann aus Discord. Alles andere,
+          einschließlich Google-Analytics-Datensätzen, Cloudflare-Protokollen
+          und CDN-Protokollen, wird nicht auf meinem Server gespeichert und
+          liegt nicht unter meiner Kontrolle. Deren Aufbewahrungsdauer richtet
+          sich nach den Richtlinien dieser Dienste.
+        </p>
+
+        <h2>8. Deine Optionen und Rechte</h2>
+        <p>
+          Du kannst per E-Mail an
+          <a href="mailto:support@bananabrother77.online"
+            >support@bananabrother77.online</a
+          >
+          Zugriff auf deinen Feedback-Eintrag anfordern oder dessen Löschung
+          verlangen. Ich kann ihn aus Discord entfernen, aber ich kann keine
+          Daten löschen, die von Dritten (Google Analytics, Cloudflare, CDNs)
+          gespeichert werden. Diese Dienste haben eigene Richtlinien; du
+          müsstest sie kontaktieren oder ihre Opt-out-Tools verwenden.
+        </p>
+        <p>
+          Du kannst Google Analytics über die
+          <a href="https://tools.google.com/dlpage/gaoptout" target="_blank"
+            >Google-Analytics-Opt-out-Erweiterung für Browser</a
+          >
+          deaktivieren oder deine Analyse-Einstellung jederzeit im
+          Einstellungsmenü einer beliebigen BananaBrother77-Website ändern. Du
+          kannst das Theme-Sync-Cookie jederzeit deaktivieren, indem du die
+          Einstellung im Einstellungs-Dialog der Website deaktivierst. Du kannst
+          localStorage und Cookies jederzeit über die Einstellungen deines
+          Browsers löschen.
+        </p>
+
+        <h2>9. Änderungen und Kontakt</h2>
+        <p>
+          Diese Richtlinie kann sich mit der Website ändern. Das Datum oben
+          ändert sich, wenn dies geschieht.
+        </p>
+        <p>
+          Datenschutzfragen und -anfragen:
+          <a href="mailto:support@bananabrother77.online"
+            >support@bananabrother77.online</a
+          >.
+        </p>
+      </article>
+    </main>
+
+    <%- include('footer.html') %> <%- include('settings-modal.html') %> <%-
+    include('scripts.html') %>
+  </body>
+</html>
