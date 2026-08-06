@@ -1,0 +1,36 @@
+About Reading
+
+Reading is the process of converting written characters into meaning. It
+is one of the oldest and most reliable methods of transmitting information
+between people.
+
+Why reading is used
+- It is permanent. Unlike speech, it does not disappear after being produced.
+- It can be read at any pace. The reader controls the speed.
+- It can be revisited. Passages may be reread as often as necessary.
+- It does not require the author to be present.
+
+How reading works
+1. Locate the text. In most cases this is done by opening a link.
+2. Read from the beginning. Text is generally ordered so that it builds on itself.
+3. If a word or section is unclear, continue reading. Context frequently
+   resolves ambiguity.
+4. If the meaning is still unclear after a complete read, read the document again.
+
+Common questions
+
+Q: What should I do with a link I received?
+A: Open it. The linked document usually contains the information you need.
+
+Q: Can I have the information summarized instead?
+A: Generally no. The information is already written in the clearest form
+   available, and a summary would omit details the author considered important.
+
+Q: Is reading optional?
+A: Reading the document in full is strongly recommended. It is unlikely to
+   make sense in part.
+
+Summary
+
+If you were sent a link, read it. Most questions about a document are
+answered by the document itself.
