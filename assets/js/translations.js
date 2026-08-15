@@ -79,8 +79,7 @@ const translations = {
     settings_theme_title: 'Theme',
     settings_lang_title: 'Language',
     settings_privacy_title: 'Privacy',
-    privacy_on: 'Analytics: On',
-    privacy_off: 'Analytics: Off',
+    privacy_label: 'Analytics',
     settings_sync_theme: 'Sync theme across sites',
     settings_sync_theme_hint:
       'When enabled, your theme preference is shared across all BananaBrother77 websites via a cookie.',
@@ -206,8 +205,7 @@ const translations = {
     settings_theme_title: 'Erscheinungsbild',
     settings_lang_title: 'Sprache',
     settings_privacy_title: 'Datenschutz',
-    privacy_on: 'Analytics: An',
-    privacy_off: 'Analytics: Aus',
+    privacy_label: 'Analysen',
     settings_sync_theme: 'Theme seitenübergreifend synchronisieren',
     settings_sync_theme_hint:
       'Wenn aktiviert, wird deine Theme-Auswahl auf allen BananaBrother77-Webseiten per Cookie geteilt.',
