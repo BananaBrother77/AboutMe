@@ -110,7 +110,7 @@ npm run deploy
 
 ## Links
 
-- Portfolio: https://bananabrother77.online
+- Portfolio: https://bananabrother77.dev
 - Linktree: https://linktr.ee/BananaBrother77
 - GitHub: https://github.com/BananaBrother77
 - Discord: https://discord.gg/mtzPBcjUHN
