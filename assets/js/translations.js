@@ -44,8 +44,8 @@ const translations = {
     projects_title: 'Projects',
     projects_intro: "Here are some of the projects I've been working on.",
 
-    project_mctoolkit_desc:
-      'Made because I was bored and now it is growing for some reason, a Minecraft Server Status website that shows live status of servers and some other info. More coming soon!',
+    project_mcserverstatus_desc:
+      'A Minecraft server status viewer that displays the live status of any server: online players, version, MOTD, and <a href="https://mcserverhost.com/" target="_blank" rel="noopener noreferrer">MCServerHost</a> node status.',
     project_view: 'View Project',
     project_bananadashboard_desc:
       'A cross-platform desktop utility with system overview, live resource monitoring, file manager, process manager, themes, and more.',
@@ -108,7 +108,7 @@ const translations = {
     feedback_success_text: 'I read every submission and use it to improve.',
     cat_general: 'General',
     cat_bug: 'Bug Report',
-    cat_mctoolkit: 'MCToolkit',
+    cat_mcserverstatus: 'MCServerStatus',
     cat_bananadashboard: 'BananaDashboard',
     cat_other: 'Other',
     social_linktree: 'Linktree',
@@ -170,8 +170,8 @@ const translations = {
     projects_title: 'Projekte',
     projects_intro: 'Hier sind einige Projekte, an denen ich gearbeitet habe.',
 
-    project_mctoolkit_desc:
-      'Erstellt, weil ich gelangweilt war, und jetzt wächst es aus irgendeinem Grund. Eine Minecraft-Server-Status-Website, die Live-Status von Servern und andere Informationen anzeigt. Bald kommen weitere Funktionen!',
+    project_mcserverstatus_desc:
+      'Ein Minecraft-Server-Status-Viewer, der den Live-Status jedes Servers anzeigt: Online-Spieler, Version, MOTD und <a href="https://mcserverhost.com/" target="_blank" rel="noopener noreferrer">MCServerHost</a>-Knotenstatus.',
     project_view: 'Projekt anzeigen',
     project_bananadashboard_desc:
       'Ein plattformübergreifendes Desktop-Tool mit Systemübersicht, Live-Ressourcenüberwachung, Dateimanager, Prozessmanager, Themes und mehr.',
@@ -236,7 +236,7 @@ const translations = {
       'Ich lese jede Einsendung und nutze sie zur Verbesserung.',
     cat_general: 'Allgemein',
     cat_bug: 'Fehler melden',
-    cat_mctoolkit: 'MCToolkit',
+    cat_mcserverstatus: 'MCServerStatus',
     cat_bananadashboard: 'BananaDashboard',
     cat_other: 'Sonstiges',
     social_linktree: 'Linktree',
@@ -271,6 +271,14 @@ export function applyTranslations() {
     const value = getTranslation(key);
     if (value && !el.hasAttribute('data-i18n-placeholder')) {
       el.textContent = value;
+    }
+  });
+
+  document.querySelectorAll('[data-i18n-html]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-html');
+    const value = getTranslation(key);
+    if (value) {
+      el.innerHTML = value;
     }
   });
 

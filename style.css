@@ -882,6 +882,16 @@ body {
   line-height: 1.7;
 }
 
+.project-desc a {
+  color: var(--accent-purple);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.project-desc a:hover {
+  color: var(--text-muted-bright);
+}
+
 .project-actions {
   margin-top: auto;
 }
